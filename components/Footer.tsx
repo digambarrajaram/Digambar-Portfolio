@@ -5,66 +5,63 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t-2 border-[#1F2937] mt-auto bg-[#0B0F14]">
-      {/* Top Gradient Line */}
-      <div className="h-px bg-gradient-to-r from-transparent via-[#38BDF8]/50 to-transparent"></div>
-      
+    <footer className="relative border-t border-[#1F2937] mt-auto bg-[#0B0F14]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 bg-[#38BDF8]/10 border-2 border-[#38BDF8] flex items-center justify-center">
-                <span className="font-mono font-bold text-[#38BDF8] text-sm">DR</span>
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#38BDF8] to-[#0EA5E9] flex items-center justify-center glow-sm">
+                <span className="font-bold text-white text-sm">DR</span>
               </div>
-              <span className="font-mono font-bold text-[#E5E7EB]">
+              <span className="font-bold text-[#E5E7EB]">
                 {personalInfo.name.split(' ')[0]}
               </span>
             </div>
-            <p className="text-sm text-[#9CA3AF] font-mono mb-4">
-              [{personalInfo.role}]
+            <p className="text-sm text-[#9CA3AF] mb-4">
+              {personalInfo.role}
             </p>
-            <p className="text-xs text-[#6B7280] font-mono">
-              <span className="text-[#38BDF8]">{"//"}</span> Building scalable infrastructure
+            <p className="text-xs text-[#6B7280]">
+              Building scalable cloud infrastructure
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-mono text-sm text-[#38BDF8] mb-4 uppercase tracking-wider">
+            <h3 className="text-sm font-semibold text-[#38BDF8] mb-4 uppercase tracking-wider">
               Navigation
             </h3>
             <div className="space-y-2">
               <Link
                 href="/about"
-                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors font-mono"
+                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
               >
-                <span className="text-[#6B7280]">$ </span>about
+                About
               </Link>
               <Link
                 href="/projects"
-                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors font-mono"
+                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
               >
-                <span className="text-[#6B7280]">$ </span>projects
+                Projects
               </Link>
               <Link
                 href="/resume"
-                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors font-mono"
+                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
               >
-                <span className="text-[#6B7280]">$ </span>resume
+                Resume
               </Link>
               <Link
                 href="/contact"
-                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors font-mono"
+                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
               >
-                <span className="text-[#6B7280]">$ </span>contact
+                Contact
               </Link>
             </div>
           </div>
 
           {/* Social Links */}
           <div>
-            <h3 className="font-mono text-sm text-[#38BDF8] mb-4 uppercase tracking-wider">
+            <h3 className="text-sm font-semibold text-[#38BDF8] mb-4 uppercase tracking-wider">
               Connect
             </h3>
             <div className="flex gap-4">
@@ -72,7 +69,7 @@ export default function Footer() {
                 href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[#1F2937] border border-[#374151] hover:border-[#38BDF8] hover:bg-[#38BDF8]/10 transition-all flex items-center justify-center group"
+                className="w-10 h-10 rounded-lg glass-card border border-[#1F2937] hover:border-[#38BDF8]/50 hover:bg-[#38BDF8]/10 transition-all flex items-center justify-center group"
                 aria-label="GitHub"
               >
                 <svg
@@ -93,7 +90,7 @@ export default function Footer() {
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[#1F2937] border border-[#374151] hover:border-[#38BDF8] hover:bg-[#38BDF8]/10 transition-all flex items-center justify-center group"
+                className="w-10 h-10 rounded-lg glass-card border border-[#1F2937] hover:border-[#38BDF8]/50 hover:bg-[#38BDF8]/10 transition-all flex items-center justify-center group"
                 aria-label="LinkedIn"
               >
                 <svg
@@ -112,14 +109,12 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[#1F2937]">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-sm text-[#9CA3AF] font-mono">
-              <span className="text-[#6B7280]">&copy;</span> {currentYear} {personalInfo.name}
-              <span className="text-[#6B7280] mx-2">|</span>
-              <span className="text-[#6B7280]">Built with</span> Next.js + Tailwind
+            <div className="text-sm text-[#9CA3AF]">
+              © {currentYear} {personalInfo.name} • Built with Next.js & Tailwind CSS
             </div>
             <div className="flex items-center gap-2">
-              <div className="status-dot online"></div>
-              <span className="text-xs text-[#9CA3AF] font-mono">
+              <div className="w-2 h-2 bg-[#10B981] rounded-full animate-pulse"></div>
+              <span className="text-xs text-[#9CA3AF]">
                 System Online
               </span>
             </div>
