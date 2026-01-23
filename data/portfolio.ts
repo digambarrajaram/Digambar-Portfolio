@@ -16,7 +16,7 @@ export const personalInfo = {
   description: "Specializing in cloud automation, containerization, and enterprise-grade CI/CD pipelines.",
   email: "digambar@example.com", // UPDATE THIS
   location: "Remote / Available Worldwide",
-  image: "/Digambar_Photo.jpeg",
+  image: "/Digambar_Photo.png",
   resumeFile: "/resume.pdf",
 };
 
