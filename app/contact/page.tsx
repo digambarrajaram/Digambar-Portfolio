@@ -97,11 +97,11 @@ export default function Contact() {
           </div>
 
           {/* GitHub */}
-          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#10B981]/50 transition-all duration-300">
+          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#38BDF8]/50 transition-all duration-300">
             <div className="flex items-center mb-6">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#10B981]/20 to-[#059669]/10 border border-[#10B981]/30 flex items-center justify-center mr-5 glow-sm">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#38BDF8]/20 to-[#0EA5E9]/10 border border-[#38BDF8]/30 flex items-center justify-center mr-5 glow-sm">
                 <svg
-                  className="w-8 h-8 text-[#10B981]"
+                  className="w-8 h-8 text-[#38BDF8]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -120,7 +120,7 @@ export default function Contact() {
                   href={socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#10B981] hover:text-[#38BDF8] transition-colors text-sm inline-flex items-center gap-1"
+                  className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors text-sm inline-flex items-center gap-1"
                 >
                   View Repos
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -213,7 +213,7 @@ export default function Contact() {
             </div>
             <p className="text-sm text-[#9CA3AF]">
               <span className="text-[#38BDF8] font-semibold">Configuration:</span> Update contact info in{" "}
-              <code className="px-2 py-1 glass-card text-[#10B981] border border-[#38BDF8]/20 rounded">
+              <code className="px-2 py-1 glass-card text-[#38BDF8] border border-[#38BDF8]/20 rounded">
                 data/portfolio.ts
               </code>
             </p>

@@ -142,8 +142,8 @@ export default function Resume() {
             </div>
             
             <div className="glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#38BDF8]/50 text-center transition-all duration-300">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-[#10B981]/20 to-[#059669]/10 border border-[#10B981]/30 flex items-center justify-center">
-                <svg className="w-8 h-8 text-[#10B981]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-[#38BDF8]/20 to-[#0EA5E9]/10 border border-[#38BDF8]/30 flex items-center justify-center">
+                <svg className="w-8 h-8 text-[#38BDF8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -182,7 +182,7 @@ export default function Resume() {
             <div>
               <p className="text-sm text-[#9CA3AF]">
                 <span className="text-[#38BDF8] font-semibold">Note:</span> Add your resume PDF file as{" "}
-                <code className="px-2 py-1 glass-card text-[#10B981] border border-[#38BDF8]/20 rounded">
+                <code className="px-2 py-1 glass-card text-[#38BDF8] border border-[#38BDF8]/20 rounded">
                   /public/resume.pdf
                 </code>{" "}
                 to enable downloads.

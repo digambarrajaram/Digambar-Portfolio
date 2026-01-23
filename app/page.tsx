@@ -16,7 +16,7 @@ export default function Home() {
               {/* Status Badge */}
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full">
-                  <span className="w-2 h-2 bg-[#10B981] rounded-full animate-pulse"></span>
+                  <span className="w-2 h-2 bg-[#38BDF8] rounded-full animate-pulse"></span>
                   <span className="text-sm font-medium text-[#E5E7EB]">Available for Work</span>
                 </div>
               </div>

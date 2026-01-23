@@ -113,7 +113,7 @@ export default function Footer() {
               © {currentYear} {personalInfo.name} • Built with Next.js & Tailwind CSS
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#10B981] rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-[#38BDF8] rounded-full animate-pulse"></div>
               <span className="text-xs text-[#9CA3AF]">
                 System Online
               </span>
