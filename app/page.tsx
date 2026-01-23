@@ -6,7 +6,7 @@ export default function Home() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Hero Section - Left/Right Layout */}
       <section className="py-16 sm:py-24 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 lg:gap-8 items-center">
           {/* Left: Text Content */}
           <div className="order-2 lg:order-1">
             <div className="inline-block mb-4">
