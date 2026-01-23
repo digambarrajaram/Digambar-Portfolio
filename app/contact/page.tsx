@@ -15,24 +15,24 @@ export default function Contact() {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         {/* Page Header */}
         <div className="mb-16">
-          <span className="text-sm font-semibold text-[#38BDF8] tracking-wide uppercase">Let&apos;s Connect</span>
-          <h1 className="text-5xl sm:text-6xl font-bold text-gradient mt-4 mb-3">
+          <span className="text-sm font-semibold text-[#388BFD] tracking-wide uppercase">Let&apos;s Connect</span>
+          <h1 className="text-5xl sm:text-6xl font-bold text-[#E6EDF3] mt-4 mb-3">
             Get in Touch
           </h1>
-          <p className="text-xl text-[#9CA3AF] max-w-2xl">
+          <p className="text-xl text-[#9198A1] max-w-2xl">
             I&apos;m always open to discussing new opportunities, collaborations, or interesting DevOps challenges.
           </p>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-[#38BDF8] to-[#0EA5E9] rounded-full mt-6"></div>
+          <div className="w-20 h-1.5 bg-[#388BFD] rounded-full mt-6"></div>
         </div>
 
         {/* Contact Methods */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
           {/* Email */}
-          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#38BDF8]/50 transition-all duration-300">
+          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200">
             <div className="flex items-center mb-6">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#38BDF8]/20 to-[#0EA5E9]/10 border border-[#38BDF8]/30 flex items-center justify-center mr-5 glow-sm">
+              <div className="w-16 h-16 rounded-xl bg-[#388BFD]/10 border border-[#388BFD]/20 flex items-center justify-center mr-5">
                 <svg
-                  className="w-8 h-8 text-[#38BDF8]"
+                  className="w-8 h-8 text-[#388BFD]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -46,28 +46,28 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-[#E5E7EB] mb-1">
+                <h2 className="text-xl font-bold text-[#E6EDF3] mb-1">
                   Email
                 </h2>
                 <a
                   href={`mailto:${personalInfo.email}`}
-                  className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors text-sm"
+                  className="text-[#388BFD] hover:text-[#539BFF] transition-colors text-sm"
                 >
                   {personalInfo.email}
                 </a>
               </div>
             </div>
-            <p className="text-sm text-[#9CA3AF]">
+            <p className="text-sm text-[#9198A1]">
               Best for professional inquiries and project discussions
             </p>
           </div>
 
           {/* LinkedIn */}
-          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#0EA5E9]/50 transition-all duration-300">
+          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200">
             <div className="flex items-center mb-6">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#0EA5E9]/20 to-[#38BDF8]/10 border border-[#0EA5E9]/30 flex items-center justify-center mr-5 glow-sm">
+              <div className="w-16 h-16 rounded-xl bg-[#388BFD]/10 border border-[#388BFD]/20 flex items-center justify-center mr-5">
                 <svg
-                  className="w-8 h-8 text-[#0EA5E9]"
+                  className="w-8 h-8 text-[#388BFD]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -75,14 +75,14 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-[#E5E7EB] mb-1">
+                <h2 className="text-xl font-bold text-[#E6EDF3] mb-1">
                   LinkedIn
                 </h2>
                 <a
                   href={socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#0EA5E9] hover:text-[#38BDF8] transition-colors text-sm inline-flex items-center gap-1"
+                  className="text-[#388BFD] hover:text-[#539BFF] transition-colors text-sm inline-flex items-center gap-1"
                 >
                   View Profile
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,17 +91,17 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-            <p className="text-sm text-[#9CA3AF]">
+            <p className="text-sm text-[#9198A1]">
               Connect with me professionally
             </p>
           </div>
 
           {/* GitHub */}
-          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#38BDF8]/50 transition-all duration-300">
+          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200">
             <div className="flex items-center mb-6">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#38BDF8]/20 to-[#0EA5E9]/10 border border-[#38BDF8]/30 flex items-center justify-center mr-5 glow-sm">
+              <div className="w-16 h-16 rounded-xl bg-[#388BFD]/10 border border-[#388BFD]/20 flex items-center justify-center mr-5">
                 <svg
-                  className="w-8 h-8 text-[#38BDF8]"
+                  className="w-8 h-8 text-[#388BFD]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -113,14 +113,14 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-[#E5E7EB] mb-1">
+                <h2 className="text-xl font-bold text-[#E6EDF3] mb-1">
                   GitHub
                 </h2>
                 <a
                   href={socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors text-sm inline-flex items-center gap-1"
+                  className="text-[#388BFD] hover:text-[#539BFF] transition-colors text-sm inline-flex items-center gap-1"
                 >
                   View Repos
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,17 +129,17 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-            <p className="text-sm text-[#9CA3AF]">
+            <p className="text-sm text-[#9198A1]">
               Check out my open source projects
             </p>
           </div>
 
           {/* Location */}
-          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#2DD4BF]/50 transition-all duration-300">
+          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200">
             <div className="flex items-center mb-6">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#2DD4BF]/20 to-[#14B8A6]/10 border border-[#2DD4BF]/30 flex items-center justify-center mr-5 glow-sm">
+              <div className="w-16 h-16 rounded-xl bg-[#388BFD]/10 border border-[#388BFD]/20 flex items-center justify-center mr-5">
                 <svg
-                  className="w-8 h-8 text-[#2DD4BF]"
+                  className="w-8 h-8 text-[#388BFD]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -159,32 +159,32 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-[#E5E7EB] mb-1">
+                <h2 className="text-xl font-bold text-[#E6EDF3] mb-1">
                   Location
                 </h2>
-                <p className="text-[#2DD4BF] text-sm font-medium">
+                <p className="text-[#388BFD] text-sm font-medium">
                   {personalInfo.location}
                 </p>
               </div>
             </div>
-            <p className="text-sm text-[#9CA3AF]">
+            <p className="text-sm text-[#9198A1]">
               Open to remote opportunities worldwide
             </p>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="frosted-glass p-12 rounded-2xl border border-[#38BDF8]/30 text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#E5E7EB] mb-4">
+        <div className="frosted-glass p-12 rounded-2xl border border-[#30363D] text-center mb-12">
+          <h2 className="text-4xl font-bold text-[#E6EDF3] mb-4">
             Let&apos;s Build Something Great
           </h2>
-          <p className="text-[#9CA3AF] mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-[#9198A1] mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
             Whether you have a project in mind, need DevOps expertise, or just want to connect, 
             I&apos;d love to hear from you. Send me an email and I&apos;ll get back to you ASAP.
           </p>
           <a
             href={`mailto:${personalInfo.email}`}
-            className="inline-flex items-center px-10 py-4 text-sm font-semibold text-[#0B0F14] bg-[#38BDF8] hover:bg-[#0EA5E9] rounded-lg transition-all duration-300 glow-md hover:glow-lg"
+            className="inline-flex items-center px-10 py-4 text-sm font-semibold text-white bg-[#388BFD] hover:bg-[#539BFF] rounded-lg transition-colors duration-200"
           >
             <svg
               className="w-5 h-5 mr-3"
@@ -204,18 +204,18 @@ export default function Contact() {
         </div>
 
         {/* Info Note */}
-        <div className="glass-card p-6 rounded-xl border border-[#38BDF8]/20">
+        <div className="glass-card p-6 rounded-xl border border-[#30363D]">
           <div className="flex items-start gap-3">
-            <div className="w-6 h-6 rounded-full bg-[#38BDF8]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg className="w-4 h-4 text-[#38BDF8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-6 h-6 rounded-full bg-[#388BFD]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg className="w-4 h-4 text-[#388BFD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <p className="text-sm text-[#9CA3AF]">
-              <span className="text-[#38BDF8] font-semibold">Configuration:</span> Update contact info in{" "}
-              <code className="px-2 py-1 glass-card text-[#38BDF8] border border-[#38BDF8]/20 rounded">
-                data/portfolio.ts
-              </code>
+            <p className="text-sm text-[#9198A1]">
+              <span className="text-[#388BFD] font-semibold">Configuration:</span> Update contact info in{" "}
+              <code className="px-2 py-1 glass-card text-[#388BFD] border border-[#388BFD]/20 rounded">{
+                'data/portfolio.ts'
+              }</code>
             </p>
           </div>
         </div>

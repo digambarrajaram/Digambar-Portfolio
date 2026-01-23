@@ -21,7 +21,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 leading-[1.1] tracking-tight text-gradient">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 leading-[1.1] tracking-tight text-[#E6EDF3]">
                 {personalInfo.name}
               </h1>
               
@@ -37,7 +37,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/projects"
-                  className="group inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-[#0B0F14] bg-[#38BDF8] hover:bg-[#0EA5E9] rounded-lg transition-all duration-300 glow-md hover:glow-lg"
+                  className="group inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white bg-[#388BFD] hover:bg-[#539BFF] rounded-lg transition-colors duration-200"
                 >
                   View Projects
                   <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export default function Home() {
                 </a>
                 <a
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-[#E5E7EB] glass-card hover:bg-[#38BDF8]/10 rounded-lg transition-all duration-300 border border-[#38BDF8]/30"
+                  className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-[#E6EDF3] bg-[#161B22] hover:bg-[#1C2128] border border-[#30363D] rounded-lg transition-colors duration-200"
                 >
                   Get in Touch
                 </a>
@@ -56,9 +56,8 @@ export default function Home() {
             {/* Right: Profile Image */}
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[300px]">
-                <div className="glass-card p-2 rounded-2xl float-animation">
+                <div className="bg-[#161B22] p-2 border border-[#21262D] rounded-2xl">
                   <div className="relative overflow-hidden rounded-xl">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#38BDF8]/20 to-transparent pointer-events-none" />
                     <Image
                       src={personalInfo.image}
                       alt={`${personalInfo.name} - ${personalInfo.role}`}
@@ -106,35 +105,26 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((item, index) => {
-              const gradients = [
-                'from-[#38BDF8] to-[#0EA5E9]', // Cyan
-                'from-[#A78BFA] to-[#8B5CF6]', // Purple
-                'from-[#2DD4BF] to-[#14B8A6]', // Teal
-              ];
-              const gradient = gradients[index % gradients.length];
-              
-              return (
-                <div
-                  key={index}
-                  className="group elevated-card glass-card p-6 rounded-xl border border-[#1F2937] hover:border-[#38BDF8]/50 transition-all duration-300"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center`}>
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <h3 className="font-bold text-[#E5E7EB] text-lg">
-                      {item.category}
-                    </h3>
+            {technologies.map((item, index) => (
+              <div
+                key={index}
+                className="group bg-[#161B22] p-6 rounded-xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-[#388BFD]/10 border border-[#388BFD]/20 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-[#388BFD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
                   </div>
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed">
-                    {item.skills}
-                  </p>
+                  <h3 className="font-bold text-[#E6EDF3] text-lg">
+                    {item.category}
+                  </h3>
                 </div>
-              );
-            })}
+                <p className="text-[#9198A1] text-sm leading-relaxed">
+                  {item.skills}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
       </div>

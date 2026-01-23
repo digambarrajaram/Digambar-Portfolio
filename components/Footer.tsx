@@ -5,54 +5,54 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-[#1F2937] mt-auto bg-[#0B0F14]">
+    <footer className="relative border-t border-[#21262D] mt-auto bg-[#0A0E13]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#38BDF8] to-[#0EA5E9] flex items-center justify-center glow-sm">
+              <div className="w-8 h-8 rounded-lg bg-[#388BFD] flex items-center justify-center">
                 <span className="font-bold text-white text-sm">DR</span>
               </div>
-              <span className="font-bold text-[#E5E7EB]">
+              <span className="font-bold text-[#E6EDF3]">
                 {personalInfo.name.split(' ')[0]}
               </span>
             </div>
-            <p className="text-sm text-[#9CA3AF] mb-4">
+            <p className="text-sm text-[#9198A1] mb-4">
               {personalInfo.role}
             </p>
-            <p className="text-xs text-[#6B7280]">
+            <p className="text-xs text-[#656D76]">
               Building scalable cloud infrastructure
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold text-[#38BDF8] mb-4 uppercase tracking-wider">
+            <h3 className="text-sm font-semibold text-[#388BFD] mb-4 uppercase tracking-wider">
               Navigation
             </h3>
             <div className="space-y-2">
               <Link
                 href="/about"
-                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
+                className="block text-sm text-[#9198A1] hover:text-[#388BFD] transition-colors"
               >
                 About
               </Link>
               <Link
                 href="/projects"
-                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
+                className="block text-sm text-[#9198A1] hover:text-[#388BFD] transition-colors"
               >
                 Projects
               </Link>
               <Link
                 href="/resume"
-                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
+                className="block text-sm text-[#9198A1] hover:text-[#388BFD] transition-colors"
               >
                 Resume
               </Link>
               <Link
                 href="/contact"
-                className="block text-sm text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
+                className="block text-sm text-[#9198A1] hover:text-[#388BFD] transition-colors"
               >
                 Contact
               </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-sm font-semibold text-[#38BDF8] mb-4 uppercase tracking-wider">
+            <h3 className="text-sm font-semibold text-[#388BFD] mb-4 uppercase tracking-wider">
               Connect
             </h3>
             <div className="flex gap-4">
@@ -69,11 +69,11 @@ export default function Footer() {
                 href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg glass-card border border-[#1F2937] hover:border-[#38BDF8]/50 hover:bg-[#38BDF8]/10 transition-all flex items-center justify-center group"
+                className="w-10 h-10 rounded-lg glass-card border border-[#21262D] hover:border-[#30363D] hover:bg-[#388BFD]/10 transition-all flex items-center justify-center group"
                 aria-label="GitHub"
               >
                 <svg
-                  className="w-5 h-5 text-[#9CA3AF] group-hover:text-[#38BDF8] transition-colors"
+                  className="w-5 h-5 text-[#9198A1] group-hover:text-[#388BFD] transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -107,14 +107,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-[#1F2937]">
+        <div className="pt-8 border-t border-[#21262D]">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-sm text-[#9CA3AF]">
+            <div className="text-sm text-[#9198A1]">
               © {currentYear} {personalInfo.name} • Built with Next.js & Tailwind CSS
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#38BDF8] rounded-full animate-pulse"></div>
-              <span className="text-xs text-[#9CA3AF]">
+              <div className="w-2 h-2 bg-[#388BFD] rounded-full animate-pulse"></div>
+              <span className="text-xs text-[#9198A1]">
                 System Online
               </span>
             </div>

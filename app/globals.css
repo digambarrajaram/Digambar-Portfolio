@@ -1,31 +1,29 @@
 @import "tailwindcss";
 
-/* Dark DevOps Theme - Professional Color System */
+/* Enterprise-Grade Dark Theme - Professional Color System */
 :root {
-  /* Background Colors */
-  --bg-primary: #0B0F14;        /* Near-black matte background */
-  --bg-surface: #111827;        /* Elevated dark cards/surfaces */
-  --bg-hover: #1F2937;          /* Hover states */
+  /* Background Layers - Subtle Depth */
+  --bg-base: #0A0E13;           /* Deepest background */
+  --bg-surface: #0F1419;        /* Primary surface layer */
+  --bg-elevated: #161B22;       /* Elevated cards/panels */
+  --bg-hover: #1C2128;          /* Interactive hover state */
   
   /* Border & Divider Colors */
-  --border-subtle: #1F2937;     /* Subtle borders */
-  --border-medium: #374151;     /* Medium emphasis borders */
+  --border-subtle: #21262D;     /* Barely visible borders */
+  --border-default: #30363D;    /* Standard borders */
+  --border-emphasis: #484F58;   /* Emphasized borders */
   
-  /* Text Colors */
-  --text-primary: #E5E7EB;      /* Primary text - soft off-white */
-  --text-secondary: #9CA3AF;    /* Secondary text - muted gray */
-  --text-tertiary: #6B7280;     /* Tertiary text - dimmed */
+  /* Text Hierarchy */
+  --text-primary: #E6EDF3;      /* Headings, primary content */
+  --text-secondary: #9198A1;    /* Body text, descriptions */
+  --text-tertiary: #656D76;     /* Labels, metadata */
+  --text-muted: #484F58;        /* Disabled, placeholder */
   
-  /* Accent Colors */
-  --accent-primary: #38BDF8;    /* Primary CTA & highlights */
-  --accent-hover: #0EA5E9;      /* Hover accent */
-  --accent-purple: #A78BFA;     /* Purple accent */
-  --accent-teal: #2DD4BF;       /* Teal accent */
-  
-  /* Semantic Colors */
-  --success: #2DD4BF;
-  --info: #38BDF8;
-  --highlight: #A78BFA;
+  /* Accent System - Single Blue */
+  --accent-primary: #388BFD;    /* Primary actions, links */
+  --accent-hover: #539BFF;      /* Hover state */
+  --accent-subtle: rgba(56, 139, 253, 0.15);  /* Subtle backgrounds */
+  --accent-border: rgba(56, 139, 253, 0.3);   /* Subtle borders */
 }
 
 @theme inline {
@@ -39,7 +37,7 @@ html {
 }
 
 body {
-  background: var(--bg-primary);
+  background: var(--bg-base);
   color: var(--text-primary);
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -47,113 +45,69 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Modern SaaS Design System */
+/* Enterprise Design System */
 
-/* Glassmorphism Cards */
+/* Refined Card System */
 .glass-card {
-  background: rgba(17, 24, 39, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(56, 189, 248, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
 }
 
 .glass-card-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card-hover:hover {
-  transform: translateY(-4px);
-  border-color: rgba(56, 189, 248, 0.3);
-  box-shadow: 0 12px 48px 0 rgba(56, 189, 248, 0.15);
+  border-color: var(--border-default);
+  background: var(--bg-hover);
 }
 
-/* Gradient Backgrounds */
+/* Subtle Background Gradient */
 .gradient-bg {
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
+  background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-surface) 100%);
 }
 
-.gradient-border {
-  position: relative;
-  background: var(--bg-surface);
-  border-radius: 16px;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  padding: 1px;
-  background: linear-gradient(135deg, #38BDF8, #0EA5E9);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0.3;
-}
-
-/* Floating Animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.float-animation {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Glow Effects */
-.glow-sm {
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
-}
-
-.glow-md {
-  box-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
-}
-
-.glow-lg {
-  box-shadow: 0 0 60px rgba(56, 189, 248, 0.4);
-}
-
-/* Smooth Gradients */
-.text-gradient {
-  background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.bg-gradient-radial {
-  background: radial-gradient(circle at center, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
-}
-
-/* Frosted Glass Backdrop */
-.frosted-glass {
-  background: rgba(11, 15, 20, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Elevated Cards */
+/* Elevated Cards - Minimal Shadows */
 .elevated-card {
-  box-shadow: 
-    0 1px 3px rgba(0, 0, 0, 0.12),
-    0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
 }
 
 .elevated-card:hover {
-  box-shadow: 
-    0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transform: translateY(-1px);
 }
 
-/* Custom Utilities */
+/* Frosted Header/Footer */
+.frosted-glass {
+  background: rgba(15, 20, 25, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: var(--border-subtle);
+}
+
+/* Accent Utilities */
+.accent-text {
+  color: var(--accent-primary);
+}
+
+.accent-hover:hover {
+  color: var(--accent-hover);
+}
+
+.accent-bg {
+  background-color: var(--accent-primary);
+}
+
+.accent-bg-hover:hover {
+  background-color: var(--accent-hover);
+}
+
+.accent-border {
+  border-color: var(--accent-border);
+}
+
+/* Text Hierarchy */
 .text-primary {
   color: var(--text-primary);
 }
@@ -162,22 +116,12 @@ body {
   color: var(--text-secondary);
 }
 
-.bg-surface {
-  background-color: var(--bg-surface);
+.text-tertiary {
+  color: var(--text-tertiary);
 }
 
-.border-subtle {
-  border-color: var(--border-subtle);
+.text-muted {
+  color: var(--text-muted);
 }
 
-.accent-text {
-  color: var(--accent-primary);
-}
-
-.accent-bg {
-  background-color: var(--accent-primary);
-}
-
-.accent-hover:hover {
-  background-color: var(--accent-hover);
-}
+/* Removed: Flashy gradients, glows, and animations */
