@@ -38,20 +38,19 @@ export default function Home() {
 
           {/* Right: Profile Image */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[320px] lg:max-w-[360px]">
+            <div className="relative w-full max-w-[280px] lg:max-w-[300px]">
               {/* Subtle glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#38BDF8]/8 via-transparent to-[#0EA5E9]/5 rounded-3xl blur-2xl scale-105"></div>
+              <div className="absolute -inset-8 bg-gradient-to-br from-[#38BDF8]/5 via-transparent to-[#0EA5E9]/3 rounded-full blur-3xl"></div>
               
               {/* Image container */}
               <div className="relative">
                 <Image
                   src={personalInfo.image}
                   alt={`${personalInfo.name} - ${personalInfo.role}`}
-                  width={360}
-                  height={360}
+                  width={300}
+                  height={400}
                   priority
-                  className="w-full h-auto rounded-2xl shadow-2xl shadow-black/40"
-                  style={{ aspectRatio: '1/1', objectFit: 'cover' }}
+                  className="w-full h-auto rounded-2xl shadow-xl shadow-black/30"
                 />
               </div>
             </div>
