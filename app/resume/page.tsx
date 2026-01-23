@@ -33,9 +33,10 @@ export default function Resume() {
         <p className="text-gray-600 dark:text-gray-400 mb-6">
           Download my resume in PDF format
         </p>
-        <button
+        <a
+          href="/resume.pdf"
+          download="digambar_rajaram_resume.pdf"
           className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
-          onClick={() => alert('PDF download placeholder - Add your resume PDF to /public folder')}
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -51,7 +52,7 @@ export default function Resume() {
             />
           </svg>
           Download PDF
-        </button>
+        </a>
         <p className="text-sm text-gray-500 dark:text-gray-500 mt-4">
           File: digambar_rajaram_resume.pdf
         </p>
@@ -143,11 +144,11 @@ export default function Resume() {
       {/* Instructions */}
       <div className="mt-12 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
         <p className="text-sm text-blue-800 dark:text-blue-200">
-          <strong>Note:</strong> To enable PDF download, add your resume PDF file to the{" "}
+          <strong>Note:</strong> Add your resume PDF file as{" "}
           <code className="px-1 py-0.5 bg-blue-100 dark:bg-blue-900 rounded">
-            /public
+            /public/resume.pdf
           </code>{" "}
-          folder and update the download link.
+          to enable the download link.
         </p>
       </div>
     </div>
