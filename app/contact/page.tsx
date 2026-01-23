@@ -135,11 +135,11 @@ export default function Contact() {
           </div>
 
           {/* Location */}
-          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#F59E0B]/50 transition-all duration-300">
+          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#2DD4BF]/50 transition-all duration-300">
             <div className="flex items-center mb-6">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#F59E0B]/20 to-[#D97706]/10 border border-[#F59E0B]/30 flex items-center justify-center mr-5 glow-sm">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#2DD4BF]/20 to-[#14B8A6]/10 border border-[#2DD4BF]/30 flex items-center justify-center mr-5 glow-sm">
                 <svg
-                  className="w-8 h-8 text-[#F59E0B]"
+                  className="w-8 h-8 text-[#2DD4BF]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -162,7 +162,7 @@ export default function Contact() {
                 <h2 className="text-xl font-bold text-[#E5E7EB] mb-1">
                   Location
                 </h2>
-                <p className="text-[#F59E0B] text-sm font-medium">
+                <p className="text-[#2DD4BF] text-sm font-medium">
                   {personalInfo.location}
                 </p>
               </div>

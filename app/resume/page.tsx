@@ -141,9 +141,9 @@ export default function Resume() {
               </div>
             </div>
             
-            <div className="glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#38BDF8]/50 text-center transition-all duration-300">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-[#38BDF8]/20 to-[#0EA5E9]/10 border border-[#38BDF8]/30 flex items-center justify-center">
-                <svg className="w-8 h-8 text-[#38BDF8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#2DD4BF]/50 text-center transition-all duration-300">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-[#2DD4BF]/20 to-[#14B8A6]/10 border border-[#2DD4BF]/30 flex items-center justify-center">
+                <svg className="w-8 h-8 text-[#2DD4BF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -156,8 +156,8 @@ export default function Resume() {
             </div>
             
             <div className="glass-card elevated-card p-8 rounded-2xl border border-[#1F2937] hover:border-[#38BDF8]/50 text-center transition-all duration-300">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-[#F59E0B]/20 to-[#D97706]/10 border border-[#F59E0B]/30 flex items-center justify-center">
-                <svg className="w-8 h-8 text-[#F59E0B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-[#A78BFA]/20 to-[#8B5CF6]/10 border border-[#A78BFA]/30 flex items-center justify-center">
+                <svg className="w-8 h-8 text-[#A78BFA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                 </svg>
               </div>

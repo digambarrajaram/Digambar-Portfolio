@@ -19,11 +19,13 @@
   /* Accent Colors */
   --accent-primary: #38BDF8;    /* Primary CTA & highlights */
   --accent-hover: #0EA5E9;      /* Hover accent */
+  --accent-purple: #A78BFA;     /* Purple accent */
+  --accent-teal: #2DD4BF;       /* Teal accent */
   
   /* Semantic Colors */
-  --success: #38BDF8;
-  --warning: #F59E0B;
-  --error: #EF4444;
+  --success: #2DD4BF;
+  --info: #38BDF8;
+  --highlight: #A78BFA;
 }
 
 @theme inline {

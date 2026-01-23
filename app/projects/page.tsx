@@ -46,8 +46,8 @@ export default function Projects() {
                 {/* Problem */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="w-2 h-2 bg-[#EF4444] rounded-full"></div>
-                    <span className="text-sm font-semibold text-[#EF4444] uppercase tracking-wider">
+                    <div className="w-2 h-2 bg-[#A78BFA] rounded-full"></div>
+                    <span className="text-sm font-semibold text-[#A78BFA] uppercase tracking-wider">
                       Challenge
                     </span>
                   </div>
@@ -59,8 +59,8 @@ export default function Projects() {
                 {/* Solution */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="w-2 h-2 bg-[#38BDF8] rounded-full"></div>
-                    <span className="text-sm font-semibold text-[#38BDF8] uppercase tracking-wider">
+                    <div className="w-2 h-2 bg-[#2DD4BF] rounded-full"></div>
+                    <span className="text-sm font-semibold text-[#2DD4BF] uppercase tracking-wider">
                       Solution
                     </span>
                   </div>
@@ -94,10 +94,10 @@ export default function Projects() {
                 {/* Architecture */}
                 <div className="pt-4 border-t border-[#1F2937]">
                   <div className="flex items-center gap-2 mb-3">
-                    <svg className="w-4 h-4 text-[#F59E0B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#A78BFA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                     </svg>
-                    <span className="text-sm font-semibold text-[#F59E0B] uppercase tracking-wider">
+                    <span className="text-sm font-semibold text-[#A78BFA] uppercase tracking-wider">
                       Architecture
                     </span>
                   </div>

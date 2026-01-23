@@ -90,28 +90,38 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {Object.entries(skills).map(([category, skillList], index) => (
-              <div key={index} className="glass-card elevated-card p-6 rounded-xl border border-[#1F2937] hover:border-[#38BDF8]/50 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#38BDF8] to-[#0EA5E9] flex items-center justify-center glow-sm">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+            {Object.entries(skills).map(([category, skillList], index) => {
+              const gradients = [
+                'from-[#38BDF8] to-[#0EA5E9]', // Cyan
+                'from-[#A78BFA] to-[#8B5CF6]', // Purple
+                'from-[#2DD4BF] to-[#14B8A6]', // Teal
+                'from-[#60A5FA] to-[#3B82F6]', // Blue
+              ];
+              const gradient = gradients[index % gradients.length];
+              
+              return (
+                <div key={index} className="glass-card elevated-card p-6 rounded-xl border border-[#1F2937] hover:border-[#38BDF8]/50 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center glow-sm`}>
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-gradient">
+                      {category}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gradient">
-                    {category}
-                  </h3>
+                  <ul className="space-y-3">
+                    {skillList.map((skill, idx) => (
+                      <li key={idx} className="flex items-center gap-3 text-[#9CA3AF]">
+                        <div className="w-1.5 h-1.5 bg-[#38BDF8] rounded-full"></div>
+                        <span>{skill}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="space-y-3">
-                  {skillList.map((skill, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-[#9CA3AF]">
-                      <div className="w-1.5 h-1.5 bg-[#38BDF8] rounded-full"></div>
-                      <span>{skill}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
