@@ -58,7 +58,7 @@ export default function Projects() {
           Projects
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400">
-          DevOps and Cloud Engineering solutions I've built
+          DevOps and Cloud Engineering solutions I&apos;ve built
         </p>
       </div>
 

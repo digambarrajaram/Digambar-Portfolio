@@ -12,7 +12,7 @@ export default function Contact() {
         Get in Touch
       </h1>
       <p className="text-xl text-gray-600 dark:text-gray-400 mb-12">
-        I'm always open to discussing new opportunities, collaborations, or interesting projects.
+        I&apos;m always open to discussing new opportunities, collaborations, or interesting projects.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -159,11 +159,11 @@ export default function Contact() {
       {/* CTA Section */}
       <div className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-8 text-center">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-          Let's Work Together
+          Let&apos;s Work Together
         </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
           Whether you have a project in mind, need DevOps expertise, or just want to connect, 
-          I'd love to hear from you. Send me an email and I'll get back to you as soon as possible.
+          I&apos;d love to hear from you. Send me an email and I&apos;ll get back to you as soon as possible.
         </p>
         <a
           href="mailto:digambar@example.com"

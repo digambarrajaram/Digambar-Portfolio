@@ -16,7 +16,7 @@ export default function About() {
       <section className="mb-12">
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            I'm a DevOps and Cloud Engineer with a passion for building scalable, 
+            I&apos;m a DevOps and Cloud Engineer with a passion for building scalable, 
             reliable infrastructure that powers modern applications. My journey in 
             technology has been driven by a commitment to automation, efficiency, 
             and continuous improvement.

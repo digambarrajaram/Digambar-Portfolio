@@ -32,7 +32,7 @@ export default function Home() {
         </h2>
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            I'm a passionate DevOps and Cloud Engineer with expertise in building and maintaining 
+            I&apos;m a passionate DevOps and Cloud Engineer with expertise in building and maintaining 
             scalable, reliable infrastructure. I specialize in AWS, Infrastructure as Code (Terraform), 
             containerization (Docker, Kubernetes), and CI/CD automation (GitHub Actions, Jenkins).
           </p>
