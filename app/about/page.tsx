@@ -7,21 +7,21 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-8">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <h1 className="text-4xl sm:text-5xl font-bold text-[#E5E7EB] mb-12">
         About Me
       </h1>
 
       {/* Introduction */}
-      <section className="mb-12">
-        <div className="prose prose-lg dark:prose-invert max-w-none">
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+      <section className="mb-16">
+        <div className="space-y-4 text-[#9CA3AF] text-lg leading-relaxed">
+          <p>
             I&apos;m a DevOps and Cloud Engineer with a passion for building scalable, 
             reliable infrastructure that powers modern applications. My journey in 
             technology has been driven by a commitment to automation, efficiency, 
             and continuous improvement.
           </p>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          <p>
             With extensive experience in cloud platforms, infrastructure as code, 
             and CI/CD pipelines, I help organizations transform their development 
             and deployment processes. I believe in implementing best practices that 
@@ -32,35 +32,34 @@ export default function About() {
       </section>
 
       {/* Professional Experience */}
-      <section className="mb-12">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-[#E5E7EB] mb-8">
           Professional Experience
         </h2>
         <div className="space-y-8">
           {/* Experience Item */}
-          <div className="border-l-4 border-gray-900 dark:border-white pl-6">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+          <div className="border-l-2 border-[#38BDF8] pl-6 pb-8">
+            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-1">
               DevOps Engineer
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-[#9CA3AF] mb-4 text-sm">
               Company Name • 2022 - Present
             </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-              <li>Designed and implemented multi-region AWS infrastructure using Terraform</li>
+            <ul className="list-disc list-inside space-y-2 text-[#9CA3AF]">\n              <li>Designed and implemented multi-region AWS infrastructure using Terraform</li>
               <li>Built automated CI/CD pipelines reducing deployment time by 60%</li>
               <li>Managed Kubernetes clusters for containerized applications</li>
               <li>Implemented monitoring and alerting solutions using Prometheus and Grafana</li>
             </ul>
           </div>
 
-          <div className="border-l-4 border-gray-900 dark:border-white pl-6">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+          <div className="border-l-2 border-[#38BDF8] pl-6 pb-8">
+            <h3 className="text-xl font-semibold text-[#E5E7EB] mb-1">
               Cloud Infrastructure Specialist
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-[#9CA3AF] mb-4 text-sm">
               Previous Company • 2020 - 2022
             </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc list-inside space-y-2 text-[#9CA3AF]">
               <li>Migrated on-premise applications to AWS cloud infrastructure</li>
               <li>Automated infrastructure provisioning using CloudFormation and Terraform</li>
               <li>Implemented security best practices and compliance standards</li>
@@ -71,46 +70,46 @@ export default function About() {
       </section>
 
       {/* Technical Expertise */}
-      <section className="mb-12">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-[#E5E7EB] mb-8">
           Technical Expertise
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-[#111827] border border-[#1F2937] rounded-lg p-6">
+            <h3 className="text-lg font-semibold text-[#E5E7EB] mb-4">
               Cloud Platforms
             </h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="space-y-2 text-[#9CA3AF]">
               <li>• Amazon Web Services (AWS)</li>
               <li>• Microsoft Azure</li>
               <li>• Google Cloud Platform</li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+          <div className="bg-[#111827] border border-[#1F2937] rounded-lg p-6">
+            <h3 className="text-lg font-semibold text-[#E5E7EB] mb-4">
               Infrastructure as Code
             </h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="space-y-2 text-[#9CA3AF]">
               <li>• Terraform</li>
               <li>• AWS CloudFormation</li>
               <li>• Ansible</li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+          <div className="bg-[#111827] border border-[#1F2937] rounded-lg p-6">
+            <h3 className="text-lg font-semibold text-[#E5E7EB] mb-4">
               Containerization & Orchestration
             </h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="space-y-2 text-[#9CA3AF]">
               <li>• Docker</li>
               <li>• Kubernetes</li>
               <li>• Amazon ECS/EKS</li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+          <div className="bg-[#111827] border border-[#1F2937] rounded-lg p-6">
+            <h3 className="text-lg font-semibold text-[#E5E7EB] mb-4">
               CI/CD Tools
             </h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="space-y-2 text-[#9CA3AF]">
               <li>• GitHub Actions</li>
               <li>• Jenkins</li>
               <li>• GitLab CI</li>
@@ -121,27 +120,27 @@ export default function About() {
 
       {/* Certifications */}
       <section>
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+        <h2 className="text-3xl font-bold text-[#E5E7EB] mb-8">
           Certifications
         </h2>
-        <div className="space-y-3">
-          <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-            <p className="font-semibold text-gray-900 dark:text-white">
+        <div className="space-y-4">
+          <div className="p-6 bg-[#111827] border border-[#1F2937] rounded-lg hover:border-[#38BDF8]/50 transition-colors">
+            <p className="font-semibold text-[#E5E7EB] mb-1">
               AWS Certified Solutions Architect - Associate
             </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Amazon Web Services</p>
+            <p className="text-sm text-[#9CA3AF]">Amazon Web Services</p>
           </div>
-          <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-            <p className="font-semibold text-gray-900 dark:text-white">
+          <div className="p-6 bg-[#111827] border border-[#1F2937] rounded-lg hover:border-[#38BDF8]/50 transition-colors">
+            <p className="font-semibold text-[#E5E7EB] mb-1">
               Certified Kubernetes Administrator (CKA)
             </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Cloud Native Computing Foundation</p>
+            <p className="text-sm text-[#9CA3AF]">Cloud Native Computing Foundation</p>
           </div>
-          <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-            <p className="font-semibold text-gray-900 dark:text-white">
+          <div className="p-6 bg-[#111827] border border-[#1F2937] rounded-lg hover:border-[#38BDF8]/50 transition-colors">
+            <p className="font-semibold text-[#E5E7EB] mb-1">
               HashiCorp Certified: Terraform Associate
             </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">HashiCorp</p>
+            <p className="text-sm text-[#9CA3AF]">HashiCorp</p>
           </div>
         </div>
       </section>

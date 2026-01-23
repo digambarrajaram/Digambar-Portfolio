@@ -7,15 +7,15 @@ export const metadata: Metadata = {
 
 export default function Resume() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-8">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <h1 className="text-4xl sm:text-5xl font-bold text-[#E5E7EB] mb-12">
         Resume
       </h1>
 
       {/* Download Section */}
-      <section className="mb-12 p-8 border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-lg text-center">
+      <section className="mb-16 p-12 border-2 border-dashed border-[#1F2937] rounded-lg text-center bg-[#111827]/30">
         <svg
-          className="w-16 h-16 mx-auto mb-4 text-gray-400 dark:text-gray-600"
+          className="w-20 h-20 mx-auto mb-6 text-[#38BDF8]"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -27,16 +27,16 @@ export default function Resume() {
             d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
           />
         </svg>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+        <h2 className="text-2xl font-bold text-[#E5E7EB] mb-3">
           Download Resume
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">
+        <p className="text-[#9CA3AF] mb-8">
           Download my resume in PDF format
         </p>
         <a
           href="/resume.pdf"
           download="digambar_rajaram_resume.pdf"
-          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+          className="inline-flex items-center px-8 py-3.5 text-base font-medium rounded-lg text-[#0B0F14] bg-[#38BDF8] hover:bg-[#0EA5E9] transition-all duration-200 shadow-lg shadow-[#38BDF8]/20"
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -53,17 +53,17 @@ export default function Resume() {
           </svg>
           Download PDF
         </a>
-        <p className="text-sm text-gray-500 dark:text-gray-500 mt-4">
+        <p className="text-sm text-[#6B7280] mt-6">
           File: digambar_rajaram_resume.pdf
         </p>
       </section>
 
       {/* Resume Overview */}
-      <section className="mb-12">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-[#E5E7EB] mb-6">
           Summary
         </h2>
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-[#9CA3AF] text-lg leading-relaxed">
           DevOps and Cloud Engineer with extensive experience in designing, implementing, 
           and maintaining scalable cloud infrastructure. Proven track record of automating 
           deployment processes, reducing costs, and improving system reliability. Skilled 
@@ -72,8 +72,8 @@ export default function Resume() {
       </section>
 
       {/* Skills Overview */}
-      <section className="mb-12">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-[#E5E7EB] mb-8">
           Core Skills
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -89,10 +89,10 @@ export default function Resume() {
           ].map((skill, index) => (
             <div
               key={index}
-              className="flex items-center p-3 border border-gray-200 dark:border-gray-800 rounded-lg"
+              className="flex items-center p-4 bg-[#111827] border border-[#1F2937] rounded-lg"
             >
               <svg
-                className="w-5 h-5 text-green-500 dark:text-green-400 mr-3 flex-shrink-0"
+                className="w-5 h-5 text-[#38BDF8] mr-3 flex-shrink-0"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -102,7 +102,7 @@ export default function Resume() {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-gray-700 dark:text-gray-300">{skill}</span>
+              <span className="text-[#E5E7EB]">{skill}</span>
             </div>
           ))}
         </div>
@@ -110,31 +110,31 @@ export default function Resume() {
 
       {/* Quick Stats */}
       <section>
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+        <h2 className="text-3xl font-bold text-[#E5E7EB] mb-8">
           Experience Highlights
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div className="text-center p-6 border border-gray-200 dark:border-gray-800 rounded-lg">
-            <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+          <div className="text-center p-8 bg-[#111827] border border-[#1F2937] rounded-lg">
+            <div className="text-5xl font-bold text-[#38BDF8] mb-2">
               5+
             </div>
-            <div className="text-gray-600 dark:text-gray-400">
+            <div className="text-[#9CA3AF]">
               Years Experience
             </div>
           </div>
-          <div className="text-center p-6 border border-gray-200 dark:border-gray-800 rounded-lg">
-            <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+          <div className="text-center p-8 bg-[#111827] border border-[#1F2937] rounded-lg">
+            <div className="text-5xl font-bold text-[#38BDF8] mb-2">
               50+
             </div>
-            <div className="text-gray-600 dark:text-gray-400">
+            <div className="text-[#9CA3AF]">
               Projects Completed
             </div>
           </div>
-          <div className="text-center p-6 border border-gray-200 dark:border-gray-800 rounded-lg">
-            <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+          <div className="text-center p-8 bg-[#111827] border border-[#1F2937] rounded-lg">
+            <div className="text-5xl font-bold text-[#38BDF8] mb-2">
               3
             </div>
-            <div className="text-gray-600 dark:text-gray-400">
+            <div className="text-[#9CA3AF]">
               Cloud Certifications
             </div>
           </div>
@@ -142,10 +142,10 @@ export default function Resume() {
       </section>
 
       {/* Instructions */}
-      <div className="mt-12 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <p className="text-sm text-blue-800 dark:text-blue-200">
-          <strong>Note:</strong> Add your resume PDF file as{" "}
-          <code className="px-1 py-0.5 bg-blue-100 dark:bg-blue-900 rounded">
+      <div className="mt-16 p-6 bg-[#111827] border border-[#38BDF8]/30 rounded-lg">
+        <p className="text-sm text-[#9CA3AF]">
+          <strong className="text-[#38BDF8]">Note:</strong> Add your resume PDF file as{" "}
+          <code className="px-2 py-1 bg-[#1F2937] text-[#38BDF8] rounded font-mono text-xs">
             /public/resume.pdf
           </code>{" "}
           to enable the download link.

@@ -1,34 +1,75 @@
 @import "tailwindcss";
 
+/* Dark DevOps Theme - Professional Color System */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background Colors */
+  --bg-primary: #0B0F14;        /* Near-black matte background */
+  --bg-surface: #111827;        /* Elevated dark cards/surfaces */
+  --bg-hover: #1F2937;          /* Hover states */
+  
+  /* Border & Divider Colors */
+  --border-subtle: #1F2937;     /* Subtle borders */
+  --border-medium: #374151;     /* Medium emphasis borders */
+  
+  /* Text Colors */
+  --text-primary: #E5E7EB;      /* Primary text - soft off-white */
+  --text-secondary: #9CA3AF;    /* Secondary text - muted gray */
+  --text-tertiary: #6B7280;     /* Tertiary text - dimmed */
+  
+  /* Accent Colors */
+  --accent-primary: #38BDF8;    /* Primary CTA & highlights */
+  --accent-hover: #0EA5E9;      /* Hover accent */
+  
+  /* Semantic Colors */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-/* Performance optimizations */
+/* Base Styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* Custom Utilities */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-surface {
+  background-color: var(--bg-surface);
+}
+
+.border-subtle {
+  border-color: var(--border-subtle);
+}
+
+.accent-text {
+  color: var(--accent-primary);
+}
+
+.accent-bg {
+  background-color: var(--accent-primary);
+}
+
+.accent-hover:hover {
+  background-color: var(--accent-hover);
 }

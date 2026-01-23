@@ -4,12 +4,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gray-200 dark:border-gray-800 mt-auto">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <footer className="border-t border-[#1F2937] mt-auto bg-[#0B0F14]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            © {currentYear} Digambar Rajaram. All rights reserved.
+          <div className="text-sm text-[#9CA3AF]">
+            © {currentYear} Digambar Rajaram. Built with Next.js & Tailwind CSS
           </div>
 
           {/* Social Links */}
@@ -18,7 +18,7 @@ export default function Footer() {
               href="https://github.com/digambarrajaram"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
               aria-label="GitHub"
             >
               <svg
@@ -52,11 +52,6 @@ export default function Footer() {
               </svg>
             </Link>
           </div>
-        </div>
-
-        {/* Additional Info */}
-        <div className="mt-6 text-center text-xs text-gray-500 dark:text-gray-500">
-          Built with Next.js, TypeScript & Tailwind CSS • Deployed on Vercel
         </div>
       </div>
     </footer>

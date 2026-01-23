@@ -2,16 +2,16 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="border-b border-gray-200 dark:border-gray-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="border-b border-[#1F2937] bg-[#0B0F14]/80 backdrop-blur-sm sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center group">
             <div>
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white">
+              <h1 className="text-xl font-bold text-[#E5E7EB] group-hover:text-[#38BDF8] transition-colors">
                 Digambar Rajaram
               </h1>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-[#9CA3AF] font-mono">
                 DevOps & Cloud Engineer
               </p>
             </div>
@@ -21,31 +21,31 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-[#9CA3AF] hover:text-[#38BDF8] transition-colors text-sm font-medium"
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-[#9CA3AF] hover:text-[#38BDF8] transition-colors text-sm font-medium"
             >
               About
             </Link>
             <Link
               href="/projects"
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-[#9CA3AF] hover:text-[#38BDF8] transition-colors text-sm font-medium"
             >
               Projects
             </Link>
             <Link
               href="/resume"
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-[#9CA3AF] hover:text-[#38BDF8] transition-colors text-sm font-medium"
             >
               Resume
             </Link>
             <Link
               href="/contact"
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="px-4 py-2 bg-[#38BDF8] hover:bg-[#0EA5E9] text-[#0B0F14] rounded-lg text-sm font-medium transition-colors"
             >
               Contact
             </Link>
@@ -53,7 +53,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-gray-700 dark:text-gray-300"
+            className="md:hidden p-2 text-[#9CA3AF] hover:text-[#38BDF8]"
             aria-label="Menu"
           >
             <svg

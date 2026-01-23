@@ -7,21 +7,21 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <h1 className="text-4xl sm:text-5xl font-bold text-[#E5E7EB] mb-4">
         Get in Touch
       </h1>
-      <p className="text-xl text-gray-600 dark:text-gray-400 mb-12">
+      <p className="text-xl text-[#9CA3AF] mb-16">
         I&apos;m always open to discussing new opportunities, collaborations, or interesting projects.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
         {/* Email */}
-        <div className="p-6 border border-gray-200 dark:border-gray-800 rounded-lg hover:border-gray-300 dark:hover:border-gray-700 transition-colors">
+        <div className="p-8 bg-[#111827] border border-[#1F2937] rounded-lg hover:border-[#38BDF8]/50 transition-all duration-200">
           <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mr-4">
+            <div className="w-14 h-14 bg-[#1F2937] rounded-full flex items-center justify-center mr-4">
               <svg
-                className="w-6 h-6 text-gray-600 dark:text-gray-400"
+                className="w-7 h-7 text-[#38BDF8]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -35,28 +35,28 @@ export default function Contact() {
               </svg>
             </div>
             <div>
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+              <h2 className="text-lg font-semibold text-[#E5E7EB]">
                 Email
               </h2>
               <a
                 href="mailto:digambar@example.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors"
               >
                 digambar@example.com
               </a>
             </div>
           </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-[#9CA3AF]">
             Best for professional inquiries and project discussions
           </p>
         </div>
 
         {/* LinkedIn */}
-        <div className="p-6 border border-gray-200 dark:border-gray-800 rounded-lg hover:border-gray-300 dark:hover:border-gray-700 transition-colors">
+        <div className="p-8 bg-[#111827] border border-[#1F2937] rounded-lg hover:border-[#38BDF8]/50 transition-all duration-200">
           <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mr-4">
+            <div className="w-14 h-14 bg-[#1F2937] rounded-full flex items-center justify-center mr-4">
               <svg
-                className="w-6 h-6 text-gray-600 dark:text-gray-400"
+                className="w-7 h-7 text-[#38BDF8]"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -64,30 +64,30 @@ export default function Contact() {
               </svg>
             </div>
             <div>
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+              <h2 className="text-lg font-semibold text-[#E5E7EB]">
                 LinkedIn
               </h2>
               <a
                 href="https://linkedin.com/in/yourprofile"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors"
               >
                 linkedin.com/in/yourprofile
               </a>
             </div>
           </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-[#9CA3AF]">
             Connect with me professionally
           </p>
         </div>
 
         {/* GitHub */}
-        <div className="p-6 border border-gray-200 dark:border-gray-800 rounded-lg hover:border-gray-300 dark:hover:border-gray-700 transition-colors">
+        <div className="p-8 bg-[#111827] border border-[#1F2937] rounded-lg hover:border-[#38BDF8]/50 transition-all duration-200">
           <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mr-4">
+            <div className="w-14 h-14 bg-[#1F2937] rounded-full flex items-center justify-center mr-4">
               <svg
-                className="w-6 h-6 text-gray-600 dark:text-gray-400"
+                className="w-7 h-7 text-[#38BDF8]"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -99,30 +99,30 @@ export default function Contact() {
               </svg>
             </div>
             <div>
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+              <h2 className="text-lg font-semibold text-[#E5E7EB]">
                 GitHub
               </h2>
               <a
                 href="https://github.com/digambarrajaram"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors"
               >
                 github.com/digambarrajaram
               </a>
             </div>
           </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-[#9CA3AF]">
             Check out my open source projects
           </p>
         </div>
 
         {/* Location */}
-        <div className="p-6 border border-gray-200 dark:border-gray-800 rounded-lg hover:border-gray-300 dark:hover:border-gray-700 transition-colors">
+        <div className="p-8 bg-[#111827] border border-[#1F2937] rounded-lg hover:border-[#38BDF8]/50 transition-all duration-200">
           <div className="flex items-center mb-4">
-            <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mr-4">
+            <div className="w-14 h-14 bg-[#1F2937] rounded-full flex items-center justify-center mr-4">
               <svg
-                className="w-6 h-6 text-gray-600 dark:text-gray-400"
+                className="w-7 h-7 text-[#38BDF8]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -142,32 +142,32 @@ export default function Contact() {
               </svg>
             </div>
             <div>
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+              <h2 className="text-lg font-semibold text-[#E5E7EB]">
                 Location
               </h2>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-[#9CA3AF]">
                 Remote / Available Worldwide
               </p>
             </div>
           </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-[#9CA3AF]">
             Open to remote opportunities
           </p>
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-8 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+      <div className="bg-[#111827] border border-[#1F2937] rounded-lg p-12 text-center">
+        <h2 className="text-3xl font-bold text-[#E5E7EB] mb-4">
           Let&apos;s Work Together
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+        <p className="text-[#9CA3AF] mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
           Whether you have a project in mind, need DevOps expertise, or just want to connect, 
           I&apos;d love to hear from you. Send me an email and I&apos;ll get back to you as soon as possible.
         </p>
         <a
           href="mailto:digambar@example.com"
-          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+          className="inline-flex items-center px-8 py-3.5 text-base font-medium rounded-lg text-[#0B0F14] bg-[#38BDF8] hover:bg-[#0EA5E9] transition-all duration-200 shadow-lg shadow-[#38BDF8]/20"
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -187,9 +187,9 @@ export default function Contact() {
       </div>
 
       {/* Update Instructions */}
-      <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-        <p className="text-sm text-blue-800 dark:text-blue-200">
-          <strong>Note:</strong> Update the email address and LinkedIn profile URL with your actual contact information.
+      <div className="mt-12 p-6 bg-[#111827] border border-[#38BDF8]/30 rounded-lg">
+        <p className="text-sm text-[#9CA3AF]">
+          <strong className="text-[#38BDF8]">Note:</strong> Update the email address and LinkedIn profile URL with your actual contact information.
         </p>
       </div>
     </div>
