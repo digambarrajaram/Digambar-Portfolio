@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { personalInfo } from '@/data/portfolio';
 
 export default function Header() {
   return (
@@ -9,10 +10,10 @@ export default function Header() {
           <Link href="/" className="flex items-center group">
             <div>
               <h1 className="text-xl font-bold text-[#E5E7EB] group-hover:text-[#38BDF8] transition-colors">
-                Digambar Rajaram
+                {personalInfo.name}
               </h1>
               <p className="text-sm text-[#9CA3AF] font-mono">
-                DevOps & Cloud Engineer
+                {personalInfo.role}
               </p>
             </div>
           </Link>

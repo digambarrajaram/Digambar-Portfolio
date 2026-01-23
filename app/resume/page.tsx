@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { personalInfo, about, coreSkills, stats } from "@/data/portfolio";
 
 export const metadata: Metadata = {
   title: "Resume | Digambar Rajaram",
@@ -34,7 +35,7 @@ export default function Resume() {
           Download my resume in PDF format
         </p>
         <a
-          href="/resume.pdf"
+          href={personalInfo.resumeFile}
           download="digambar_rajaram_resume.pdf"
           className="inline-flex items-center px-8 py-3.5 text-base font-medium rounded-lg text-[#0B0F14] bg-[#38BDF8] hover:bg-[#0EA5E9] transition-all duration-200 shadow-lg shadow-[#38BDF8]/20"
         >
@@ -64,10 +65,7 @@ export default function Resume() {
           Summary
         </h2>
         <p className="text-[#9CA3AF] text-lg leading-relaxed">
-          DevOps and Cloud Engineer with extensive experience in designing, implementing, 
-          and maintaining scalable cloud infrastructure. Proven track record of automating 
-          deployment processes, reducing costs, and improving system reliability. Skilled 
-          in AWS, Terraform, Docker, Kubernetes, and CI/CD pipelines.
+          {about.summary}
         </p>
       </section>
 
@@ -77,16 +75,7 @@ export default function Resume() {
           Core Skills
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {[
-            "AWS (EC2, S3, RDS, Lambda, EKS)",
-            "Infrastructure as Code (Terraform, CloudFormation)",
-            "Containerization (Docker, Kubernetes)",
-            "CI/CD (GitHub Actions, Jenkins, GitLab CI)",
-            "Scripting (Bash, Python, PowerShell)",
-            "Monitoring (Prometheus, Grafana, CloudWatch)",
-            "Version Control (Git, GitHub)",
-            "Linux System Administration",
-          ].map((skill, index) => (
+          {coreSkills.map((skill, index) => (
             <div
               key={index}
               className="flex items-center p-4 bg-[#111827] border border-[#1F2937] rounded-lg"
@@ -116,7 +105,7 @@ export default function Resume() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="text-center p-8 bg-[#111827] border border-[#1F2937] rounded-lg">
             <div className="text-5xl font-bold text-[#38BDF8] mb-2">
-              5+
+              {stats.yearsExperience}
             </div>
             <div className="text-[#9CA3AF]">
               Years Experience
@@ -124,7 +113,7 @@ export default function Resume() {
           </div>
           <div className="text-center p-8 bg-[#111827] border border-[#1F2937] rounded-lg">
             <div className="text-5xl font-bold text-[#38BDF8] mb-2">
-              50+
+              {stats.projectsCompleted}
             </div>
             <div className="text-[#9CA3AF]">
               Projects Completed
@@ -132,7 +121,7 @@ export default function Resume() {
           </div>
           <div className="text-center p-8 bg-[#111827] border border-[#1F2937] rounded-lg">
             <div className="text-5xl font-bold text-[#38BDF8] mb-2">
-              3
+              {stats.certifications}
             </div>
             <div className="text-[#9CA3AF]">
               Cloud Certifications

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { personalInfo, about, technologies } from '@/data/portfolio';
 
 export default function Home() {
   return (
@@ -10,15 +11,14 @@ export default function Home() {
           <div className="order-2 lg:order-1">
             <div className="inline-block mb-4">
               <span className="text-sm font-mono text-[#38BDF8] tracking-wide">
-                DEVOPS & CLOUD ENGINEER
+                {personalInfo.role.toUpperCase()}
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#E5E7EB] mb-6 leading-tight">
-              Digambar Rajaram
+              {personalInfo.name}
             </h1>
             <p className="text-lg sm:text-xl text-[#9CA3AF] mb-8 leading-relaxed max-w-xl">
-              Building scalable, reliable infrastructure with modern DevOps practices. 
-              Specializing in cloud automation, containerization, and enterprise-grade CI/CD pipelines.
+              {personalInfo.tagline} {personalInfo.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -42,8 +42,8 @@ export default function Home() {
               <div className="absolute inset-0 bg-[#38BDF8]/10 rounded-2xl blur-3xl"></div>
               <div className="relative rounded-2xl overflow-hidden border border-[#1F2937] shadow-2xl">
                 <Image
-                  src="/Digambar_Photo.jpeg"
-                  alt="Digambar Rajaram - DevOps Engineer"
+                  src={personalInfo.image}
+                  alt={`${personalInfo.name} - ${personalInfo.role}`}
                   width={480}
                   height={480}
                   priority
@@ -62,15 +62,9 @@ export default function Home() {
             About Me
           </h2>
           <div className="space-y-4 text-[#9CA3AF] text-lg leading-relaxed">
-            <p>
-              I&apos;m a passionate DevOps and Cloud Engineer with expertise in building and maintaining 
-              scalable, reliable infrastructure. I specialize in AWS, Infrastructure as Code (Terraform), 
-              containerization (Docker, Kubernetes), and CI/CD automation (GitHub Actions, Jenkins).
-            </p>
-            <p>
-              My focus is on implementing best practices for cloud architecture, automating deployments, 
-              and ensuring high availability and performance for production systems.
-            </p>
+            {about.intro.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </section>
@@ -81,14 +75,7 @@ export default function Home() {
           Core Technologies
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { category: "Cloud Platforms", skills: "AWS, Azure, Google Cloud" },
-            { category: "Infrastructure as Code", skills: "Terraform, CloudFormation" },
-            { category: "Containerization", skills: "Docker, Kubernetes, ECS" },
-            { category: "CI/CD", skills: "GitHub Actions, Jenkins, GitLab CI" },
-            { category: "Scripting", skills: "Bash, Python, PowerShell" },
-            { category: "Monitoring", skills: "Prometheus, Grafana, CloudWatch" },
-          ].map((item, index) => (
+          {technologies.map((item, index) => (
             <div
               key={index}
               className="p-6 bg-[#111827] border border-[#1F2937] rounded-lg hover:border-[#38BDF8]/50 transition-all duration-200"

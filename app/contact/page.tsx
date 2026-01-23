@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { personalInfo, socialLinks } from "@/data/portfolio";
 
 export const metadata: Metadata = {
   title: "Contact | Digambar Rajaram",
@@ -39,10 +40,10 @@ export default function Contact() {
                 Email
               </h2>
               <a
-                href="mailto:digambar@example.com"
+                href={`mailto:${personalInfo.email}`}
                 className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors"
               >
-                digambar@example.com
+                {personalInfo.email}
               </a>
             </div>
           </div>
@@ -68,12 +69,12 @@ export default function Contact() {
                 LinkedIn
               </h2>
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors"
+                className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors text-sm"
               >
-                linkedin.com/in/yourprofile
+                View Profile
               </a>
             </div>
           </div>
@@ -103,12 +104,12 @@ export default function Contact() {
                 GitHub
               </h2>
               <a
-                href="https://github.com/digambarrajaram"
+                href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors"
+                className="text-[#38BDF8] hover:text-[#0EA5E9] transition-colors text-sm"
               >
-                github.com/digambarrajaram
+                View Repositories
               </a>
             </div>
           </div>
@@ -146,7 +147,7 @@ export default function Contact() {
                 Location
               </h2>
               <p className="text-[#9CA3AF]">
-                Remote / Available Worldwide
+                {personalInfo.location}
               </p>
             </div>
           </div>
@@ -166,7 +167,7 @@ export default function Contact() {
           I&apos;d love to hear from you. Send me an email and I&apos;ll get back to you as soon as possible.
         </p>
         <a
-          href="mailto:digambar@example.com"
+          href={`mailto:${personalInfo.email}`}
           className="inline-flex items-center px-8 py-3.5 text-base font-medium rounded-lg text-[#0B0F14] bg-[#38BDF8] hover:bg-[#0EA5E9] transition-all duration-200 shadow-lg shadow-[#38BDF8]/20"
         >
           <svg
@@ -189,7 +190,10 @@ export default function Contact() {
       {/* Update Instructions */}
       <div className="mt-12 p-6 bg-[#111827] border border-[#38BDF8]/30 rounded-lg">
         <p className="text-sm text-[#9CA3AF]">
-          <strong className="text-[#38BDF8]">Note:</strong> Update the email address and LinkedIn profile URL with your actual contact information.
+          <strong className="text-[#38BDF8]">Tip:</strong> Update your contact information in{" "}
+          <code className="px-2 py-1 bg-[#1F2937] text-[#38BDF8] rounded font-mono text-xs">
+            data/portfolio.ts
+          </code>
         </p>
       </div>
     </div>

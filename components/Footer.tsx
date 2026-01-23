@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { personalInfo, socialLinks } from '@/data/portfolio';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,13 +10,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
           <div className="text-sm text-[#9CA3AF]">
-            © {currentYear} Digambar Rajaram. Built with Next.js & Tailwind CSS
+            © {currentYear} {personalInfo.name}. Built with Next.js & Tailwind CSS
           </div>
 
           {/* Social Links */}
           <div className="flex items-center gap-6">
             <Link
-              href="https://github.com/digambarrajaram"
+              href={socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
@@ -36,10 +37,10 @@ export default function Footer() {
             </Link>
 
             <Link
-              href="https://linkedin.com/in/yourprofile"
+              href={socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-[#9CA3AF] hover:text-[#38BDF8] transition-colors"
               aria-label="LinkedIn"
             >
               <svg

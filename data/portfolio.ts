@@ -152,6 +152,7 @@ export const projects = [
   },
 ];
 
+
 export const stats = {
   yearsExperience: "5+",
   projectsCompleted: "50+",
