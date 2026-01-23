@@ -117,7 +117,7 @@ digambar-portfolio/
 ### **Setup**
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/digambar-portfolio.git
+git clone https://github.com/digambarrajaram/digambar-portfolio.git
 cd digambar-portfolio
 
 # Install dependencies
