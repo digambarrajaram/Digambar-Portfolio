@@ -202,23 +202,6 @@ export default function Contact() {
             Send an Email
           </a>
         </div>
-
-        {/* Info Note */}
-        <div className="glass-card p-6 rounded-xl border border-[#30363D]">
-          <div className="flex items-start gap-3">
-            <div className="w-6 h-6 rounded-full bg-[#388BFD]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg className="w-4 h-4 text-[#388BFD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <p className="text-sm text-[#9198A1]">
-              <span className="text-[#388BFD] font-semibold">Configuration:</span> Update contact info in{" "}
-              <code className="px-2 py-1 glass-card text-[#388BFD] border border-[#388BFD]/20 rounded">{
-                'data/portfolio.ts'
-              }</code>
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );

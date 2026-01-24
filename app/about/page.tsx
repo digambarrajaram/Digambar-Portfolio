@@ -73,6 +73,16 @@ export default function About() {
                         <span>{item}</span>
                       </div>
                     ))}
+                    {job.achievements && job.achievements.length > 0 && (
+                      <div className="mt-4">
+                        <div className="font-semibold text-[#E6EDF3] mb-2">Achievements:</div>
+                        <ul className="list-disc list-inside space-y-1">
+                          {job.achievements.map((ach, aidx) => (
+                            <li key={aidx} className="text-[#9CA3AF]">{ach}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -99,7 +109,10 @@ export default function About() {
                       </svg>
                     </div>
                     <h3 className="text-xl font-bold text-[#E6EDF3]">
-                      {category}
+                      {category === 'cloudInfrastructure' ? 'Cloud Infrastructure'
+                        : category === 'devOpsAutomation' ? 'DevOps Automation'
+                        : category === 'observabilitySecurity' ? 'Observability Security'
+                        : category}
                     </h3>
                   </div>
                   <ul className="space-y-3">

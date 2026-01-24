@@ -110,7 +110,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-[#21262D]">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-sm text-[#9198A1]">
-              © {currentYear} {personalInfo.name} • Built with Next.js & Tailwind CSS
+              © {currentYear} {personalInfo.name} • Built using modern engineering practices
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[#388BFD] rounded-full animate-pulse"></div>

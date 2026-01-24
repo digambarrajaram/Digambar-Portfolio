@@ -38,18 +38,26 @@ export default function Projects() {
               </div>
 
               {/* Project Title */}
-              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-6">
+              <h2 className="text-2xl font-bold text-[#E6EDF3] mb-2">
                 {project.title}
               </h2>
-
+              {/* Project Category */}
+              {project.category && (
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 text-xs font-semibold bg-[#388BFD]/10 text-[#388BFD] rounded-full border border-[#388BFD]/30">
+                    {project.category}
+                  </span>
+                </div>
+              )}
               <div className="space-y-6">
-                {/* Description, Highlights, Architecture, Tech Stack */}
+                {/* Description */}
                 {project.description && (
                   <div>
                     <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Description</span>
                     <p className="text-[#9198A1] leading-relaxed">{project.description}</p>
                   </div>
                 )}
+                {/* Tech Stack */}
                 <div>
                   <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Tech Stack</span>
                   <div className="flex flex-wrap gap-2 mt-2">
@@ -63,29 +71,9 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
-                          {project.description && (
-                            <div>
-                              <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Description</span>
-                              <p className="text-[#9198A1] leading-relaxed">{project.description}</p>
-                            </div>
-                          )}
-                          <div>
-                            <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Tech Stack</span>
-                            <div className="flex flex-wrap gap-2 mt-2">
-                              {project.technologies.map((tech, techIndex) => (
-                                <span
-                                  key={techIndex}
-                                  className="inline-block px-3 py-1 text-xs font-medium bg-[#21262D] text-[#388BFD] rounded-full border border-[#30363D]"
-                                >
-                                  {tech}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-
-                        </div>
-                      </div>
-                    ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

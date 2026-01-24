@@ -45,7 +45,7 @@ export default function Resume() {
               Professional Resume
             </h2>
             <p className="text-[#9198A1] mb-8">
-              Download my complete resume in TXT format
+              Download my complete resume in PDF format
             </p>
             
             <a
@@ -170,27 +170,7 @@ export default function Resume() {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Info Note */}
-        <div className="glass-card p-6 rounded-xl border border-[#30363D]">
-          <div className="flex items-start gap-3">
-            <div className="w-6 h-6 rounded-full bg-[#388BFD]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg className="w-4 h-4 text-[#388BFD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-sm text-[#9198A1]">
-                <span className="text-[#388BFD] font-semibold">Note:</span> Add your resume PDF file as{" "}
-                <code className="px-2 py-1 glass-card text-[#388BFD] border border-[#388BFD]/20 rounded">
-                  /public/resume.pdf
-                </code>{" "}
-                to enable downloads.
-              </p>
-            </div>
-          </div>
-        </div>
+        </section>        
       </div>
     </div>
   );

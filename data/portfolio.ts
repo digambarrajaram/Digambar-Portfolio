@@ -1,6 +1,6 @@
 // Technologies (flat array for Home page)
 export const technologies = [
-  "AWS", "Terraform", "Next.js", "FastAPI", "GitHub Actions", "Python", "Docker", "TypeScript", "Clerk", "OpenAI", "Kubernetes", "Ansible", "Prometheus", "Grafana", "Semgrep", "S3 Vector Storage", "Amazon Bedrock", "SageMaker", "Langfuse", "Vercel", "Gradio"
+  "AWS", "Terraform", "Kubernetes", "GitHub Actions", "Docker", "Ansible", "Python", "Prometheus", "Grafana","Jenkins", "Shell scripting", "VMware vSphere","OpenAI", "Semgrep", "S3 Vector Storage", "Amazon Bedrock", "SageMaker", "Langfuse", "Vercel","Next.js", "FastAPI", "Gradio"
 ];
 /**
  * PORTFOLIO — SINGLE SOURCE OF TRUTH
@@ -32,15 +32,15 @@ export const about = {
 // Refined Skill Sections
 export const skills = {
   cloudInfrastructure: [
-    "AWS (EC2, S3, IAM, Lambda, API Gateway, CloudFront, App Runner)",
+    "AWS (EC2, S3, IAM, Lambda, API Gateway, CloudFront, App Runner,Route 53, RDS, ElastiCache, ALB, Auto Scaling Groups, CloudFormation, VPC)",
     "Terraform (Infrastructure as Code)",
     "VMware vSphere & Datacenter Operations",
     "VPC Networking & Security Groups"
   ],
   devOpsAutomation: [
-    "GitHub Actions (OIDC-based CI/CD)",
+    "GitHub Actions",
     "Jenkins",
-    "Docker (Multi-stage builds)",
+    "Docker & Containerization",
     "Kubernetes (EKS)",
     "Ansible",
     "Python & Shell Scripting"
@@ -63,10 +63,16 @@ export const experience = [
     responsibilities: [
       "Owned day-to-day infrastructure operations for a mission-critical government financial platform",
       "Managed VMware vSphere environments supporting production and non-production workloads",
-      "Administered Windows Server lifecycle and Linux-based systems",
-      "Performed capacity planning for compute and storage layers",
-      "Executed OS hardening and patch management cycles",
-      "Coordinated VAPT activities and managed infrastructure licensing",
+      "Administered Windows Server lifecycle: provisioning, patching, monitoring, and decommissioning",
+      "Handled Linux-based systems for application and support workloads",
+      "Led and coordinated infrastructure operations activities across a multi-member team",
+      "Performed capacity planning for compute, storage, and virtualization layers",
+      "Executed OS hardening activities aligned with internal security baselines",
+      "Planned and executed patch management cycles with minimal service impact",
+      "Coordinated VAPT activities with security teams and tracked remediation",
+      "Managed infrastructure licensing and compliance documentation",
+      "Participated in incident response, root-cause analysis, and change management",
+      "Worked closely with application, security, and audit teams to maintain SLA and compliance",
     ],
     achievements: [
       "Promoted to Assistant Manager in Sep 2023 based on operational ownership",
@@ -77,10 +83,10 @@ export const experience = [
 
 export const projects = [
   {
-    title: "AWS Incident Simulation & Automated Response",
+    title: "AI-Driven DevOps Incident Management on AWS",
     category: "DevOps / SRE",
-    description: "Simulated real-world incidents on AWS using Terraform, Lambda, and CloudWatch to validate automated remediation and alerting workflows.",
-    technologies: ["AWS", "Terraform", "GitHub Actions", "Lambda", "CloudWatch"],
+    description: "Production-style incident simulation platform to evaluate AWS DevOps Agent using real infrastructure, CI/CD events, and deterministic failures.",
+    technologies: ["AWS DevOps Agents","AWS", "Terraform", "GitHub Actions", "AWS Lambda", "CloudWatch"],
   },
   {
     title: "Production-Grade AWS Multi-AZ Web Stack",
@@ -89,15 +95,15 @@ export const projects = [
     technologies: ["AWS", "Terraform", "ALB", "EC2", "RDS", "ElastiCache", "CloudWatch"],
   },
   {
-    title: "EKS Infrastructure Automation",
+    title: "Scalable & Secure AWS EKS Infrastructure Automation",
     category: "Kubernetes / IaC",
-    description: "Provisioned secure, scalable AWS EKS clusters using Terraform with private nodes and IAM roles for service accounts.",
+    description: "Terraform-driven provisioning of a production-ready AWS EKS cluster with secure networking, IAM, and managed node groups.",
     technologies: ["AWS", "EKS", "Terraform", "Kubernetes", "IAM"],
   },
   {
-    title: "CI/CD Security Analyzer",
+    title: "Cybersecurity Analyzer",
     category: "DevSecOps",
-    description: "Integrated Semgrep-based static code analysis into CI/CD pipelines for automated security scanning and compliance.",
+    description: "Cloud-native static code analysis platform using Semgrep and MCP orchestration, designed for multi-cloud deployments.",
     technologies: ["Python", "Semgrep", "Terraform", "AWS"],
   },
   {
@@ -109,13 +115,13 @@ export const projects = [
   {
     title: "IdeaGen Pro – AI SaaS",
     category: "AI SaaS",
-    description: "Built a subscription-based AI SaaS with real-time streaming and secure authentication. (Side project, not production)",
+    description: "Built a subscription-based AI SaaS with real-time streaming and secure authentication.",
     technologies: ["Next.js", "FastAPI", "TypeScript", "OpenAI", "Clerk"],
   },
   {
     title: "MediNotes Pro – AI Healthcare SaaS",
     category: "Healthcare / AI",
-    description: "Containerized AI assistant for transforming consultation notes into summaries. (Side project, not production)",
+    description: "Containerized AI assistant for transforming consultation notes into summaries.",
     technologies: ["Next.js", "FastAPI", "Docker", "OpenAI", "Clerk"],
   }
 ];
