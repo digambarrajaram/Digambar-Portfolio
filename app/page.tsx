@@ -26,11 +26,11 @@ export default function Home() {
               </h1>
               
               <h2 className="text-2xl sm:text-3xl font-semibold text-[#E5E7EB] mb-6">
-                {personalInfo.role}
+                {personalInfo.title}
               </h2>
 
               <p className="text-lg text-[#9CA3AF] leading-relaxed max-w-2xl mb-10">
-                {personalInfo.tagline} {personalInfo.description}
+                {about.headline}
               </p>
 
               {/* CTA Buttons */}
@@ -58,9 +58,10 @@ export default function Home() {
               <div className="relative w-full max-w-[300px]">
                 <div className="bg-[#161B22] p-2 border border-[#21262D] rounded-2xl">
                   <div className="relative overflow-hidden rounded-xl">
+                    {/* Add a profile image in public/ and set the src here if available */}
                     <Image
-                      src={personalInfo.image}
-                      alt={`${personalInfo.name} - ${personalInfo.role}`}
+                      src="/profile.jpg"
+                      alt={`${personalInfo.name} - ${personalInfo.title}`}
                       width={300}
                       height={400}
                       priority

@@ -16,7 +16,7 @@ export default function Header() {
                 {personalInfo.name.split(' ')[0]}
               </h1>
               <p className="text-xs text-[#9198A1]">
-                {personalInfo.role}
+                {personalInfo.title}
               </p>
             </div>
           </Link>

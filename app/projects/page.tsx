@@ -43,95 +43,89 @@ export default function Projects() {
               </h2>
 
               <div className="space-y-6">
-                {/* Problem */}
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-2 h-2 bg-[#388BFD] rounded-full"></div>
-                    <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">
-                      Challenge
-                    </span>
+                {/* Description, Highlights, Architecture, Tech Stack */}
+                {project.description && (
+                  <div>
+                    <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Description</span>
+                    <p className="text-[#9198A1] leading-relaxed">{project.description}</p>
                   </div>
-                  <p className="text-[#9198A1] leading-relaxed">
-                    {project.problem}
-                  </p>
-                </div>
-
-                {/* Solution */}
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-2 h-2 bg-[#388BFD] rounded-full"></div>
-                    <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">
-                      Solution
-                    </span>
+                )}
+                {project.highlights && (
+                  <div>
+                    <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Highlights</span>
+                    <ul className="list-disc ml-6 text-[#9198A1]">
+                      {project.highlights.map((h, i) => (
+                        <li key={i}>{h}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <p className="text-[#9198A1] leading-relaxed">
-                    {project.solution}
-                  </p>
-                </div>
-
-                {/* Tech Stack */}
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <svg className="w-4 h-4 text-[#388BFD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">
-                      Tech Stack
-                    </span>
+                )}
+                {project.architecture && (
+                  <div>
+                    <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Architecture</span>
+                    <ul className="list-disc ml-6 text-[#9198A1]">
+                      {project.architecture.map((a, i) => (
+                        <li key={i}>{a}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {project.techStack.map((tech, techIndex) => (
+                )}
+                <div>
+                  <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Tech Stack</span>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1.5 glass-card rounded-lg text-[#E6EDF3] text-sm border border-[#30363D] hover:border-[#388BFD] hover:text-[#388BFD] transition-all duration-200"
+                        className="inline-block px-3 py-1 text-xs font-medium bg-[#21262D] text-[#388BFD] rounded-full border border-[#30363D]"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
+                          {project.description && (
+                            <div>
+                              <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Description</span>
+                              <p className="text-[#9198A1] leading-relaxed">{project.description}</p>
+                            </div>
+                          )}
+                          {project.highlights && (
+                            <div>
+                              <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Highlights</span>
+                              <ul className="list-disc ml-6 text-[#9198A1]">
+                                {project.highlights.map((h, i) => (
+                                  <li key={i}>{h}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          {project.architecture && (
+                            <div>
+                              <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Architecture</span>
+                              <ul className="list-disc ml-6 text-[#9198A1]">
+                                {project.architecture.map((a, i) => (
+                                  <li key={i}>{a}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          <div>
+                            <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Tech Stack</span>
+                            <div className="flex flex-wrap gap-2 mt-2">
+                              {project.technologies.map((tech, techIndex) => (
+                                <span
+                                  key={techIndex}
+                                  className="inline-block px-3 py-1 text-xs font-medium bg-[#21262D] text-[#388BFD] rounded-full border border-[#30363D]"
+                                >
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
 
-                {/* Architecture */}
-                <div className="pt-4 border-t border-[#21262D]">
-                  <div className="flex items-center gap-2 mb-3">
-                    <svg className="w-4 h-4 text-[#388BFD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                    <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">
-                      Architecture
-                    </span>
-                  </div>
-                  <p className="text-[#9198A1] text-sm leading-relaxed">
-                    {project.architecture}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="mt-16 frosted-glass p-8 rounded-2xl border border-[#30363D]">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-            <div className="group">
-              <div className="text-5xl font-bold text-[#E6EDF3] mb-2">
-                {projects.length}
-              </div>
-              <div className="text-sm text-[#9198A1] font-semibold uppercase tracking-wider">Projects Deployed</div>
-            </div>
-            <div className="group">
-              <div className="text-5xl font-bold text-[#E6EDF3] mb-2">
-                100%
-              </div>
-              <div className="text-sm text-[#9198A1] font-semibold uppercase tracking-wider">Uptime Achieved</div>
-            </div>
-            <div className="group">
-              <div className="text-5xl font-bold text-[#E6EDF3] mb-2">
-                ∞
-              </div>
-              <div className="text-sm text-[#9198A1] font-semibold uppercase tracking-wider">Continuous Improvement</div>
-            </div>
-          </div>
+                        </div>
+                      </div>
+                    ))}
         </div>
       </div>
     </div>

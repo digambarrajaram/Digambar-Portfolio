@@ -1,155 +1,284 @@
 /**
- * PORTFOLIO CONTENT - Single Source of Truth
- * 
- * Edit this file to update your entire portfolio website.
- * After making changes:
- * 1. git add data/portfolio.ts
- * 2. git commit -m "Update portfolio content"
- * 3. git push
- * 4. Vercel auto-deploys with your changes
+ * PORTFOLIO — SINGLE SOURCE OF TRUTH
+ * Author: Digambar Rajaram
+ * Focus: Infrastructure, DevOps, Cloud & Platform Engineering
+ * Philosophy: Production-first, security-aware, automation-driven
  */
 
+
+// Personal Info
 export const personalInfo = {
   name: "Digambar Rajaram",
-  role: "Infrastructure & DevOps",
-  tagline: "Building scalable, reliable infrastructure with modern DevOps practices.",
-  description: "Specializing in cloud automation, containerization, and enterprise-grade CI/CD pipelines.",
-  email: "digambarrajaram2@gmail.com", // UPDATE THIS
-  location: "Remote / Available Worldwide",
-  image: "/Digambar_Photo.png",
-  resumeFile: "/resume.pdf",
+  title: "Infrastructure & DevOps Engineer",
+  location: "India",
+  phone: "+91-7353570952",
+  email: "digambarrajaram2@gmail.com",
 };
 
 export const socialLinks = {
   github: "https://github.com/digambarrajaram",
-  linkedin: "https://www.linkedin.com/in/digambar-rajaram-8371b51a5/", // UPDATE THIS
+  linkedin: "https://www.linkedin.com/in/digambarrajaram",
 };
 
+// About Section
 export const about = {
+  headline: "Designing Secure, Reliable, and Production-Grade Cloud Platforms",
   intro: [
-    "I'm a DevOps and Cloud Engineer with a passion for building scalable, reliable infrastructure that powers modern applications. My journey in technology has been driven by a commitment to automation, efficiency, and continuous improvement. With extensive experience in cloud platforms, infrastructure as code, and CI/CD pipelines, I help organizations transform their development and deployment processes. I believe in implementing best practices that enable teams to deliver value faster while maintaining high standards of quality and security."
+    "Infrastructure & DevOps Engineer with 2.4+ years of enterprise experience supporting large-scale, regulated government platforms.",
+    "Strong background in VMware vSphere, Linux, Windows Server, and datacenter operations, combined with hands-on cloud-native DevOps practices on AWS.",
+    "I bring a production-first mindset — focusing on reliability, security, observability, and automation. My work spans traditional infrastructure operations through to modern IaC-driven cloud architectures, CI/CD automation, and incident-driven platform engineering."
   ],
-  summary: "DevOps and Cloud Engineer with extensive experience in designing, implementing, and maintaining scalable cloud infrastructure. Proven track record of automating deployment processes, reducing costs, and improving system reliability. Skilled in AWS, Terraform, Docker, Kubernetes, and CI/CD pipelines.",
+  branding: [
+    "Production-first engineering mindset",
+    "Automation over manual operations",
+    "Security, compliance, and auditability by design",
+    "Strong infrastructure fundamentals with modern DevOps execution",
+    "Continuous learning and ownership-driven growth",
+  ],
 };
 
+// Skills Section
+export const skills = {
+  cloudDevOps: [
+    "AWS (EC2, S3, IAM, Lambda, API Gateway, CloudFront, App Runner)",
+    "Terraform (Infrastructure as Code)",
+    "Git & GitHub Actions (OIDC-based CI/CD)",
+    "Jenkins",
+  ],
+  containersAutomation: [
+    "Docker (multi-stage builds)",
+    "Kubernetes (working knowledge)",
+    "Ansible",
+    "Python",
+    "Shell scripting",
+  ],
+  monitoringObservability: [
+    "Amazon CloudWatch",
+    "Prometheus",
+    "Grafana",
+  ],
+  infrastructureOS: [
+    "VMware vSphere",
+    "Windows Server Administration",
+    "Linux (Ubuntu)",
+    "Datacenter Operations",
+  ],
+  securityOperations: [
+    "OS hardening (CIS-aligned)",
+    "Patch management",
+    "VAPT coordination & remediation",
+    "Capacity planning",
+    "License management & compliance",
+  ],
+  applicationPlatforms: [
+    "FastAPI",
+    "REST APIs",
+    "Next.js",
+  ],
+  exploratoryTools: [
+    "Codeium",
+    "Brainboard",
+    "K8sGPT",
+    "Vercel",
+    "Gradio",
+    "Clerk",
+    "Amazon Bedrock",
+    "SageMaker",
+    "Langfuse",
+    "Semgrep",
+    "S3 Vector Storage",
+  ],
+};
+
+// Experience Section
 export const experience = [
   {
-    title: "Assistant Manager – Infrastructure & DevOps ",
-    company: "Protean eGov Technologies Ltd", // UPDATE THIS
-    period: "Mar 2023 – Jun 2025",
+    company: "Protean eGov Technologies Ltd (formerly NSDL eGov Infrastructure Ltd)",
+    location: "Mumbai, Maharashtra, India",
+    role: "Assistant Manager – Infrastructure & DevOps",
+    duration: "Mar 2023 – Jun 2025",
+    domain: "National Pension System (NPS) – Government Financial Platform",
     responsibilities: [
-      "Designed and implemented multi-region AWS infrastructure using Terraform",
-      "Built automated CI/CD pipelines reducing deployment time by 60%",
-      "Managed Kubernetes clusters for containerized applications",
-      "Implemented monitoring and alerting solutions using Prometheus and Grafana",
+      "Owned day-to-day infrastructure operations for a mission-critical government financial platform",
+      "Managed VMware vSphere environments supporting production and non-production workloads",
+      "Administered Windows Server lifecycle: provisioning, patching, monitoring, and decommissioning",
+      "Handled Linux-based systems for application and support workloads",
+      "Led and coordinated infrastructure operations activities across a multi-member team",
+      "Performed capacity planning for compute, storage, and virtualization layers",
+      "Executed OS hardening activities aligned with internal security baselines",
+      "Planned and executed patch management cycles with minimal service impact",
+      "Coordinated VAPT activities with security teams and tracked remediation",
+      "Managed infrastructure licensing and compliance documentation",
+      "Participated in incident response, root-cause analysis, and change management",
+      "Worked closely with application, security, and audit teams to maintain SLA and compliance",
+    ],
+    internalProjects: [
+      {
+        title: "Infrastructure Inventory Management System",
+        description: "Designed and developed an internal inventory management tool to track hardware, software, licenses, and ownership across environments.",
+        impact: [
+          "Improved asset visibility and ownership tracking",
+          "Reduced manual effort during audits and compliance reviews",
+          "Enhanced readiness for internal and external audits",
+        ],
+      },
+    ],
+    achievements: [
+      "Promoted to Assistant Manager in March 2024 based on performance and operational ownership",
+      "Recognized for reliability, incident ownership, and cross-team coordination",
     ],
   },
 ];
 
-export const skills = {
-  "Cloud Platforms": ["Amazon Web Services (AWS)", "Microsoft Azure", "Google Cloud Platform"],
-  "Infrastructure as Code": ["Terraform", "AWS CloudFormation", "Ansible"],
-  "Containerization & Orchestration": ["Docker", "Kubernetes", "Amazon ECS/EKS"],
-  "CI/CD Tools": ["GitHub Actions", "Jenkins", "GitLab CI"],
-  "Scripting": ["Bash", "Python", "PowerShell"],
-  "Monitoring": ["Prometheus", "Grafana", "CloudWatch"],
-  "Version Control": ["Git", "GitHub"],
-  "Linux System Administration": ["Ubuntu", "CentOS", "RHEL"],
-};
-
-export const coreSkills = [
-  "AWS (EC2, S3, RDS, Lambda, EKS)",
-  "Infrastructure as Code (Terraform, CloudFormation)",
-  "Containerization (Docker, Kubernetes)",
-  "CI/CD (GitHub Actions, Jenkins, GitLab CI)",
-  "Scripting (Bash, Python, PowerShell)",
-  "Monitoring (Prometheus, Grafana, CloudWatch)",
-  "Version Control (Git, GitHub)",
-  "Linux System Administration",
-];
-
-export const technologies = [
-  { category: "Cloud Platforms", skills: "AWS, Azure, Google Cloud" },
-  { category: "Infrastructure as Code", skills: "Terraform, CloudFormation" },
-  { category: "Containerization", skills: "Docker, Kubernetes, ECS" },
-  { category: "CI/CD", skills: "GitHub Actions, Jenkins, GitLab CI" },
-  { category: "Scripting", skills: "Bash, Python, PowerShell" },
-  { category: "Monitoring", skills: "Prometheus, Grafana, CloudWatch" },
-];
-
-export const certifications = [
-  {
-    name: "AWS Certified Solutions Architect - Associate",
-    issuer: "Amazon Web Services",
-    year: "2023", // UPDATE THIS
-  },
-  {
-    name: "Certified Kubernetes Administrator (CKA)",
-    issuer: "Cloud Native Computing Foundation",
-    year: "2023", // UPDATE THIS
-  },
-  {
-    name: "HashiCorp Certified: Terraform Associate",
-    issuer: "HashiCorp",
-    year: "2022", // UPDATE THIS
-  },
-];
-
+// Projects Section (deduplicated, valid structure)
 export const projects = [
   {
-    title: "AWS Multi-AZ Infrastructure with Terraform",
-    problem: "Design a highly available, fault-tolerant infrastructure for a production application with automatic failover capabilities.",
-    solution: "Implemented multi-AZ architecture using Terraform across 3 availability zones with load balancing, auto-scaling, and automated disaster recovery.",
-    techStack: ["AWS", "Terraform", "VPC", "EC2", "RDS", "Route53", "CloudWatch"],
-    architecture: "Multi-tier architecture with separate subnets for web, application, and database layers. Implemented NAT gateways, bastion hosts, and security groups following AWS best practices.",
+    title: "AI-Driven DevOps Incident Management on AWS",
+    category: "Core DevOps / SRE",
+    description: "Production-style incident simulation platform to evaluate AWS DevOps Agent using real infrastructure, CI/CD events, and deterministic failures.",
+    architecture: [
+      "Terraform IaC with bootstrap + application scopes",
+      "GitHub Actions CI/CD with OIDC",
+      "API Gateway + Lambda with CloudWatch telemetry",
+      "Failure injection, rollback, and teardown workflows",
+    ],
+    technologies: ["AWS", "Terraform", "GitHub Actions", "Lambda", "CloudWatch"],
+    links: { github: "https://github.com/digambarrajaram" },
   },
   {
-    title: "GitHub Actions CI/CD Pipeline",
-    problem: "Automate build, test, and deployment process for a microservices application with zero-downtime deployments.",
-    solution: "Created comprehensive GitHub Actions workflows with automated testing, security scanning, Docker image building, and progressive deployment to production.",
-    techStack: ["GitHub Actions", "Docker", "Kubernetes", "AWS EKS", "Helm", "SonarQube"],
-    architecture: "Multi-stage pipeline with parallel test execution, automated rollback on failure, and blue-green deployment strategy for production releases.",
+    title: "Production AWS Multi-AZ Web Stack – Terraform Architecture Review",
+    category: "Core DevOps / Cloud Architecture",
+    description: "Deep architectural review of a production-grade, three-tier AWS stack focusing on availability, security, traffic flow, and operational risk.",
+    highlights: [
+      "Multi-AZ VPC with public, private-app, private-db subnets",
+      "ALB → ASG (EC2) → RDS MySQL + ElastiCache Redis",
+      "IMDSv2, Secrets Manager, CloudWatch logging",
+      "Identified WAF, VPC endpoint, and egress-hardening gaps",
+    ],
+    technologies: ["AWS", "Terraform", "ALB", "EC2", "RDS", "ElastiCache"],
+    links: { github: "https://github.com/digambarrajaram/AWS-Terraform-Multi-AZ-Networking-Load-Balancing-Auto-Scaling-and-Secure-Service-Integration" },
   },
   {
-    title: "Dockerized Application Deployment",
-    problem: "Containerize and orchestrate a monolithic application for improved scalability and resource utilization.",
-    solution: "Migrated application to containerized architecture with Docker, implemented Kubernetes orchestration, and established automated scaling policies.",
-    techStack: ["Docker", "Kubernetes", "Helm", "Prometheus", "Grafana", "ELK Stack"],
-    architecture: "Microservices-based deployment with service mesh for inter-service communication, centralized logging, and real-time monitoring dashboards.",
+    title: "Scalable & Secure AWS EKS Infrastructure Automation",
+    category: "Core DevOps / Kubernetes",
+    description: "Terraform-driven provisioning of a production-ready AWS EKS cluster with secure networking, IAM, and managed node groups.",
+    highlights: [
+      "Multi-AZ VPC with private worker nodes",
+      "IAM roles for service accounts (IRSA)",
+      "Managed node groups and security groups",
+      "Production-ready kubeconfig and outputs",
+    ],
+    technologies: ["AWS", "EKS", "Terraform", "Kubernetes", "IAM"],
+    links: { github: "https://github.com/digambarrajaram" },
   },
   {
-    title: "Infrastructure Monitoring & Alerting System",
-    problem: "Establish comprehensive monitoring solution to proactively detect and respond to infrastructure issues.",
-    solution: "Deployed Prometheus and Grafana stack with custom dashboards, alert rules, and integration with PagerDuty for incident management.",
-    techStack: ["Prometheus", "Grafana", "AlertManager", "PagerDuty", "Node Exporter"],
-    architecture: "Distributed monitoring architecture with metric collection, aggregation, visualization, and multi-channel alerting (Slack, Email, SMS).",
+    title: "Infrastructure-as-Code: Flask App in Private AWS VPC",
+    category: "DevOps / IaC",
+    description: "Secure deployment of a Flask application inside a private AWS VPC using Terraform, CI/CD, and best-practice networking patterns.",
+    technologies: ["Terraform", "AWS", "EC2", "RDS", "CI/CD"],
+    links: { github: "https://github.com/digambarrajaram" },
   },
   {
-    title: "Automated Backup & Disaster Recovery",
-    problem: "Implement automated backup strategy with defined RPO/RTO for critical databases and application data.",
-    solution: "Created automated backup pipelines using AWS services with cross-region replication, point-in-time recovery, and regular restore testing.",
-    techStack: ["AWS Backup", "S3", "Lambda", "CloudWatch Events", "SNS", "DynamoDB"],
-    architecture: "Scheduled backup automation with lifecycle policies, encryption at rest, cross-region replication, and automated compliance reporting.",
+    title: "Cybersecurity Analyzer",
+    category: "DevSecOps",
+    description: "Cloud-native static code analysis platform using Semgrep and MCP orchestration, designed for multi-cloud deployments.",
+    technologies: ["Python", "Semgrep", "Terraform", "AWS", "Azure", "GCP"],
+    links: { github: "https://github.com/digambarrajaram/Cybersecurity-Analyzer" },
   },
   {
-    title: "Kubernetes Cluster Setup & Management",
-    problem: "Deploy production-ready Kubernetes cluster with security hardening, networking, and persistent storage.",
-    solution: "Provisioned EKS cluster with node groups, implemented RBAC, network policies, ingress controllers, and integrated with AWS services.",
-    techStack: ["AWS EKS", "kubectl", "Helm", "Calico", "AWS ALB Ingress", "EBS CSI"],
-    architecture: "Production-grade cluster with multiple node groups, pod security policies, encrypted secrets management, and automated certificate rotation.",
+    title: "AI Digital Twin – Cloud-Native Platform",
+    category: "Cloud-Native / AI Platform",
+    description: "End-to-end AI Digital Twin with serverless backend, persistent memory, and automated AWS infrastructure.",
+    technologies: ["AWS", "Terraform", "FastAPI", "Next.js", "GitHub Actions"],
+    links: { github: "https://github.com/digambarrajaram" },
+  },
+  {
+    title: "IdeaGen Pro – AI SaaS Business Idea Generator",
+    category: "Full-Stack AI SaaS",
+    description: "Subscription-based AI SaaS platform that generates business ideas using streaming GenAI responses with authentication and billing.",
+    highlights: [
+      "Real-time SSE-based AI streaming",
+      "Clerk authentication & subscription management",
+      "Next.js + FastAPI full-stack architecture",
+      "Production-ready SaaS deployment patterns",
+    ],
+    technologies: ["Next.js", "FastAPI", "TypeScript", "OpenAI", "Clerk"],
+    links: { github: "https://github.com/digambarrajaram" },
+  },
+  {
+    title: "MediNotes Pro – AI Healthcare SaaS",
+    category: "AI SaaS / Healthcare",
+    description: "AI-powered healthcare consultation assistant that transforms doctor's notes into professional summaries, action items, and patient-friendly communications.",
+    highlights: [
+      "HIPAA-aware architecture and secure authentication",
+      "Streaming AI responses with structured outputs",
+      "Containerized deployment with Docker",
+      "Modern, responsive UI with dark mode",
+    ],
+    technologies: ["Next.js", "FastAPI", "Docker", "OpenAI", "Clerk"],
+    links: { github: "https://github.com/digambarrajaram" },
+  },
+  {
+    title: "PromptOps – AI-Powered DevOps Experimentation",
+    category: "DevOps / AI Tooling",
+    description: "Exploration of AI-assisted DevOps workflows focusing on prompt-driven automation and operational efficiency.",
+    technologies: ["AI", "DevOps", "Automation"],
+    links: { github: "https://github.com/digambarrajaram" },
   },
 ];
 
+// Technologies (flattened for Home page)
+export const technologies = [
+  "AWS", "Terraform", "Next.js", "FastAPI", "GitHub Actions", "Python", "Docker", "TypeScript", "Clerk", "OpenAI", "Kubernetes", "Ansible", "Prometheus", "Grafana", "Semgrep", "S3 Vector Storage", "Amazon Bedrock", "SageMaker", "Langfuse", "Vercel", "Gradio"
+];
 
+// Core Skills (for Resume)
+export const coreSkills = [
+  "Cloud Infrastructure (AWS, Azure, GCP)",
+  "Infrastructure as Code (Terraform)",
+  "CI/CD Automation (GitHub Actions, Jenkins)",
+  "Containerization (Docker, Kubernetes)",
+  "Monitoring & Observability (CloudWatch, Prometheus, Grafana)",
+  "Security & Compliance (CIS, VAPT, Patch Management)",
+  "DevOps & SRE Practices",
+  "Python & Shell Scripting",
+];
+
+// Stats (for Resume)
 export const stats = {
-  yearsExperience: "5+",
-  projectsCompleted: "50+",
-  certifications: "3",
+  experienceYears: 2.4,
+  projects: 10,
+  certifications: 8,
 };
 
-export const metadata = {
-  siteTitle: "Digambar Rajaram | DevOps & Cloud Engineer",
-  siteDescription: "DevOps & Cloud Engineer specializing in AWS, Terraform, Kubernetes, and CI/CD automation. Building scalable infrastructure solutions.",
-  siteUrl: "https://your-domain.com", // UPDATE AFTER DEPLOYMENT
-  author: "Digambar Rajaram",
-};
+// Certifications
+export const certifications = [
+  {
+    name: "Cloud & DevOps Upskilling Program",
+    provider: "Learnbay (Microsoft Collaboration)",
+    duration: "Feb 2025 – Dec 2025",
+  },
+  {
+    name: "Java Full Stack Development",
+    provider: "TalentSprint",
+    duration: "Mar 2023 – Jun 2023",
+  },
+  {
+    name: "Java Full Stack Development",
+    provider: "Q-J Spiders",
+    duration: "Aug 2022 – Feb 2023",
+  },
+  {
+    name: "AI Engineer – MLOps Track",
+    specialization: "Deploy GenAI & Agentic AI at Scale",
+    provider: "Udemy",
+  },
+  {
+    name: "PromptOps – AI-Powered DevOps",
+    provider: "Udemy",
+  },
+  {
+    name: "Complete VMware vSphere ESXi & vCenter Administration",
+    provider: "Udemy",
+  },
+];

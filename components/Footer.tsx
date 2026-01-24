@@ -19,7 +19,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-[#9198A1] mb-4">
-              {personalInfo.role}
+              {personalInfo.title}
             </p>
             <p className="text-xs text-[#656D76]">
               Building scalable cloud infrastructure

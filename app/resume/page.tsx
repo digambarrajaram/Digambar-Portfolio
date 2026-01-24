@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { personalInfo, about, coreSkills, stats } from "@/data/portfolio";
+import { about, coreSkills, stats } from "@/data/portfolio";
 
 export const metadata: Metadata = {
   title: "Resume | Digambar Rajaram",
@@ -49,8 +49,8 @@ export default function Resume() {
             </p>
             
             <a
-              href={personalInfo.resumeFile}
-              download="digambar_rajaram_resume.pdf"
+              href="/resume.txt"
+              download="digambar_rajaram_resume.txt"
               className="inline-flex items-center px-8 py-4 text-sm font-semibold text-white bg-[#388BFD] hover:bg-[#539BFF] rounded-lg transition-colors duration-200"
             >
               <svg
@@ -86,7 +86,7 @@ export default function Resume() {
           
           <div className="glass-card p-8 rounded-xl border border-[#30363D]">
             <p className="text-[#9198A1] text-lg leading-relaxed">
-              {about.summary}
+              {about.headline}
             </p>
           </div>
         </section>
@@ -134,7 +134,7 @@ export default function Resume() {
                 </svg>
               </div>
               <div className="text-5xl font-bold text-[#E6EDF3] mb-2">
-                {stats.yearsExperience}
+                 {stats.experienceYears}
               </div>
               <div className="text-[#9198A1] uppercase tracking-wide text-sm font-semibold">
                 Years Experience
@@ -148,7 +148,7 @@ export default function Resume() {
                 </svg>
               </div>
               <div className="text-5xl font-bold text-[#E6EDF3] mb-2">
-                {stats.projectsCompleted}
+                 {stats.projects}
               </div>
               <div className="text-[#9198A1] uppercase tracking-wide text-sm font-semibold">
                 Projects Deployed

@@ -141,8 +141,9 @@ export default function About() {
                   {cert.name}
                 </h3>
                 <div className="mt-auto">
-                  <p className="text-sm text-[#9198A1] mb-1 font-medium">{cert.issuer}</p>
-                  <p className="text-xs text-[#656D76]">{cert.year}</p>
+                  <p className="text-sm text-[#9198A1] mb-1 font-medium">{cert.provider}</p>
+                  {cert.duration && <p className="text-xs text-[#656D76]">{cert.duration}</p>}
+                  {cert.specialization && <p className="text-xs text-[#656D76]">{cert.specialization}</p>}
                 </div>
               </div>
             ))}
