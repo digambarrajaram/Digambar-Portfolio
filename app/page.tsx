@@ -105,26 +105,14 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((item, index) => (
-              <div
+          <div className="flex flex-wrap gap-3">
+            {technologies.map((tech, index) => (
+              <span
                 key={index}
-                className="group bg-[#161B22] p-6 rounded-xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200"
+                className="inline-block px-4 py-2 text-sm font-medium bg-[#161B22] text-[#388BFD] rounded-full border border-[#30363D]"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#388BFD]/10 border border-[#388BFD]/20 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#388BFD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <h3 className="font-bold text-[#E6EDF3] text-lg">
-                    {item.category}
-                  </h3>
-                </div>
-                <p className="text-[#9198A1] text-sm leading-relaxed">
-                  {item.skills}
-                </p>
-              </div>
+                {tech}
+              </span>
             ))}
           </div>
         </section>

@@ -53,14 +53,14 @@ export default function About() {
                   <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                     <div>
                       <h3 className="text-2xl font-bold text-[#E6EDF3] mb-1">
-                        {job.title}
+                        {job.role}
                       </h3>
                       <div className="text-[#388BFD] font-semibold">
                         {job.company}
                       </div>
                     </div>
                     <span className="px-4 py-2 glass-card rounded-lg text-[#9198A1] text-sm font-medium border border-[#30363D]">
-                      {job.period}
+                      {job.duration}
                     </span>
                   </div>
                   
