@@ -27,8 +27,7 @@ export const socialLinks = {
 
 export const about = {
   intro: [
-    "I'm a DevOps and Cloud Engineer with a passion for building scalable, reliable infrastructure that powers modern applications. My journey in technology has been driven by a commitment to automation, efficiency, and continuous improvement.",
-    "With extensive experience in cloud platforms, infrastructure as code, and CI/CD pipelines, I help organizations transform their development and deployment processes. I believe in implementing best practices that enable teams to deliver value faster while maintaining high standards of quality and security.",
+    "I'm a DevOps and Cloud Engineer with a passion for building scalable, reliable infrastructure that powers modern applications. My journey in technology has been driven by a commitment to automation, efficiency, and continuous improvement. With extensive experience in cloud platforms, infrastructure as code, and CI/CD pipelines, I help organizations transform their development and deployment processes. I believe in implementing best practices that enable teams to deliver value faster while maintaining high standards of quality and security."
   ],
   summary: "DevOps and Cloud Engineer with extensive experience in designing, implementing, and maintaining scalable cloud infrastructure. Proven track record of automating deployment processes, reducing costs, and improving system reliability. Skilled in AWS, Terraform, Docker, Kubernetes, and CI/CD pipelines.",
 };
