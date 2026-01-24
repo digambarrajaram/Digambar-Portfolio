@@ -49,8 +49,8 @@ export default function Resume() {
             </p>
             
             <a
-              href="/resume.txt"
-              download="digambar_rajaram_resume.txt"
+              href="/Resume.pdf"
+              download="digambar_rajaram_resume.pdf"
               className="inline-flex items-center px-8 py-4 text-sm font-semibold text-white bg-[#388BFD] hover:bg-[#539BFF] rounded-lg transition-colors duration-200"
             >
               <svg
@@ -70,7 +70,7 @@ export default function Resume() {
             </a>
             
             <p className="text-xs text-[#6B7280] mt-6">
-              digambar_rajaram_resume.txt
+              digambar_rajaram_resume.pdf
             </p>
           </div>
         </section>

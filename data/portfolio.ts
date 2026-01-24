@@ -77,45 +77,45 @@ export const experience = [
 
 export const projects = [
   {
-    title: "AI-Driven DevOps Incident Management on AWS",
-    category: "Core DevOps / SRE",
-    description: "Production-style incident simulation platform using Terraform, Lambda, and CloudWatch telemetry to evaluate automated incident response.",
-    technologies: ["AWS DevOps Agents","AWS", "Terraform", "GitHub Actions", "Lambda", "CloudWatch"],
+    title: "AWS Incident Simulation & Automated Response",
+    category: "DevOps / SRE",
+    description: "Simulated real-world incidents on AWS using Terraform, Lambda, and CloudWatch to validate automated remediation and alerting workflows.",
+    technologies: ["AWS", "Terraform", "GitHub Actions", "Lambda", "CloudWatch"],
   },
   {
-    title: "Production AWS Multi-AZ Web Stack",
-    category: "Cloud Architecture",
-    description: "Three-tier AWS stack focusing on high availability and security, utilizing ALB, ASG, and RDS across multiple Availability Zones.",
-    technologies: ["AWS", "Terraform", "ALB", "EC2", "RDS", "ElastiCache","CloudWatch"],
+    title: "Production-Grade AWS Multi-AZ Web Stack",
+    category: "Cloud Infrastructure",
+    description: "Designed and deployed a resilient three-tier web stack on AWS with ALB, ASG, and RDS across multiple Availability Zones for high availability.",
+    technologies: ["AWS", "Terraform", "ALB", "EC2", "RDS", "ElastiCache", "CloudWatch"],
   },
   {
-    title: "Scalable AWS EKS Infrastructure Automation",
-    category: "Kubernetes",
-    description: "Terraform-driven provisioning of an EKS cluster with private worker nodes and IAM roles for service accounts (IRSA).",
+    title: "EKS Infrastructure Automation",
+    category: "Kubernetes / IaC",
+    description: "Provisioned secure, scalable AWS EKS clusters using Terraform with private nodes and IAM roles for service accounts.",
     technologies: ["AWS", "EKS", "Terraform", "Kubernetes", "IAM"],
   },
   {
-    title: "Cybersecurity Analyzer",
+    title: "CI/CD Security Analyzer",
     category: "DevSecOps",
-    description: "Cloud-native static code analysis platform using Semgrep for automated security scanning in CI/CD pipelines.",
+    description: "Integrated Semgrep-based static code analysis into CI/CD pipelines for automated security scanning and compliance.",
     technologies: ["Python", "Semgrep", "Terraform", "AWS"],
   },
   {
-    title: "AI Digital Twin – Cloud-Native Platform",
+    title: "AI Digital Twin Platform (Cloud-Native)",
     category: "Cloud-Native / AI",
-    description: "End-to-end AI Digital Twin with serverless backend and automated AWS infrastructure deployment.",
+    description: "Developed a serverless AI Digital Twin platform with automated AWS infrastructure provisioning and event-driven backend.",
     technologies: ["AWS", "Terraform", "FastAPI", "Next.js", "GitHub Actions"],
   },
   {
-    title: "IdeaGen Pro – AI SaaS Platform",
-    category: "Full-Stack AI SaaS",
-    description: "Subscription-based AI platform featuring real-time streaming responses and secure authentication.",
+    title: "IdeaGen Pro – AI SaaS",
+    category: "AI SaaS",
+    description: "Built a subscription-based AI SaaS with real-time streaming and secure authentication. (Side project, not production)",
     technologies: ["Next.js", "FastAPI", "TypeScript", "OpenAI", "Clerk"],
   },
   {
     title: "MediNotes Pro – AI Healthcare SaaS",
     category: "Healthcare / AI",
-    description: "AI-powered assistant transforming consultation notes into professional summaries with a containerized deployment flow.",
+    description: "Containerized AI assistant for transforming consultation notes into summaries. (Side project, not production)",
     technologies: ["Next.js", "FastAPI", "Docker", "OpenAI", "Clerk"],
   }
 ];
@@ -151,7 +151,7 @@ export const certifications = [
 ];
 
 export const stats = {
-  experienceYears: 2.3,
+  experienceYears: 2.4,
   projects: 7,
-  certifications: 5,
+  certifications: 6,
 };
