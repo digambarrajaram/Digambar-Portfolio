@@ -11,10 +11,10 @@
 
 export const personalInfo = {
   name: "Digambar Rajaram",
-  role: "DevOps & Cloud Engineer",
+  role: "Infrastructure & DevOps",
   tagline: "Building scalable, reliable infrastructure with modern DevOps practices.",
   description: "Specializing in cloud automation, containerization, and enterprise-grade CI/CD pipelines.",
-  email: "digambar@example.com", // UPDATE THIS
+  email: "digambarrajaram2@gmail.com", // UPDATE THIS
   location: "Remote / Available Worldwide",
   image: "/Digambar_Photo.png",
   resumeFile: "/resume.pdf",
@@ -22,7 +22,7 @@ export const personalInfo = {
 
 export const socialLinks = {
   github: "https://github.com/digambarrajaram",
-  linkedin: "https://linkedin.com/in/yourprofile", // UPDATE THIS
+  linkedin: "https://www.linkedin.com/in/digambar-rajaram-8371b51a5/", // UPDATE THIS
 };
 
 export const about = {
@@ -34,25 +34,14 @@ export const about = {
 
 export const experience = [
   {
-    title: "DevOps Engineer",
-    company: "Company Name", // UPDATE THIS
-    period: "2022 - Present",
+    title: "Assistant Manager – Infrastructure & DevOps ",
+    company: "Protean eGov Technologies Ltd", // UPDATE THIS
+    period: "Mar 2023 – Jun 2025",
     responsibilities: [
       "Designed and implemented multi-region AWS infrastructure using Terraform",
       "Built automated CI/CD pipelines reducing deployment time by 60%",
       "Managed Kubernetes clusters for containerized applications",
       "Implemented monitoring and alerting solutions using Prometheus and Grafana",
-    ],
-  },
-  {
-    title: "Cloud Infrastructure Specialist",
-    company: "Previous Company", // UPDATE THIS
-    period: "2020 - 2022",
-    responsibilities: [
-      "Migrated on-premise applications to AWS cloud infrastructure",
-      "Automated infrastructure provisioning using CloudFormation and Terraform",
-      "Implemented security best practices and compliance standards",
-      "Reduced infrastructure costs by 30% through optimization",
     ],
   },
 ];
