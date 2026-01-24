@@ -45,7 +45,7 @@ export default function Resume() {
               Professional Resume
             </h2>
             <p className="text-[#9198A1] mb-8">
-              Download my complete resume in PDF format
+              Download my complete resume in TXT format
             </p>
             
             <a
@@ -70,7 +70,7 @@ export default function Resume() {
             </a>
             
             <p className="text-xs text-[#6B7280] mt-6">
-              digambar_rajaram_resume.pdf
+              digambar_rajaram_resume.txt
             </p>
           </div>
         </section>

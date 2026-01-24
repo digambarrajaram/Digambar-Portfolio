@@ -58,9 +58,8 @@ export default function Home() {
               <div className="relative w-full max-w-[300px]">
                 <div className="bg-[#161B22] p-2 border border-[#21262D] rounded-2xl">
                   <div className="relative overflow-hidden rounded-xl">
-                    {/* Add a profile image in public/ and set the src here if available */}
                     <Image
-                      src="/profile.jpg"
+                      src="/Digambar_Photo.png"
                       alt={`${personalInfo.name} - ${personalInfo.title}`}
                       width={300}
                       height={400}
@@ -93,6 +92,21 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Branding/Philosophy Section */}
+        <section className="py-16">
+          <div className="max-w-3xl">
+            <span className="text-sm font-semibold text-[#38BDF8] tracking-wide uppercase">Philosophy</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#E5E7EB] mt-2 mb-4">
+              My Engineering Principles
+            </h2>
+            <ul className="list-disc ml-6 text-[#9CA3AF] text-lg space-y-2">
+              {about.branding.map((point, idx) => (
+                <li key={idx}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {/* Core Technologies */}
         <section className="py-20">
           <div className="mb-12">
@@ -104,7 +118,6 @@ export default function Home() {
               Tools and platforms I use to build reliable cloud infrastructure
             </p>
           </div>
-          
           <div className="flex flex-wrap gap-3">
             {technologies.map((tech, index) => (
               <span
