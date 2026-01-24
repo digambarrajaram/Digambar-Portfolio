@@ -79,8 +79,8 @@ export default function Home() {
             <div className="mb-3">
               <span className="text-sm font-semibold text-[#38BDF8] tracking-wide uppercase">About Me</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-[#E5E7EB] mb-10">
-              Building Infrastructure at Scale
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#E5E7EB] mb-6">
+              {about.headline}
             </h2>
             <div className="space-y-6 text-[#9CA3AF] text-lg leading-relaxed">
               {about.intro.map((paragraph, index) => (
@@ -92,20 +92,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Branding/Philosophy Section */}
-        <section className="py-16">
-          <div className="max-w-3xl">
-            <span className="text-sm font-semibold text-[#38BDF8] tracking-wide uppercase">Philosophy</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#E5E7EB] mt-2 mb-4">
-              My Engineering Principles
-            </h2>
-            <ul className="list-disc ml-6 text-[#9CA3AF] text-lg space-y-2">
-              {about.branding.map((point, idx) => (
-                <li key={idx}>{point}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
 
         {/* Core Technologies */}
         <section className="py-20">

@@ -50,26 +50,6 @@ export default function Projects() {
                     <p className="text-[#9198A1] leading-relaxed">{project.description}</p>
                   </div>
                 )}
-                {project.highlights && (
-                  <div>
-                    <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Highlights</span>
-                    <ul className="list-disc ml-6 text-[#9198A1]">
-                      {project.highlights.map((h, i) => (
-                        <li key={i}>{h}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                {project.architecture && (
-                  <div>
-                    <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Architecture</span>
-                    <ul className="list-disc ml-6 text-[#9198A1]">
-                      {project.architecture.map((a, i) => (
-                        <li key={i}>{a}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
                 <div>
                   <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Tech Stack</span>
                   <div className="flex flex-wrap gap-2 mt-2">
@@ -87,26 +67,6 @@ export default function Projects() {
                             <div>
                               <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Description</span>
                               <p className="text-[#9198A1] leading-relaxed">{project.description}</p>
-                            </div>
-                          )}
-                          {project.highlights && (
-                            <div>
-                              <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Highlights</span>
-                              <ul className="list-disc ml-6 text-[#9198A1]">
-                                {project.highlights.map((h, i) => (
-                                  <li key={i}>{h}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                          {project.architecture && (
-                            <div>
-                              <span className="text-sm font-semibold text-[#388BFD] uppercase tracking-wider">Architecture</span>
-                              <ul className="list-disc ml-6 text-[#9198A1]">
-                                {project.architecture.map((a, i) => (
-                                  <li key={i}>{a}</li>
-                                ))}
-                              </ul>
                             </div>
                           )}
                           <div>

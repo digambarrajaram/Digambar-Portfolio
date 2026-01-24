@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { about, coreSkills, stats } from "@/data/portfolio";
+import { about, skills, stats } from "@/data/portfolio";
 
 export const metadata: Metadata = {
   title: "Resume | Digambar Rajaram",
@@ -101,7 +101,8 @@ export default function Resume() {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {coreSkills.map((skill, index) => (
+            {/* Flatten all skills into a single list */}
+            {Object.values(skills).flat().map((skill, index) => (
               <div
                 key={index}
                 className="group glass-card elevated-card flex items-center p-5 rounded-xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200"
