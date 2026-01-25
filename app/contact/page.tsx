@@ -63,7 +63,7 @@ export default function Contact() {
           </div>
 
           {/* LinkedIn */}
-          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200">
+          <div className="group glass-card elevated-card p-8 rounded-2xl border border-[#21262D] hover:border-[#388BFD] hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
             <div className="flex items-center mb-6">
               <div className="w-16 h-16 rounded-xl bg-[#388BFD]/10 border border-[#388BFD]/20 flex items-center justify-center mr-5">
                 <svg
@@ -184,7 +184,7 @@ export default function Contact() {
           </p>
           <a
             href={`mailto:${personalInfo.email}`}
-            className="inline-flex items-center px-10 py-4 text-sm font-semibold text-white bg-[#388BFD] hover:bg-[#539BFF] rounded-lg transition-colors duration-200"
+            className="inline-flex items-center px-10 py-4 text-sm font-semibold text-white bg-[#388BFD] hover:bg-[#539BFF] rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
           >
             <svg
               className="w-5 h-5 mr-3"

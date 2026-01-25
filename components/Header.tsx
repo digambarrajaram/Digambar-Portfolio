@@ -25,31 +25,31 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-1">
             <Link
               href="/"
-              className="px-4 py-2 text-[#9198A1] hover:text-[#388BFD] rounded-lg hover:bg-[#161B22] transition-all text-sm font-medium"
+              className="px-4 py-2 text-[#9198A1] hover:text-white hover:bg-[#388BFD] rounded-lg transition-all duration-200 text-sm font-medium"
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="px-4 py-2 text-[#9198A1] hover:text-[#388BFD] rounded-lg hover:bg-[#161B22] transition-all text-sm font-medium"
+              className="px-4 py-2 text-[#9198A1] hover:text-white hover:bg-[#388BFD] rounded-lg transition-all duration-200 text-sm font-medium"
             >
               About
             </Link>
             <Link
               href="/projects"
-              className="px-4 py-2 text-[#9198A1] hover:text-[#388BFD] rounded-lg hover:bg-[#161B22] transition-all text-sm font-medium"
+              className="px-4 py-2 text-[#9198A1] hover:text-white hover:bg-[#388BFD] rounded-lg transition-all duration-200 text-sm font-medium"
             >
               Projects
             </Link>
             <Link
               href="/resume"
-              className="px-4 py-2 text-[#9198A1] hover:text-[#388BFD] rounded-lg hover:bg-[#161B22] transition-all text-sm font-medium"
+              className="px-4 py-2 text-[#9198A1] hover:text-white hover:bg-[#388BFD] rounded-lg transition-all duration-200 text-sm font-medium"
             >
               Resume
             </Link>
             <Link
               href="/contact"
-              className="ml-2 px-5 py-2 bg-[#388BFD] hover:bg-[#539BFF] text-white text-sm font-semibold rounded-lg transition-colors duration-200"
+              className="px-4 py-2 text-[#9198A1] hover:text-white hover:bg-[#388BFD] rounded-lg transition-all duration-200 text-sm font-medium"
             >
               Contact
             </Link>

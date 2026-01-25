@@ -142,7 +142,7 @@ export default function Resume() {
               </div>
             </div>
             
-            <div className="glass-card elevated-card p-8 rounded-2xl border border-[#21262D] hover:border-[#30363D] text-center transition-all duration-200">
+            <div className="glass-card elevated-card p-8 rounded-2xl border border-[#21262D] hover:border-[#388BFD] hover:shadow-xl text-center transition-all duration-300 hover:scale-[1.02]">
               <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-[#388BFD]/10 border border-[#388BFD]/20 flex items-center justify-center">
                 <svg className="w-8 h-8 text-[#388BFD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

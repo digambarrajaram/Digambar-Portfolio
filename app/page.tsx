@@ -37,7 +37,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/projects"
-                  className="group inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white bg-[#388BFD] hover:bg-[#539BFF] rounded-lg transition-colors duration-200"
+                  className="group inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white bg-[#388BFD] hover:bg-[#539BFF] rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
                 >
                   View Projects
                   <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export default function Home() {
                 </a>
                 <a
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-[#E6EDF3] bg-[#161B22] hover:bg-[#1C2128] border border-[#30363D] rounded-lg transition-colors duration-200"
+                  className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-[#E6EDF3] bg-[#161B22] hover:bg-[#388BFD] hover:text-white border border-[#30363D] hover:border-[#388BFD] rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
                 >
                   Get in Touch
                 </a>
@@ -84,7 +84,7 @@ export default function Home() {
             </h2>
             <div className="space-y-6 text-[#9CA3AF] text-lg leading-relaxed">
               {about.intro.map((paragraph, index) => (
-                <p key={index} className="glass-card p-6 rounded-xl border border-[#38BDF8]/20">
+                <p key={index} className="glass-card p-6 rounded-xl border border-[#38BDF8]/20 hover:border-[#38BDF8]/40 transition-all duration-200 hover:shadow-lg">
                   {paragraph}
                 </p>
               ))}

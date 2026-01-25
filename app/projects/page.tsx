@@ -30,7 +30,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group glass-card elevated-card p-8 rounded-2xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200"
+              className="group glass-card elevated-card p-8 rounded-2xl border border-[#21262D] hover:border-[#388BFD] hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
             >
               {/* Project Number Badge */}
               <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#388BFD] font-bold text-white mb-6">

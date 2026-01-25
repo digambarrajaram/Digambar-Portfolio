@@ -49,7 +49,7 @@ export default function About() {
                 <div className="absolute -left-[13px] top-0 w-6 h-6 bg-[#388BFD] rounded-full border-4 border-[#0A0E13]"></div>
                 
                 {/* Job Card */}
-                <div className="glass-card elevated-card p-6 rounded-xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200">
+                <div className="glass-card elevated-card p-6 rounded-xl border border-[#21262D] hover:border-[#388BFD] hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                   <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                     <div>
                       <h3 className="text-2xl font-bold text-[#E6EDF3] mb-1">
@@ -139,9 +139,9 @@ export default function About() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <div 
+              <div
                 key={index}
-                className="glass-card elevated-card p-6 rounded-xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200 group"
+                className="glass-card elevated-card p-6 rounded-xl border border-[#21262D] hover:border-[#388BFD] hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group"
               >
                 <div className="mb-4">
                   <div className="w-14 h-14 rounded-xl bg-[#388BFD]/10 border border-[#388BFD]/20 flex items-center justify-center">
