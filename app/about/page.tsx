@@ -1,29 +1,53 @@
-import type { Metadata } from "next";
+'use client';
+
+
+import { useEffect } from 'react';
 import { about, experience, skills, certifications } from "@/data/portfolio";
 
-export const metadata: Metadata = {
-  title: "About | Digambar Rajaram",
-  description: "Learn more about Digambar Rajaram's professional background, experience, and expertise in DevOps and Cloud Engineering.",
-};
-
 export default function About() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollButton = document.querySelector('.scroll-to-top');
+      if (scrollButton) {
+        if (window.scrollY > 300) {
+          scrollButton.classList.add('visible');
+        } else {
+          scrollButton.classList.remove('visible');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <div className="relative">
       {/* Background Gradient */}
       <div className="fixed inset-0 gradient-bg pointer-events-none" />
-      
+
+      {/* Scroll to Top Button */}
+      <button
+        className="scroll-to-top"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Scroll to top"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
+
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-        {/* Page Header */}
-        <div className="mb-16">
-          <span className="text-sm font-semibold text-[#388BFD] tracking-wide uppercase">Get to Know Me</span>
-          <h1 className="text-5xl sm:text-6xl font-bold text-[#E6EDF3] mt-4 mb-4">
+        {/* Enhanced Page Header */}
+        <div className="mb-20 text-center">
+          <span className="typography-caption text-[#60A5FA] block mb-6">Get to Know Me</span>
+          <h1 className="typography-heading-1 text-[#F8FAFC] mb-6 leading-tight">
             About Me
           </h1>
-          <div className="w-20 h-1.5 bg-[#388BFD] rounded-full"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-[#3B82F6] to-[#1D4ED8] rounded-full mx-auto"></div>
         </div>
 
         {/* Introduction */}
-        <section className="mb-20">
+        <section className="mb-20 fade-in-up">
           <div className="frosted-glass p-8 rounded-2xl border border-[#30363D]">
             <div className="space-y-6 text-[#9198A1] text-lg leading-relaxed">
               {about.intro.map((paragraph, index) => (
@@ -34,12 +58,13 @@ export default function About() {
         </section>
 
         {/* Professional Experience */}
-        <section className="mb-20">
-          <div className="mb-10">
-            <span className="text-sm font-semibold text-[#388BFD] tracking-wide uppercase">Career Path</span>
-            <h2 className="text-4xl font-bold text-[#E6EDF3] mt-2">
+        <section className="mb-24">
+          <div className="mb-12 text-center">
+            <span className="typography-caption text-[#60A5FA] block mb-4">Career Path</span>
+            <h2 className="typography-heading-2 text-[#F8FAFC] mb-6 leading-tight">
               Professional Experience
             </h2>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-[#3B82F6] to-[#1D4ED8] rounded-full mx-auto"></div>
           </div>
           
           <div className="space-y-8">
@@ -67,20 +92,21 @@ export default function About() {
                   <div className="space-y-3">
                     {job.responsibilities.map((item, idx) => (
                       <div key={idx} className="flex gap-3 text-[#9198A1]">
-                        <svg className="w-5 h-5 text-[#388BFD] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
+                        <div className="w-1.5 h-1.5 bg-[#388BFD] rounded-full flex-shrink-0 mt-2"></div>
                         <span>{item}</span>
                       </div>
                     ))}
                     {job.achievements && job.achievements.length > 0 && (
                       <div className="mt-4">
                         <div className="font-semibold text-[#E6EDF3] mb-2">Achievements:</div>
-                        <ul className="list-disc list-inside space-y-1">
+                        <div className="space-y-3">
                           {job.achievements.map((ach, aidx) => (
-                            <li key={aidx} className="text-[#9CA3AF]">{ach}</li>
+                            <div key={aidx} className="flex gap-3 text-[#9198A1]">
+                              <div className="w-1.5 h-1.5 bg-[#388BFD] rounded-full flex-shrink-0 mt-2"></div>
+                              <span>{ach}</span>
+                            </div>
                           ))}
-                        </ul>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -91,17 +117,18 @@ export default function About() {
         </section>
 
         {/* Technical Expertise */}
-        <section className="mb-20">
-          <div className="mb-10">
-            <span className="text-sm font-semibold text-[#388BFD] tracking-wide uppercase">Expertise</span>
-            <h2 className="text-4xl font-bold text-[#E6EDF3] mt-2">
+        <section className="mb-24">
+          <div className="mb-12 text-center">
+            <span className="typography-caption text-[#60A5FA] block mb-4">Expertise</span>
+            <h2 className="typography-heading-2 text-[#F8FAFC] mb-6 leading-tight">
               Technical Skills
             </h2>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-[#3B82F6] to-[#1D4ED8] rounded-full mx-auto"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Object.entries(skills).map(([category, skillList], index) => (
-                <div key={index} className="glass-card elevated-card p-6 rounded-xl border border-[#21262D] hover:border-[#30363D] transition-all duration-200">
+                <div key={index} className="glass-card elevated-card p-6 rounded-xl border border-[#21262D] hover:border-[#388BFD] hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="w-10 h-10 rounded-lg bg-[#388BFD]/10 border border-[#388BFD]/20 flex items-center justify-center">
                       <svg className="w-5 h-5 text-[#388BFD]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

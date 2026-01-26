@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { personalInfo, socialLinks } from "@/data/portfolio";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export const metadata: Metadata = {
   title: "Contact | Digambar Rajaram",
@@ -11,18 +12,21 @@ export default function Contact() {
     <div className="relative">
       {/* Background Gradient */}
       <div className="fixed inset-0 gradient-bg pointer-events-none" />
-      
+
+      {/* Scroll to Top Button */}
+      <ScrollToTopButton />
+
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-        {/* Page Header */}
-        <div className="mb-16">
-          <span className="text-sm font-semibold text-[#388BFD] tracking-wide uppercase">Let&apos;s Connect</span>
-          <h1 className="text-5xl sm:text-6xl font-bold text-[#E6EDF3] mt-4 mb-3">
+        {/* Enhanced Page Header */}
+        <div className="mb-20 text-center">
+          <span className="typography-caption text-[#60A5FA] block mb-6">Let&apos;s Connect</span>
+          <h1 className="typography-heading-1 text-[#F8FAFC] mb-6 leading-tight">
             Get in Touch
           </h1>
-          <p className="text-xl text-[#9198A1] max-w-2xl">
+          <p className="typography-body-large text-[#CBD5E1] max-w-3xl mx-auto mb-8">
             I&apos;m always open to discussing new opportunities, collaborations, or interesting DevOps challenges.
           </p>
-          <div className="w-20 h-1.5 bg-[#388BFD] rounded-full mt-6"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-[#3B82F6] to-[#1D4ED8] rounded-full mx-auto"></div>
         </div>
 
         {/* Contact Methods */}
@@ -173,34 +177,62 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="frosted-glass p-12 rounded-2xl border border-[#30363D] text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#E6EDF3] mb-4">
+        {/* Enhanced CTA Section */}
+        <div className="frosted-glass p-16 rounded-3xl border border-[#2A3441] text-center mb-12">
+          <h2 className="typography-heading-2 text-[#F8FAFC] mb-6">
             Let&apos;s Build Something Great
           </h2>
-          <p className="text-[#9198A1] mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
-            Whether you have a project in mind, need DevOps expertise, or just want to connect, 
+          <p className="typography-body-large text-[#CBD5E1] mb-12 max-w-3xl mx-auto leading-relaxed">
+            Whether you have a project in mind, need DevOps expertise, or just want to connect,
             I&apos;d love to hear from you. Send me an email and I&apos;ll get back to you ASAP.
           </p>
-          <a
-            href={`mailto:${personalInfo.email}`}
-            className="inline-flex items-center px-10 py-4 text-sm font-semibold text-white bg-[#388BFD] hover:bg-[#539BFF] rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-105"
-          >
-            <svg
-              className="w-5 h-5 mr-3"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href={`mailto:${personalInfo.email}`}
+              className="group inline-flex items-center px-12 py-5 text-lg font-bold text-white rounded-2xl transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-1 transform-gpu"
+              style={{
+                background: 'var(--gradient-primary)',
+                boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)'
+              }}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
-            </svg>
-            Send an Email
-          </a>
+              <svg
+                className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <span>Send an Email</span>
+            </a>
+            <a
+              href="/resume"
+              className="inline-flex items-center px-12 py-5 text-lg font-bold text-[#F8FAFC] glass-card border-2 border-[#3B82F6]/30 rounded-2xl transition-all duration-500 hover:border-[#3B82F6] hover:bg-[#3B82F6]/10 hover:scale-110 hover:shadow-2xl hover:-translate-y-1 transform-gpu"
+              style={{
+                boxShadow: '0 4px 15px rgba(59, 130, 246, 0.15)'
+              }}
+            >
+              <svg
+                className="w-6 h-6 mr-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <span>View Resume</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

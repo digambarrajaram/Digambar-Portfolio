@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WebVitals from "@/components/WebVitals";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +21,16 @@ export const metadata: Metadata = {
   keywords: ["DevOps", "Cloud Engineer", "AWS", "Terraform", "Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Infrastructure as Code"],
   authors: [{ name: "Digambar Rajaram" }],
   creator: "Digambar Rajaram",
+  publisher: "Digambar Rajaram",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://digambar-portfolio.vercel.app'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -27,11 +38,21 @@ export const metadata: Metadata = {
     title: "Digambar Rajaram | DevOps & Cloud Engineer",
     description: "Professional portfolio showcasing DevOps and Cloud Engineering projects, expertise in AWS, Terraform, Kubernetes, and CI/CD automation.",
     siteName: "Digambar Rajaram Portfolio",
+    images: [
+      {
+        url: "/Digambar_Photo.png",
+        width: 1200,
+        height: 630,
+        alt: "Digambar Rajaram - DevOps & Cloud Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Digambar Rajaram | DevOps & Cloud Engineer",
     description: "Professional portfolio showcasing DevOps and Cloud Engineering projects.",
+    images: ["/Digambar_Photo.png"],
+    creator: "@digambarrajaram",
   },
   robots: {
     index: true,
@@ -43,6 +64,9 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  verification: {
+    google: 'your-google-site-verification-code',
   },
 };
 
@@ -56,8 +80,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
+        <WebVitals />
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <Header />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1" role="main">
           {children}
         </main>
         <Footer />

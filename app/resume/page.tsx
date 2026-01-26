@@ -13,13 +13,13 @@ export default function Resume() {
       <div className="fixed inset-0 gradient-bg pointer-events-none" />
       
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-        {/* Page Header */}
-        <div className="mb-16">
-          <span className="text-sm font-semibold text-[#388BFD] tracking-wide uppercase">Career Overview</span>
-          <h1 className="text-5xl sm:text-6xl font-bold text-[#E6EDF3] mt-4 mb-4">
+        {/* Enhanced Page Header */}
+        <div className="mb-20 text-center">
+          <span className="typography-caption text-[#60A5FA] block mb-6">Career Overview</span>
+          <h1 className="typography-heading-1 text-[#F8FAFC] mb-6 leading-tight">
             Resume
           </h1>
-          <div className="w-20 h-1.5 bg-[#388BFD] rounded-full"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-[#3B82F6] to-[#1D4ED8] rounded-full mx-auto"></div>
         </div>
 
         {/* Download Section */}
