@@ -5,7 +5,7 @@ import { personalInfo, about, stats } from '@/data/portfolio';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center py-20 sm:py-32 lg:py-40 overflow-hidden">
+    <section className="relative flex items-center py-0 md:py-20 sm:py-32 lg:py-40 overflow-hidden md:min-h-screen">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0A0E13] via-[#0F1419] to-[#161B22]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.1),transparent_50%)]" />
@@ -14,7 +14,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Text Content */}
-          <div className="order-2 lg:order-1 space-y-8 scroll-reveal" suppressHydrationWarning={true}>
+          <div className="order-2 lg:order-1 space-y-8 scroll-reveal text-center md:text-left" suppressHydrationWarning={true}>
             {/* Status Badge */}
             <div className="inline-flex items-center gap-3 px-6 py-3 glass-card border border-[#3B82F6]/20 rounded-full hover:border-[#3B82F6]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[#3B82F6]/20 relative overflow-hidden backdrop-blur-sm" style={{ boxShadow: '0 0 20px rgba(59, 130, 246, 0.1)' }}>
               <div className="relative">

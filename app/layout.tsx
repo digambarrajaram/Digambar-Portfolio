@@ -83,7 +83,7 @@ export default function RootLayout({
         <WebVitals />
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <Header />
-        <main id="main-content" className="flex-1" role="main">
+        <main id="main-content" className="flex-1 pt-20 md:pt-0" role="main">
           {children}
         </main>
         <Footer />

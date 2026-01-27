@@ -217,6 +217,31 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Mobile-specific fixes for layout and scroll */
+@media (max-width: 768px) {
+  /* Ensure body content doesn't hide behind fixed header */
+  body {
+    position: relative;
+  }
+
+  /* Prevent content from appearing above mobile menu */
+  main, section {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Ensure footer is always in normal flow and visible */
+  footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Prevent layout shifts during mobile menu interactions */
+  body.overflow-hidden {
+    overflow: hidden;
+  }
+}
+
 /* Enterprise Design System */
 
 /* Refined Card System */

@@ -23,7 +23,7 @@ export default function AboutSection() {
 
   return (
     <section className="py-24 fade-in-up scroll-reveal" suppressHydrationWarning={true}>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="mb-6">
           <span className="typography-caption text-[#60A5FA] slide-in-left">About Me</span>
         </div>

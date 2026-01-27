@@ -12,11 +12,15 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+      // Close mobile menu on scroll
+      if (isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobileMenuOpen]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -47,12 +51,12 @@ export default function Header() {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 backface-hidden ${
       isScrolled
         ? 'bg-[#0A0E13]/95 backdrop-blur-xl border-b border-[#2A3441] shadow-lg'
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center gap-3 group focus:outline-none">
@@ -127,8 +131,18 @@ export default function Header() {
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 z-40 bg-black/70 backdrop-blur-md" onClick={closeMobileMenu}>
-            <div ref={mobileMenuRef} className="fixed top-20 left-0 right-0 bottom-0 bg-[#0F1419]/98 backdrop-blur-xl border-t border-[#2A3441] shadow-xl">
+          <>
+            {/* Full-screen backdrop */}
+            <div
+              className="md:hidden fixed inset-0 z-[999] bg-black/60 backdrop-blur-sm"
+              onClick={closeMobileMenu}
+              aria-hidden="true"
+            />
+            {/* Menu panel */}
+            <div
+              ref={mobileMenuRef}
+              className="md:hidden fixed top-20 left-0 right-0 bottom-0 z-[1000] bg-[#0F1419] border-t border-[#2A3441] shadow-2xl overflow-y-auto"
+            >
               <nav className="flex flex-col gap-2 p-6">
                 <Link
                   href="/"
@@ -167,7 +181,7 @@ export default function Header() {
                 </Link>
               </nav>
             </div>
-          </div>
+          </>
         )}
       </div>
     </header>
