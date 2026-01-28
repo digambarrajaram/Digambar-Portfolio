@@ -32,7 +32,7 @@ export default function HeroSection() {
   return (
         <section
           id="hero"
-          className="relative w-full"
+          className="relative w-full pb-10"
         >
         <div className="site-container pt-1 pb-1 sm:pb-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <section className="pt-3 pb-15">
+    <section className="pt-3 pb-20">
       <div className="site-container space-y-14">
 
         {/* ================= HEADER ================= */}

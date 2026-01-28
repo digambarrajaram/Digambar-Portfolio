@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Resume() {
   return (
-    <section className="pt-5 pb-15">
+    <section className="pt-5 pb-20">
       <div className="site-container space-y-14">
 
         {/* ================= HEADER ================= */}

@@ -4,7 +4,7 @@ import { projects } from '@/data/portfolio';
 
 export default function ProjectsClient() {
   return (
-    <section className="pt-5 pb-15">
+    <section className="pt-5 pb-20">
       <div className="site-container">
 
         {/* ================= HEADER ================= */}
