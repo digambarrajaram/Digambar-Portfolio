@@ -76,7 +76,7 @@ export default function TechnologiesSection() {
       id="technologies"
       className="relative w-full pt-0"
     >
-      <div className="site-container pb-10 sm:pb-24">
+      <div className="site-container pt-15 pb-10 sm:pb-24">
         {/* HEADER */}
         <div
           className={`text-center mb-12 sm:mb-16 transition-all duration-700 ease-out
