@@ -8,6 +8,9 @@ import WebVitals from "@/components/WebVitals";
 import { MobileMenuProvider } from "@/components/MobileMenuContext";
 import MobileMenuOverlay from "@/components/MobileMenuOverlay";
 
+/* ================================
+   Fonts
+================================ */
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,15 +23,22 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+/* ================================
+   Viewport
+================================ */
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
 };
 
+/* ================================
+   Metadata (SEO + Favicon FIX)
+================================ */
 export const metadata: Metadata = {
   title: "Digambar Rajaram | Infrastructure & DevOps Engineer",
   description:
     "Professional portfolio of Digambar Rajaram - Infrastructure, DevOps & Cloud Engineer specializing in AWS, Terraform, Docker, Kubernetes, and CI/CD automation.",
+
   keywords: [
     "DevOps",
     "Cloud Engineer",
@@ -40,17 +50,27 @@ export const metadata: Metadata = {
     "GitHub Actions",
     "Infrastructure as Code",
   ],
+
   authors: [{ name: "Digambar Rajaram" }],
   creator: "Digambar Rajaram",
   publisher: "Digambar Rajaram",
+
   metadataBase: new URL("https://digambarrajaram.cloud"),
   alternates: {
     canonical: "/",
   },
+
+  /* ✅ THIS REMOVES VERCEL ICON */
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "digambarrajaram.cloud",
+    url: "https://digambarrajaram.cloud",
     title: "Digambar Rajaram | Infrastructure & DevOps Engineer",
     description:
       "Professional portfolio showcasing Infrastructure, DevOps and Cloud Engineering projects.",
@@ -64,6 +84,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Digambar Rajaram | Infrastructure & DevOps Engineer",
@@ -72,12 +93,16 @@ export const metadata: Metadata = {
     images: ["/Digambar_Photo.png"],
     creator: "@digambarrajaram",
   },
+
   robots: {
     index: true,
     follow: true,
   },
 };
 
+/* ================================
+   Root Layout
+================================ */
 export default function RootLayout({
   children,
 }: {
@@ -85,12 +110,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Performance Monitoring */}
         <WebVitals />
 
         {/* Accessibility */}
@@ -98,11 +121,12 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        {/* 🔑 Global Mobile Menu Context */}
+        {/* Global Mobile Menu Context */}
         <MobileMenuProvider>
           {/* Fixed Header */}
           <Header />
 
+          {/* Main Content */}
           <main
             id="main-content"
             role="main"
@@ -111,9 +135,10 @@ export default function RootLayout({
             {children}
           </main>
 
+          {/* Footer */}
           <Footer />
 
-          {/* Mobile Menu Overlay (isolated root) */}
+          {/* Mobile Menu Overlay */}
           <MobileMenuOverlay />
         </MobileMenuProvider>
       </body>
