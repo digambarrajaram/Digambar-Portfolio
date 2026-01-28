@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import WebVitals from "@/components/WebVitals";
 import { MobileMenuProvider } from "@/components/MobileMenuContext";
 import MobileMenuOverlay from "@/components/MobileMenuOverlay";
+import { Analytics } from "@vercel/analytics/next";
 
 /* ================================
    Fonts
@@ -141,6 +142,9 @@ export default function RootLayout({
           {/* Mobile Menu Overlay */}
           <MobileMenuOverlay />
         </MobileMenuProvider>
+
+        {/* Vercel Analytics */}
+        <Analytics />
       </body>
     </html>
   );
