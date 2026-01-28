@@ -1,74 +1,77 @@
 'use client';
 
-import { useEffect } from 'react';
-import { projects } from "@/data/portfolio";
+import { projects } from '@/data/portfolio';
 
 export default function ProjectsClient() {
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollButton = document.querySelector('.scroll-to-top');
-      if (scrollButton) {
-        if (window.scrollY > 300) {
-          scrollButton.classList.add('visible');
-        } else {
-          scrollButton.classList.remove('visible');
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div className="relative">
-      {/* Background Gradient */}
-      <div className="fixed inset-0 gradient-bg pointer-events-none" />
+    <section className="pt-5 pb-15">
+      <div className="site-container">
 
-      {/* Scroll to Top Button */}
-      <button
-        className="scroll-to-top"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        aria-label="Scroll to top"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-      </button>
+        {/* ================= HEADER ================= */}
+        <div className="text-center mb-16">
+          <span className="inline-block mb-6 px-4 py-1 text-xs font-bold tracking-widest uppercase
+            rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+            Portfolio
+          </span>
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-        {/* Page Header */}
-        <div className="mb-20 text-center">
-          <span className="typography-caption text-[#60A5FA] block mb-6">Portfolio</span>
-          <h1 className="typography-heading-1 text-[#F8FAFC] mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-50 mb-6">
             My Projects
           </h1>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-[#3B82F6] to-[#1D4ED8] rounded-full mx-auto"></div>
+
+          <p className="max-w-3xl mx-auto text-lg text-slate-400">
+            <span className="font-bold text-white">
+                          Selected projects demonstrating real-world DevOps, Cloud, and automation expertise
+                          </span>{' '}
+          </p>
         </div>
 
-        {/* Projects Grid */}
+        {/* ================= PROJECT GRID ================= */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
-              key={index}
-              className="glass-card elevated-card p-6 rounded-xl border border-[#21262D] hover:border-[#388BFD] hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group"
+              key={project.title}
+              className="group relative rounded-2xl border border-slate-700/50
+                bg-gradient-to-br from-slate-800/70 via-slate-800/50 to-slate-900/70
+                backdrop-blur-xl p-7
+                shadow-[0_20px_40px_rgba(0,0,0,0.35)]
+                hover:-translate-y-2 hover:shadow-[0_35px_70px_rgba(0,0,0,0.55)]
+                transition-all duration-300 overflow-hidden"
             >
-              <div className="mb-4">
-                <span className="px-3 py-1 text-xs font-semibold text-[#388BFD] bg-[#388BFD]/10 rounded-full border border-[#388BFD]/20">
-                  {project.category}
-                </span>
-              </div>
-              <h3 className="text-xl font-bold text-[#E6EDF3] mb-3 leading-snug group-hover:text-[#388BFD] transition-colors">
+              {/* Glow Accent */}
+              <div
+                aria-hidden
+                className="absolute -top-12 -right-12 h-32 w-32 rounded-full
+                  bg-emerald-500/15 blur-3xl opacity-0
+                  group-hover:opacity-100 transition-opacity"
+              />
+
+              {/* Category */}
+              <span className="inline-block mb-4 px-3 py-1 text-xs font-semibold rounded-full
+                bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
+                {project.category}
+              </span>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-slate-100 mb-3 group-hover:text-white transition-colors">
                 {project.title}
               </h3>
-              <p className="text-[#9198A1] mb-4 leading-relaxed">
+
+              {/* Description */}
+              <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 {project.description}
               </p>
+
+              {/* Divider */}
+              <div className="h-px w-full bg-slate-700/50 mb-4" />
+
+              {/* Tech Stack */}
               <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, techIndex) => (
+                {project.technologies.map((tech) => (
                   <span
-                    key={techIndex}
-                    className="px-2 py-1 text-xs text-[#9198A1] bg-[#21262D] rounded-md border border-[#30363D]"
+                    key={tech}
+                    className="px-3 py-1 text-xs rounded-md
+                      bg-slate-900/70 border border-slate-700
+                      text-slate-400 group-hover:text-slate-300 transition-colors"
                   >
                     {tech}
                   </span>
@@ -77,7 +80,8 @@ export default function ProjectsClient() {
             </div>
           ))}
         </div>
+
       </div>
-    </div>
+    </section>
   );
 }

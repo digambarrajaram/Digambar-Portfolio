@@ -5,7 +5,8 @@ import { onCLS, onFID, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 export default function WebVitals() {
   useEffect(() => {
-    // Report Core Web Vitals to console for development
+    if (process.env.NODE_ENV !== 'development') return;
+
     onCLS(console.log);
     onFID(console.log);
     onFCP(console.log);

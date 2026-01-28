@@ -1,55 +1,151 @@
 'use client';
 
-import { technologies } from '@/data/portfolio';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+const techCategories = [
+  {
+    title: 'Cloud Infrastructure',
+    technologies: [
+      'AWS',
+      'Terraform',
+      'VMware vSphere',
+      'VPC Networking',
+      'Security Groups',
+    ],
+    accent: 'emerald',
+  },
+  {
+    title: 'DevOps & Automation',
+    technologies: [
+      'GitHub Actions',
+      'Jenkins',
+      'Docker',
+      'Kubernetes',
+      'Ansible',
+      'Shell Scripting',
+    ],
+    accent: 'blue',
+  },
+  {
+    title: 'Observability',
+    technologies: ['CloudWatch', 'Prometheus', 'Grafana'],
+    accent: 'purple',
+  },
+  {
+    title: 'AI / ML',
+    technologies: [
+      'OpenAI',
+      'Amazon Bedrock',
+      'SageMaker',
+      'Langfuse',
+      'Vector Databases',
+    ],
+    accent: 'pink',
+  },
+  {
+    title: 'Frontend / Backend',
+    technologies: ['Next.js', 'FastAPI', 'Python', 'Gradio'],
+    accent: 'cyan',
+  },
+];
 
 export default function TechnologiesSection() {
-  const [selectedTech, setSelectedTech] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const handleTechClick = (tech: string) => {
-    setSelectedTech(selectedTech === tech ? null : tech);
-  };
+  useEffect(() => {
+    const section = document.getElementById('technologies');
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="py-24 fade-in-up scroll-reveal" suppressHydrationWarning={true}>
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-6">
-          <span className="typography-caption text-[#60A5FA] slide-in-left">Technologies</span>
+    <section
+      id="technologies"
+      className="relative w-full pt-0"
+    >
+      <div className="site-container pb-10 sm:pb-24">
+        {/* HEADER */}
+        <div
+          className={`text-center mb-12 sm:mb-16 transition-all duration-700 ease-out
+            ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
+          `}
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-50 mb-4">
+            Tech Stack & Tools
+          </h2>
+          <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto">
+            Technologies I use to build secure, scalable, production-grade systems
+          </p>
         </div>
-        <h2 className="typography-heading-1 text-[#F8FAFC] mb-8 leading-tight slide-in-right stagger-1">
-          Tech Stack & Tools
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {technologies.map((tech, index) => (
+
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {techCategories.map((category, index) => (
             <div
-              key={index}
-              onClick={() => handleTechClick(tech)}
-              className={`glass-card p-4 rounded-xl border border-[#2A3441] hover:border-[#3B82F6]/30 transition-all duration-300 hover:shadow-xl hover:scale-105 card-interactive stagger-${(index % 6) + 1} group cursor-pointer text-center`}
+              key={category.title}
+              className={`relative rounded-2xl border border-slate-700/50 bg-slate-800/50 backdrop-blur-xl p-6 sm:p-8 shadow-xl transition-all duration-700 ease-out
+                ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
+              `}
+              style={{ transitionDelay: `${index * 80}ms` }}
             >
-              <span className="typography-body text-[#CBD5E1] group-hover:text-[#E5E7EB] transition-colors duration-300">
-                {tech}
-              </span>
-              {selectedTech === tech && (
-                <div className="mt-2 text-xs text-[#60A5FA] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Click to explore projects
-                </div>
-              )}
+              {/* GLOW */}
+              <div
+                aria-hidden
+                className={`absolute -top-10 -right-10 h-28 w-28 rounded-full blur-3xl ${
+                  category.accent === 'emerald'
+                    ? 'bg-emerald-500/15'
+                    : category.accent === 'blue'
+                    ? 'bg-blue-500/15'
+                    : category.accent === 'purple'
+                    ? 'bg-purple-500/15'
+                    : category.accent === 'pink'
+                    ? 'bg-pink-500/15'
+                    : 'bg-cyan-500/15'
+                }`}
+              />
+
+              <h3 className="relative mb-4 text-xl font-semibold text-slate-200">
+                {category.title}
+              </h3>
+
+              <div className="relative flex flex-wrap gap-2 sm:gap-3">
+                {category.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className={`inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium border cursor-default
+                      ${
+                        category.accent === 'emerald'
+                          ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20'
+                          : category.accent === 'blue'
+                          ? 'border-blue-500/30 bg-blue-500/10 text-blue-300 hover:bg-blue-500/20'
+                          : category.accent === 'purple'
+                          ? 'border-purple-500/30 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20'
+                          : category.accent === 'pink'
+                          ? 'border-pink-500/30 bg-pink-500/10 text-pink-300 hover:bg-pink-500/20'
+                          : 'border-cyan-500/30 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20'
+                      }
+                    `}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
-        {selectedTech && (
-          <div className="mt-8 text-center">
-            <a
-              href="/projects"
-              className="inline-flex items-center px-6 py-3 text-sm font-medium text-[#F8FAFC] glass-card border border-[#3B82F6]/40 rounded-xl transition-all duration-300 hover:border-[#3B82F6] hover:bg-[#3B82F6]/10 hover:scale-105"
-            >
-              View Projects Using {selectedTech}
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-        )}
       </div>
     </section>
   );
