@@ -7,7 +7,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="relative w-full pt-5 pb-20">
       <div className="site-container space-y-15">
-        <AboutSummary />
+        <AboutSummary isFullPage={true} />
         <AboutDetails />
       </div>
     </section>

@@ -53,11 +53,8 @@ export default function AboutDetails() {
           {exp.responsibilities?.length > 0 && (
             <div className="mt-6 pt-5 border-t border-slate-700/40">
               <p className="text-emerald-400 font-medium">
-                {exp.domain}
-              </p>
-              <h4 className="text-sm uppercase tracking-wide text-slate-400 mb-3 font-semibold">
                 Key Responsibilities
-              </h4>
+              </p>
               <ul className="space-y-3">
                 {exp.responsibilities.map((item, i) => (
                   <li key={i} className="flex items-start text-slate-300 leading-relaxed">
@@ -141,7 +138,6 @@ export default function AboutDetails() {
             >
               <h3 className="text-lg font-semibold text-slate-50">{cert.name}</h3>
               <p className="text-emerald-400 text-sm font-medium">{cert.provider}</p>
-              <p className="text-slate-400 text-sm">{cert.duration}</p>
             </div>
           ))}
         </div>

@@ -4,14 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { personalInfo } from '@/data/portfolio';
 import { useMobileMenu } from '@/components/MobileMenuContext';
-
-const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/resume', label: 'Resume' },
-  { href: '/contact', label: 'Contact' },
-];
+import { navItems } from '@/lib/constants';
 
 export default function Header() {
   const pathname = usePathname();

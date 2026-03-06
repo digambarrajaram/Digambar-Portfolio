@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
+import { SITE_URL } from '@/lib/metadata';
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://digambar-portfolio.vercel.app'
+  const baseUrl = SITE_URL;
   
   return [
     {

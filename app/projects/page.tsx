@@ -1,10 +1,7 @@
 import ProjectsClient from "@/components/ProjectsClient";
+import { generateProjectsMetadata } from "@/lib/metadata";
 
-
-export const metadata = {
-  title: "Projects | Digambar Rajaram",
-  description: "Explore DevOps and Cloud Engineering projects by Digambar Rajaram, featuring AWS infrastructure, CI/CD pipelines, and containerization solutions.",
-};
+export const metadata = generateProjectsMetadata();
 
 export default function Projects() {
   return (

@@ -1,7 +1,23 @@
 // Technologies (flat array for Home page)
+
 export const technologies = [
-  "AWS", "Terraform", "Kubernetes", "GitHub Actions", "Docker", "Ansible", "Python", "Prometheus", "Grafana","Jenkins", "Shell scripting", "VMware vSphere","OpenAI", "Semgrep", "S3 Vector Storage", "Amazon Bedrock", "SageMaker", "Langfuse", "Vercel","Next.js", "FastAPI", "Gradio"
+  "AWS",
+  "Terraform",
+  "Kubernetes",
+  "Docker",
+  "GitHub Actions",
+  "Jenkins",
+  "Ansible",
+  "Python",
+  "Shell Scripting",
+  "Prometheus",
+  "Grafana",
+  "VMware vSphere",
+  "Linux",
+  "Windows Server",
+  "Commvault"
 ];
+
 /**
  * PORTFOLIO — SINGLE SOURCE OF TRUTH
  * Author: Digambar Rajaram
@@ -9,7 +25,7 @@ export const technologies = [
 
 export const personalInfo = {
   name: "Digambar Rajaram",
-  title: "Infrastructure & DevOps Engineer",
+  title: "DevOps & Cloud Infrastructure Engineer",
   location: "India",
   phone: "+91-7353570952",
   email: "digambarrajaram2@gmail.com",
@@ -18,38 +34,82 @@ export const personalInfo = {
 export const socialLinks = {
   linkedin: "https://www.linkedin.com/in/digambar-rajaram-8371b51a5/",
   github: "https://github.com/digambarrajaram",
+  twitter: "https://twitter.com/digambarrajaram",
+};
+
+export const siteConfig = {
+  siteUrl: "https://digambarrajaram.cloud",
+  profileImage: "/Digambar_Photo.png",
 };
 
 export const about = {
-  headline: "Designing Secure, Reliable, and Production-Grade Cloud Platforms",
+  headline:
+    "Building Reliable Infrastructure at Scale — Enterprise VMware Platforms and Cloud-Native DevOps on AWS",
+
   intro: [
-    "Infrastructure & DevOps Engineer with 2+ years of enterprise experience supporting large-scale, regulated government platforms.",
-    "Strong background in VMware vSphere, Linux, Windows Server, and datacenter operations, combined with hands-on cloud-native DevOps practices on AWS.",
-    "I bring a production-first mindset focusing on reliability, security, observability, and automation."
+    "DevOps & Cloud Infrastructure Engineer with 2+ years of enterprise production experience managing large-scale infrastructure for mission-critical government financial platforms. Skilled in AWS, VMware vSphere, CI/CD automation, containerization, and Infrastructure as Code.",
+
+    "Hands-on experience operating VMware vSphere environments supporting 1500+ virtual machines across 100+ ESXi hosts, ensuring high availability, disaster recovery readiness, and performance optimization.",
+
+    "Focused on modern DevOps practices including Docker, Kubernetes, CI/CD automation, and AWS cloud deployments, with a strong emphasis on reliability, observability, security, and production-ready infrastructure."
   ],
+
+  // Supporting content for AboutSummary component
+  expertise: [
+    "AWS cloud infrastructure",
+    "VMware vSphere datacenter operations",
+    "modern DevOps practices including CI/CD automation, containerization, and infrastructure as code"
+  ],
+
+  approach: [
+    "security-first mindset",
+    "OS hardening and access controls to observability and monitoring",
+    "ensuring systems remain stable, auditable, and resilient under real-world load"
+  ]
 };
 
-// Refined Skill Sections
 export const skills = {
-  cloudInfrastructure: [
-    "AWS (EC2, S3, IAM, Lambda, API Gateway, CloudFront, App Runner,Route 53, RDS, ElastiCache, ALB, Auto Scaling Groups, CloudFormation, VPC)",
+
+  cloudDevOps: [
+    "AWS (EC2, S3, IAM, VPC, Lambda, API Gateway, EKS, CloudWatch, ALB/NLB)",
     "Terraform (Infrastructure as Code)",
-    "VMware vSphere & Datacenter Operations",
-    "VPC Networking & Security Groups"
-  ],
-  devOpsAutomation: [
-    "GitHub Actions",
-    "Jenkins",
     "Docker & Containerization",
-    "Kubernetes (EKS)",
-    "Ansible",
-    "Python & Shell Scripting"
+    "Kubernetes",
+    "Jenkins",
+    "GitHub Actions",
+    "Ansible"
   ],
-  observabilitySecurity: [
+
+  infrastructureVirtualization: [
+    "VMware vSphere",
+    "ESXi & vCenter",
+    "High Availability (HA)",
+    "Distributed Resource Scheduler (DRS)",
+    "vMotion",
+    "vRealize Operations (vROps)",
+    "Capacity Planning & Performance Optimization"
+  ],
+
+  operatingSystems: [
+    "Linux (Ubuntu, Amazon Linux, RedHat)",
+    "Windows Server 2016/2019/2022",
+    "OS Hardening",
+    "Patch Management"
+  ],
+
+  backupDisasterRecovery: [
+    "Commvault Enterprise Backup",
+    "Disaster Recovery Automation",
+    "RPO/RTO Validation",
+    "Backup Infrastructure Management"
+  ],
+
+  monitoringAutomation: [
     "Amazon CloudWatch",
-    "Prometheus & Grafana",
-    "OS Hardening (CIS-aligned)",
-    "Patch Management & VAPT Remediation"
+    "Prometheus",
+    "Grafana",
+    "Python",
+    "Shell Scripting"
   ]
 };
 
@@ -60,104 +120,128 @@ export const experience = [
     role: "Assistant Manager – Infrastructure & DevOps",
     duration: "Mar 2023 – Jun 2025",
     domain: "National Pension System (NPS) – Government Financial Platform",
+
     responsibilities: [
-      "Owned day-to-day infrastructure operations for a mission-critical government financial platform",
-      "Managed VMware vSphere environments supporting production and non-production workloads",
-      "Administered Windows Server lifecycle: provisioning, patching, monitoring, and decommissioning",
-      "Handled Linux-based systems for application and support workloads",
-      "Led and coordinated infrastructure operations activities across a multi-member team",
-      "Performed capacity planning for compute, storage, and virtualization layers",
-      "Executed OS hardening activities aligned with internal security baselines",
-      "Planned and executed patch management cycles with minimal service impact",
-      "Coordinated VAPT activities with security teams and tracked remediation",
-      "Managed infrastructure licensing and compliance documentation",
-      "Participated in incident response, root-cause analysis, and change management",
-      "Worked closely with application, security, and audit teams to maintain SLA and compliance",
+
+      "Managed large-scale VMware vSphere infrastructure supporting 1500+ virtual machines across production and disaster recovery environments.",
+
+      "Maintained clustered virtualization environment consisting of 100+ ESXi hosts ensuring high availability using HA, DRS, and vMotion migrations.",
+
+      "Performed ESXi lifecycle management including firmware validation, upgrades, and patch management while minimizing service disruption.",
+
+      "Administered Windows Server and Linux systems including provisioning, patching, and security hardening aligned with enterprise standards.",
+
+      "Managed enterprise backup environment exceeding 10+ PB using Commvault ensuring reliable backup, restore validation, and compliance readiness.",
+
+      "Automated disaster recovery failover processes using Ansible scripts and validated RPO/RTO objectives during DR drills.",
+
+      "Optimized infrastructure performance using VMware vRealize Operations analytics including CPU Ready metrics, memory contention analysis, and storage latency monitoring.",
+
+      "Led day-to-day operations of a 6-member infrastructure team ensuring SLA adherence and operational stability.",
+
+      "Acted as escalation point for critical incidents performing root cause analysis and implementing preventive improvements.",
+
+      "Participated in change management and CAB processes ensuring safe infrastructure changes across production environments."
     ],
+
     achievements: [
-      "Promoted to Assistant Manager in Sep 2023 based on operational ownership",
-      "Recognized for reliability and incident ownership",
-    ],
-  },
+      "Promoted to Assistant Manager in Sep 2023 based on operational ownership and leadership.",
+      "Improved infrastructure reliability through proactive monitoring and capacity planning.",
+      "Contributed to automation initiatives reducing manual infrastructure operations."
+    ]
+  }
 ];
 
 export const projects = [
+
   {
-    title: "AI-Driven DevOps Incident Management on AWS",
+    title: "Enterprise DevOps CI/CD Pipeline",
+    category: "DevOps Automation",
+    description:
+      "Designed and implemented an enterprise CI/CD pipeline for a Java web application integrating GitHub, Jenkins, Docker, and Ansible to automate build, test, containerization, and deployment processes.",
+    technologies: ["Jenkins", "Docker", "Ansible", "AWS EC2", "Maven", "GitHub"]
+  },
+
+  {
+    title: "AI-Driven DevOps Incident Management Platform",
     category: "DevOps / SRE",
-    description: "Production-style incident simulation platform to evaluate AWS DevOps Agent using real infrastructure, CI/CD events, and deterministic failures.",
-    technologies: ["AWS DevOps Agents","AWS", "Terraform", "GitHub Actions", "AWS Lambda", "CloudWatch"],
+    description:
+      "Built a simulated DevOps incident response platform on AWS using Terraform infrastructure to evaluate automated incident analysis using CloudWatch metrics, logs, and CI/CD deployment telemetry.",
+    technologies: ["AWS", "Terraform", "CloudWatch", "GitHub Actions"]
   },
+
   {
-    title: "Production-Grade AWS Multi-AZ Web Stack",
+    title: "Multi-AZ AWS Networking & Auto Scaling Architecture",
     category: "Cloud Infrastructure",
-    description: "Designed and deployed a resilient three-tier web stack on AWS with ALB, ASG, and RDS across multiple Availability Zones for high availability.",
-    technologies: ["AWS", "Terraform", "ALB", "EC2", "RDS", "ElastiCache", "CloudWatch"],
+    description:
+      "Designed a highly available AWS infrastructure using Terraform with multi-AZ VPC networking, Application Load Balancers, NAT Gateways, and Auto Scaling Groups.",
+    technologies: ["AWS", "Terraform", "ALB", "Auto Scaling", "VPC"]
   },
+
   {
-    title: "Scalable & Secure AWS EKS Infrastructure Automation",
-    category: "Kubernetes / IaC",
-    description: "Terraform-driven provisioning of a production-ready AWS EKS cluster with secure networking, IAM, and managed node groups.",
-    technologies: ["AWS", "EKS", "Terraform", "Kubernetes", "IAM"],
+    title: "Amazon EKS Production Automation",
+    category: "Kubernetes",
+    description:
+      "Provisioned production-ready Kubernetes infrastructure using Terraform with managed EKS node groups, IRSA based IAM access control, and AWS Load Balancer Controller integration.",
+    technologies: ["AWS", "EKS", "Terraform", "Kubernetes"]
   },
+
   {
-    title: "Cybersecurity Analyzer",
-    category: "DevSecOps",
-    description: "Cloud-native static code analysis platform using Semgrep and MCP orchestration, designed for multi-cloud deployments.",
-    technologies: ["Python", "Semgrep", "Terraform", "AWS"],
+    title: "Infrastructure Inventory Management Platform",
+    category: "Internal Automation Tool",
+    description:
+      "Developed internal infrastructure asset management platform using Spring Boot, MySQL, and ReactJS to track hardware and software inventory improving audit readiness and compliance tracking.",
+    technologies: ["Spring Boot", "ReactJS", "MySQL"]
   },
-  {
-    title: "AI Digital Twin Platform (Cloud-Native)",
-    category: "Cloud-Native / AI",
-    description: "Developed a serverless AI Digital Twin platform with automated AWS infrastructure provisioning and event-driven backend.",
-    technologies: ["AWS", "Terraform", "FastAPI", "Next.js", "GitHub Actions"],
-  },
+
   {
     title: "IdeaGen Pro – AI SaaS",
-    category: "AI SaaS",
-    description: "Built a subscription-based AI SaaS with real-time streaming and secure authentication.",
-    technologies: ["Next.js", "FastAPI", "TypeScript", "OpenAI", "Clerk"],
+    category: "Personal Project",
+    description:
+      "AI SaaS platform generating startup ideas using modern web architecture with real-time streaming responses and secure authentication.",
+    technologies: ["Next.js", "FastAPI", "OpenAI"]
   },
+
   {
     title: "MediNotes Pro – AI Healthcare SaaS",
-    category: "Healthcare / AI",
-    description: "Containerized AI assistant for transforming consultation notes into summaries.",
-    technologies: ["Next.js", "FastAPI", "Docker", "OpenAI", "Clerk"],
+    category: "Personal Project",
+    description:
+      "Containerized AI assistant for transforming doctor consultation notes into structured summaries.",
+    technologies: ["Next.js", "FastAPI", "Docker"]
   }
+
 ];
 
 export const certifications = [
   {
     name: "Cloud & DevOps Upskilling Program",
-    provider: "Learnbay (External Online)",
-    duration: "Feb 2025 – Dec 2025",
-  },
-  {
-    name: "Java Full Stack Development",
-    provider: "TalentSprint (Company-sponsored Bootcamp)",
-    duration: "Mar 2023 – Jun 2023",
-  },
-  {
-    name: "Java Full Stack Development",
-    provider: "Q-J Spiders",
-    duration: "Aug 2022 – Feb 2023",
+    provider: "Learnbay",
   },
   {
     name: "AI Engineer – MLOps Track",
-    provider: "Udemy",
+    provider: "Udemy"
   },
   {
-    name: "PromptOps – AI-Powered DevOps",
-    provider: "Udemy",
+    name: "VMware vSphere ESXi & vCenter Administration",
+    provider: "Udemy"
   },
   {
-    name: "Complete VMware vSphere ESXi & vCenter Administration",
-    provider: "Udemy",
+    name: "Java Full Stack Development",
+    provider: "TalentSprint / Q-J Spiders"
   }
 ];
 
 export const stats = {
   experienceYears: 2.4,
   projects: 7,
-  certifications: 6,
+  certifications: 4,
+  // Key achievements
+  vmsManaged: "1500+",
+  esxiHosts: "100+",
+  backupStorage: "10+ PB",
+  uptime: "99.9%"
+};
+
+export const projectsPage = {
+  tagline: "Selected projects demonstrating real-world DevOps, Cloud, and automation expertise"
 };

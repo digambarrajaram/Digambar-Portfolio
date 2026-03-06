@@ -1,10 +1,11 @@
 import { MetadataRoute } from 'next'
+import { personalInfo } from '@/data/portfolio';
  
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Digambar Rajaram - DevOps & Cloud Engineer',
-    short_name: 'Digambar Portfolio',
-    description: 'Professional portfolio showcasing DevOps and Cloud Engineering projects',
+    name: `${personalInfo.name} - ${personalInfo.title}`,
+    short_name: `${personalInfo.name} Portfolio`,
+    description: `Professional portfolio showcasing ${personalInfo.title} projects and expertise`,
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
@@ -16,5 +17,5 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/x-icon',
       },
     ],
-  }
+  };
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { projects } from '@/data/portfolio';
+import { projects, projectsPage } from '@/data/portfolio';
 
 export default function ProjectsClient() {
   return (
@@ -20,7 +20,7 @@ export default function ProjectsClient() {
 
           <p className="max-w-3xl mx-auto text-lg text-slate-400">
             <span className="font-bold text-white">
-                          Selected projects demonstrating real-world DevOps, Cloud, and automation expertise
+                          {projectsPage.tagline}
                           </span>{' '}
           </p>
         </div>

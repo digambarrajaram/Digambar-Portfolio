@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { personalInfo, about } from '@/data/portfolio';
+import { personalInfo, about, siteConfig } from '@/data/portfolio';
 import Stats from './Stats';
 
 export default function HeroSection() {
@@ -98,7 +98,7 @@ export default function HeroSection() {
               <div className="relative rounded-3xl border border-slate-600/60 bg-slate-800/60 backdrop-blur-xl p-3 shadow-2xl">
                 <div className="overflow-hidden rounded-2xl bg-slate-900">
                   <Image
-                    src="/Digambar_Photo.png"
+                    src={siteConfig.profileImage}
                     alt={`${personalInfo.name} – ${personalInfo.title}`}
                     width={460}
                     height={560}

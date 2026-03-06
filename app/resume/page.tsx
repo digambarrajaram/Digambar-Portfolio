@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { about, skills, stats } from "@/data/portfolio";
+import { generateResumeMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Resume | Digambar Rajaram",
-  description:
-    "Download the resume of Digambar Rajaram - DevOps & Cloud Engineer. Experience with AWS, Terraform, Kubernetes, and CI/CD automation.",
-};
+export const metadata: Metadata = generateResumeMetadata();
 
 export default function Resume() {
   return (
@@ -43,38 +40,49 @@ export default function Resume() {
             </div>
 
             <h2 className="text-2xl font-bold text-slate-100 mb-3">
-              Download Resume
+              My Resume
             </h2>
 
             <p className="text-slate-400 mb-8">
-              Complete resume in PDF format
+              View or download my complete resume
             </p>
 
-            <a
-              href="/Resume.pdf"
-              download
-              className="inline-flex items-center px-8 py-4 text-sm font-semibold
-                text-white rounded-xl
-                bg-gradient-to-r from-emerald-500 to-emerald-600
-                hover:from-emerald-400 hover:to-emerald-600
-                shadow-lg shadow-emerald-500/30 transition-all"
-            >
-              Download PDF
-            </a>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="/Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold
+                  text-white rounded-xl
+                  bg-gradient-to-r from-emerald-500 to-emerald-600
+                  hover:from-emerald-400 hover:to-emerald-600
+                  shadow-lg shadow-emerald-500/30 transition-all hover:scale-105"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                View Resume
+              </a>
+
+              <a
+                href="/Resume.pdf"
+                download
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold
+                  text-emerald-300 rounded-xl border border-emerald-500/30
+                  hover:bg-emerald-500/10 transition-all hover:scale-105"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download PDF
+              </a>
+            </div>
           </div>
         </section>
-
-        {/* ================= SUMMARY ================= */}
-        <section className="max-w-4xl mx-auto">
-          <SectionHeader label="Overview" title="Professional Summary" />
-          <div className="rounded-2xl border border-slate-700/50
-            bg-slate-800/50 backdrop-blur-xl p-8">
-            <p className="text-lg leading-relaxed text-slate-300">
-              {about.headline}
-            </p>
-          </div>
-        </section>
-
         {/* ================= SKILLS ================= */}
         <section>
           <SectionHeader label="Expertise" title="Core Competencies" />

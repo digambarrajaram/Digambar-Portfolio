@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 interface SharedLayoutProps {
   children: React.ReactNode;
@@ -9,6 +10,12 @@ interface SharedLayoutProps {
 export default function SharedLayout({ children }: SharedLayoutProps) {
   const [scrollY, setScrollY] = useState(0);
   const [parallaxRate, setParallaxRate] = useState(0);
+  const pathname = usePathname();
+
+  // Scroll to top on route change (fixes mobile navigation issue)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +59,7 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
       </button>
 
       {/* Page Content */}
-      <div className="relative max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 pt-0">
+      <div className="relative w-full px-6 sm:px-6 lg:px-8 pt-0">
         {children}
       </div>
     </div>
