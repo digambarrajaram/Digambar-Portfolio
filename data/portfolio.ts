@@ -225,7 +225,7 @@ export const projects = [
 
 export const certifications = [
   {
-    name: "•	Advanced Cloud Computing & DevOps Certification from Learnbay, in collaboration with Microsoft",
+    name: "Advanced Cloud Computing & DevOps Certification from Learnbay, in collaboration with Microsoft",
     provider: "Learnbay",
   },
   {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { about, stats, personalInfo } from '@/data/portfolio';
+import { about, skills, stats, personalInfo } from '@/data/portfolio';
 
 interface AboutSummaryProps {
   isFullPage?: boolean;
@@ -42,7 +42,7 @@ export default function AboutSummary({ isFullPage = false }: AboutSummaryProps) 
         </svg>
       ),
       title: "Cloud & DevOps",
-      description: "AWS, Terraform, Kubernetes, Docker, Jenkins, GitHub Actions, Ansible"
+      description: skills.cloudDevOps.join(', ')
     },
     {
       icon: (
@@ -51,7 +51,7 @@ export default function AboutSummary({ isFullPage = false }: AboutSummaryProps) 
         </svg>
       ),
       title: "Virtualization & Infrastructure",
-      description: "VMware vSphere, Linux, Windows Server, Commvault"
+      description: skills.infrastructureVirtualization.join(', ')
     },
     {
       icon: (
@@ -60,7 +60,7 @@ export default function AboutSummary({ isFullPage = false }: AboutSummaryProps) 
         </svg>
       ),
       title: "Observability & Scripting",
-      description: "Prometheus, Grafana, Python, Shell Scripting"
+      description: skills.monitoringAutomation.join(', ')
     }
   ];
 
