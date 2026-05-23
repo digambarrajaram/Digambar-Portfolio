@@ -8,6 +8,8 @@ export const technologies = [
   "GitHub Actions",
   "Jenkins",
   "Ansible",
+  "ELK Stack",
+  "N8N",
   "Python",
   "Shell Scripting",
   "Prometheus",
@@ -25,7 +27,7 @@ export const technologies = [
 
 export const personalInfo = {
   name: "Digambar Rajaram",
-  title: "DevOps & Cloud Infrastructure Engineer",
+  title: "DevOps & Infrastructure Engineer",
   location: "India",
   phone: "+91-7353570952",
   email: "digambarrajaram2@gmail.com",
@@ -44,40 +46,42 @@ export const siteConfig = {
 
 export const about = {
   headline:
-    "Building Reliable Infrastructure at Scale — Enterprise VMware Platforms and Cloud-Native DevOps on AWS",
+    "Building Reliable Infrastructure at Scale — Enterprise VMware & Cloud-Native DevOps on AWS",
 
   intro: [
-    "DevOps & Cloud Infrastructure Engineer with 2+ years of enterprise production experience managing large-scale infrastructure for mission-critical government financial platforms. Skilled in AWS, VMware vSphere, CI/CD automation, containerization, and Infrastructure as Code.",
+    "DevOps & Infrastructure Engineer with 2+ years of enterprise production experience at Protean eGov Technologies, supporting India's largest government platforms including NPS, PAN, TIN, CRA, and eSign — processing millions of transactions daily.",
 
-    "Hands-on experience operating VMware vSphere environments supporting 1500+ virtual machines across 100+ ESXi hosts, ensuring high availability, disaster recovery readiness, and performance optimization.",
+    "Operated VMware vSphere environments across 1500+ VMs and 100+ ESXi hosts with 99.9%+ uptime, leading disaster recovery automation, performance optimization, and a 6-member infrastructure team.",
 
-    "Focused on modern DevOps practices including Docker, Kubernetes, CI/CD automation, and AWS cloud deployments, with a strong emphasis on reliability, observability, security, and production-ready infrastructure."
+    "Building cloud-native expertise across AWS, Terraform, Kubernetes, CI/CD, and observability — with hands-on projects in ELK Stack, AI-driven incident management, and production-grade AWS networking."
   ],
 
-  // Supporting content for AboutSummary component
   expertise: [
-    "AWS cloud infrastructure",
-    "VMware vSphere datacenter operations",
-    "modern DevOps practices including CI/CD automation, containerization, and infrastructure as code"
+    "AWS cloud infrastructure & IaC (Terraform, Helm, GitHub Actions)",
+    "VMware vSphere datacenter operations & enterprise backup (Commvault 10+ PB)",
+    "CI/CD automation, containerization, and observability (ELK, Prometheus, Grafana)"
   ],
 
   approach: [
-    "security-first mindset",
-    "OS hardening and access controls to observability and monitoring",
-    "ensuring systems remain stable, auditable, and resilient under real-world load"
+    "security-first mindset — from OS hardening and RBAC to X-Pack TLS and least-privilege IAM",
+    "end-to-end ownership across infrastructure, automation, and monitoring",
+    "building systems that are stable, auditable, and resilient under real-world load"
   ]
 };
 
 export const skills = {
 
   cloudDevOps: [
-    "AWS (EC2, S3, IAM, VPC, Lambda, API Gateway, EKS, CloudWatch, ALB/NLB)",
+    "AWS (EC2, S3, IAM, VPC, Lambda, API Gateway, EKS, CloudWatch, ALB/NLB,Route 53, Cloud Front)",
     "Terraform (Infrastructure as Code)",
     "Docker & Containerization",
     "Kubernetes",
     "Jenkins",
     "GitHub Actions",
-    "Ansible"
+    "Ansible",
+    "Agile/Scrum SDLC",
+    "cloud service models (IaaS, PaaS, SaaS)",
+    "workflow automation with N8N"
   ],
 
   infrastructureVirtualization: [
@@ -105,6 +109,7 @@ export const skills = {
   ],
 
   monitoringAutomation: [
+    "ELK Stack (Elasticsearch, Logstash, Kibana, Filebeat, ElastAlert2)",
     "Amazon CloudWatch",
     "Prometheus",
     "Grafana",
@@ -117,31 +122,31 @@ export const experience = [
   {
     company: "Protean eGov Technologies Ltd (formerly NSDL eGov Infrastructure Ltd)",
     location: "Mumbai, Maharashtra, India",
-    role: "Assistant Manager – Infrastructure & DevOps",
+    role: "Assistant Manager – DevOps & Infrastructure Engineer",
     duration: "Mar 2023 – Jun 2025",
-    domain: "National Pension System (NPS) – Government Financial Platform",
+    domain: "India’s largest government platforms (NPS, PAN, TIN, CRA, eSign)",
 
     responsibilities: [
 
-      "Managed large-scale VMware vSphere infrastructure supporting 1500+ virtual machines across production and disaster recovery environments.",
+      "Maintained 99.9%+ uptime across 1500+ VMs spanning production and DR environments on a clustered VMware vSphere architecture (100+ ESXi hosts), directly supporting mission-critical government financial services",
 
-      "Maintained clustered virtualization environment consisting of 100+ ESXi hosts ensuring high availability using HA, DRS, and vMotion migrations.",
+      "Reduced unplanned downtime by ~40% through proactive performance monitoring using vROps analytics — tracking CPU Ready, memory contention, and storage latency across the entire fleet",
 
-      "Performed ESXi lifecycle management including firmware validation, upgrades, and patch management while minimizing service disruption.",
+      "Executed zero-downtime ESXi lifecycle upgrades and firmware validation cycles across 100+ hosts, coordinating with CAB and maintaining patch compliance with no production impact",
 
-      "Administered Windows Server and Linux systems including provisioning, patching, and security hardening aligned with enterprise standards.",
+      "Managed provisioning, monthly patch cycles (100% compliance), and security hardening for 1500+ Windows Server (2016/2019/2022) and Linux VMs supporting enterprise workloads",
 
-      "Managed enterprise backup environment exceeding 10+ PB using Commvault ensuring reliable backup, restore validation, and compliance readiness.",
+      "Administered 10+ PB enterprise backup environment using Commvault — the backbone of disaster recovery for one of India's largest government fintech platforms",
 
-      "Automated disaster recovery failover processes using Ansible scripts and validated RPO/RTO objectives during DR drills.",
+      "Automated Disaster Recovery failover using Ansible, reducing manual DR drill time by 60% and achieving consistent RPO/RTO targets during quarterly audits",
 
-      "Optimized infrastructure performance using VMware vRealize Operations analytics including CPU Ready metrics, memory contention analysis, and storage latency monitoring.",
+      "Led daily operations of a 6-member infrastructure team; served as escalation point for P1/P2 incidents and conducted structured Root Cause Analysis (RCA) for all major events",
 
-      "Led day-to-day operations of a 6-member infrastructure team ensuring SLA adherence and operational stability.",
+      "Participated in CAB meetings and enforced ITIL-aligned change management processes, reducing change-related incidents by standardizing pre-change checklists",
 
-      "Acted as escalation point for critical incidents performing root cause analysis and implementing preventive improvements.",
+      "Built an internal infrastructure asset management platform using Spring Boot, MySQL, and ReactJS to replace manual spreadsheet tracking of 1500+ hardware/software assets",
 
-      "Participated in change management and CAB processes ensuring safe infrastructure changes across production environments."
+      "Reduced audit preparation time by ~50% — platform provided real-time inventory visibility that was previously unavailable during compliance reviews"
     ],
 
     achievements: [
@@ -220,15 +225,19 @@ export const projects = [
 
 export const certifications = [
   {
-    name: "Cloud & DevOps Upskilling Program",
+    name: "•	Advanced Cloud Computing & DevOps Certification from Learnbay, in collaboration with Microsoft",
     provider: "Learnbay",
   },
   {
-    name: "AI Engineer – MLOps Track",
+    name: "AI Engineer MLOps Track-Deploy Gen AI & Agentic AI at Scale",
     provider: "Udemy"
   },
   {
-    name: "VMware vSphere ESXi & vCenter Administration",
+    name: "PromptOps  AI-Powered DevOps",
+    provider: "Udemy"
+  },
+  {
+    name: "Complete VMWare vSphere ESXi and vCenter Administration",
     provider: "Udemy"
   },
   {
@@ -239,8 +248,8 @@ export const certifications = [
 
 export const stats = {
   experienceYears: 2.4,
-  projects: 7,
-  certifications: 4,
+  projects: 8,
+  certifications: 5,
   // Key achievements
   vmsManaged: "1500+",
   esxiHosts: "100+",
