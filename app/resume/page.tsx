@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { stats } from "@/data/portfolio";
+import { skills, stats } from "@/data/portfolio";
 import { generateResumeMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = generateResumeMetadata();
