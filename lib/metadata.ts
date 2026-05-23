@@ -104,7 +104,7 @@ export function generateProjectsMetadata(): Metadata {
   const projectCount = projects.length;
   return generatePageMetadata({
     title: 'Projects',
-    description: `Explore ${projectCount} DevOps and Cloud Engineering projects by ${personalInfo.name}, featuring AWS infrastructure, CI/CD pipelines, and containerization solutions.`,
+    description: `Explore ${projectCount} DevOps and Infrastructure Engineering projects by ${personalInfo.name}, featuring AWS infrastructure, CI/CD pipelines, and containerization solutions.`,
   });
 }
 
