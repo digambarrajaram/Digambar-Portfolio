@@ -49,12 +49,16 @@ export const about = {
     "Building Reliable Infrastructure at Scale — Enterprise VMware & Cloud-Native DevOps on AWS",
 
   intro: [
-    "DevOps & Infrastructure Engineer with 2+ years of enterprise production experience at Protean eGov Technologies, supporting India's largest government platforms including NPS, PAN, TIN, CRA, and eSign — processing millions of transactions daily.",
+  "DevOps & Infrastructure Engineer with 2+ years of enterprise production experience at Protean eGov Technologies, managing mission-critical platforms (NPS, PAN, TIN, CRA, eSign) that handle millions of daily financial transactions across India.",
 
-    "Operated VMware vSphere environments across 1500+ VMs and 100+ ESXi hosts with 99.9%+ uptime, leading disaster recovery automation, performance optimization, and a 6-member infrastructure team.",
+  "Maintained 99.9%+ uptime across 1500+ VMs on a large-scale VMware vSphere environment (100+ ESXi hosts), driving performance optimization, zero-downtime upgrades, and infrastructure reliability at enterprise scale.",
 
-    "Building cloud-native expertise across AWS, Terraform, Kubernetes, CI/CD, and observability — with hands-on projects in ELK Stack, AI-driven incident management, and production-grade AWS networking."
-  ],
+  "Led disaster recovery and backup operations for a 10+ PB Commvault environment, automating DR failover with Ansible and reducing recovery time by 60% while consistently meeting RPO/RTO targets.",
+
+  "Promoted to Assistant Manager within 6 months, leading a 6-member infrastructure team, handling P1/P2 incidents, and enforcing ITIL-driven change management to reduce production risks and improve system stability.",
+
+  "Building advanced cloud-native and DevOps expertise across AWS, Terraform, Kubernetes, CI/CD, and observability, with hands-on projects in ELK Stack, AI-driven incident management, and production-grade EKS architectures."
+],
 
   expertise: [
     "AWS cloud infrastructure & IaC (Terraform, Helm, GitHub Actions)",
