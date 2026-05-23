@@ -153,7 +153,13 @@ export const experience = [
 ];
 
 export const projects = [
-
+  {
+  title: "ELK Stack – Centralized Log Aggregation & Observability Platform",
+  category: "Observability & Monitoring",
+  description:
+    "Built a production-style ELK Stack on AWS EC2 using Terraform (IaC end-to-end) with Docker Compose. Engineered multi-source Logstash pipelines with Grok filters to parse Nginx, application, and syslog data into Elasticsearch 8.x. Designed Kibana dashboards for real-time infrastructure health and error rate tracking. Implemented ElastAlert2 anomaly detection rules with Slack/email alerting achieving sub-5-minute MTTD. Hardened the cluster with X-Pack TLS, RBAC, and ILM policies for security and storage management.",
+  technologies: ["Elasticsearch", "Logstash", "Kibana", "Filebeat", "ElastAlert2", "AWS EC2", "Terraform", "Docker Compose", "Grok"]
+   },
   {
     title: "Enterprise DevOps CI/CD Pipeline",
     category: "DevOps Automation",
