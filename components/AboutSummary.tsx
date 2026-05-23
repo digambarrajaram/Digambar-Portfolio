@@ -224,7 +224,7 @@ export default function AboutSummary({ isFullPage = false }: AboutSummaryProps) 
 
                 {/* Intro Content - Fixed mapping with proper text */}
                 <div className="space-y-4">
-                  {about.intro.slice(0, 3).map((paragraph, index) => (
+                  {about.intro.slice(0, 5).map((paragraph, index) => (
                     <div 
                       key={index} 
                       className="flex items-start space-x-3 group"
