@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="text-center">
           <span className="inline-block mb-6 px-4 py-1 text-xs font-bold tracking-widest uppercase
             rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-            Let's Connect
+            Let&apos;s Connect
           </span>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-50 mb-6">
@@ -22,7 +22,7 @@ export default function Contact() {
           </h1>
 
           <p className="max-w-3xl mx-auto text-lg text-slate-400">
-            I'm always open to discussing new opportunities, collaborations,
+            I&apos;m always open to discussing new opportunities, collaborations,
             or interesting DevOps challenges.
           </p>
         </div>
@@ -74,12 +74,12 @@ export default function Contact() {
           bg-slate-800/50 backdrop-blur-xl p-14 text-center">
 
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-6">
-            Let's Build Something Great
+            Let&apos;s Build Something Great
           </h2>
 
           <p className="max-w-3xl mx-auto text-lg text-slate-400 mb-12">
             Whether you have a project in mind or just want to connect,
-            I'd love to hear from you.
+            I&apos;d love to hear from you.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">

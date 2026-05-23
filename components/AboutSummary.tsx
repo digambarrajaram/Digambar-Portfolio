@@ -11,11 +11,6 @@ export default function AboutSummary({ isFullPage = false }: AboutSummaryProps) 
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  // Format experience years for display
-  const experienceText = stats.experienceYears >= 1 
-    ? `${stats.experienceYears.toFixed(1)}+ years`
-    : '1+ year';
-
   useEffect(() => {
     const section = document.getElementById('home-about');
     if (!section) return;

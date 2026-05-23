@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { personalInfo, socialLinks, skills } from '@/data/portfolio';
+import { personalInfo, socialLinks } from '@/data/portfolio';
 
 export default function Footer() {
   const year = new Date().getFullYear();
