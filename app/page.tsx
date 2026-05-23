@@ -43,6 +43,7 @@ const TechnologiesSection = dynamic(
    HOME PAGE
    ========================================================= */
 
+   
 export default function HomePage() {
   return (
     <>
