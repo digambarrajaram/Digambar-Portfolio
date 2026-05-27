@@ -8,16 +8,18 @@ export const technologies = [
   "GitHub Actions",
   "Jenkins",
   "Ansible",
+  "Argo CD",
+  "Helm",
   "ELK Stack",
-  "N8N",
-  "Python",
-  "Shell Scripting",
   "Prometheus",
   "Grafana",
+  "Python",
+  "Shell Scripting",
   "VMware vSphere",
   "Linux",
   "Windows Server",
-  "Commvault"
+  "Commvault",
+  "N8N"
 ];
 
 /**
@@ -27,7 +29,7 @@ export const technologies = [
 
 export const personalInfo = {
   name: "Digambar Rajaram",
-  title: "DevOps & Infrastructure Engineer",
+  title: "DevOps & Cloud Infrastructure Engineer",
   location: "India",
   phone: "+91-7353570952",
   email: "digambarrajaram2@gmail.com",
@@ -46,28 +48,28 @@ export const siteConfig = {
 
 export const about = {
   headline:
-    "Building Reliable Infrastructure at Scale — Enterprise VMware & Cloud-Native DevOps on AWS",
+    "Building Reliable Infrastructure at Scale — CI/CD, GitOps, Kubernetes & Cloud-Native DevOps on AWS",
 
   intro: [
-  "DevOps & Infrastructure Engineer with 2+ years of enterprise production experience at Protean eGov Technologies, managing mission-critical platforms (NPS, PAN, TIN, CRA, eSign) that handle millions of daily financial transactions across India.",
+    "DevOps & Cloud Infrastructure Engineer with 2+ years of production experience at Protean eGov Technologies, building CI/CD pipelines, managing AWS cloud infrastructure, and operating Kubernetes (EKS) workloads at scale for government-grade platforms (NPS, PAN, eSign) serving 300M+ users.",
 
-  "Maintained 99.9%+ uptime across 1500+ VMs on a large-scale VMware vSphere environment (100+ ESXi hosts), driving performance optimization, zero-downtime upgrades, and infrastructure reliability at enterprise scale.",
+    "Provisioned and maintained production EKS clusters via Terraform, managed GitOps deployments with Argo CD and Helm Charts, enforced Kubernetes RBAC and network policies, and ran a unified observability stack (Prometheus, Grafana, kube-state-metrics, ELK) across both EKS and VMware environments.",
 
-  "Led disaster recovery and backup operations for a 10+ PB Commvault environment, automating DR failover with Ansible and reducing recovery time by 60% while consistently meeting RPO/RTO targets.",
+    "Maintained 99.9%+ uptime across 1500+ VMs on a large-scale VMware vSphere environment (100+ ESXi hosts), driving performance optimization, zero-downtime upgrades, and infrastructure reliability at enterprise scale.",
 
-  "Promoted to Assistant Manager within 6 months, leading a 6-member infrastructure team, handling P1/P2 incidents, and enforcing ITIL-driven change management to reduce production risks and improve system stability.",
+    "Led disaster recovery and backup operations for a 10+ PB Commvault environment, automating DR failover with Ansible and reducing recovery time by 60% while consistently meeting RPO/RTO targets.",
 
-  "Building advanced cloud-native and DevOps expertise across AWS, Terraform, Kubernetes, CI/CD, and observability, with hands-on projects in ELK Stack, AI-driven incident management, and production-grade EKS architectures."
-],
+    "Promoted to Assistant Manager within 6 months, leading a 6-member infrastructure team, handling P1/P2 incidents, and enforcing ITIL-driven change management to reduce production risks and improve system stability."
+  ],
 
   expertise: [
-    "AWS cloud infrastructure & IaC (Terraform, Helm, GitHub Actions)",
-    "VMware vSphere datacenter operations & enterprise backup (Commvault 10+ PB)",
-    "CI/CD automation, containerization, and observability (ELK, Prometheus, Grafana)"
+    "CI/CD pipelines, GitOps (Argo CD, Helm, Kustomize), and IaC (Terraform, Ansible, GitHub Actions)",
+    "Kubernetes (EKS) — RBAC, Network Policies, PVCs, EBS CSI, IRSA/OIDC, AWS Load Balancer Controller",
+    "AWS cloud infrastructure, VMware vSphere datacenter operations & enterprise backup (Commvault 10+ PB)"
   ],
 
   approach: [
-    "security-first mindset — from OS hardening and RBAC to X-Pack TLS and least-privilege IAM",
+    "security-first mindset — from OS hardening and RBAC to X-Pack TLS, Sealed Secrets, and least-privilege IAM",
     "end-to-end ownership across infrastructure, automation, and monitoring",
     "building systems that are stable, auditable, and resilient under real-world load"
   ]
@@ -76,16 +78,30 @@ export const about = {
 export const skills = {
 
   cloudDevOps: [
-    "AWS (EC2, S3, IAM, VPC, Lambda, API Gateway, EKS, CloudWatch, ALB/NLB,Route 53, Cloud Front)",
-    "Terraform (Infrastructure as Code)",
-    "Docker & Containerization",
-    "Kubernetes",
+    "AWS (EC2, S3, IAM, VPC, Lambda, API Gateway, EKS, CloudWatch, ALB/NLB, Route 53, CloudFront, ECR, KMS)",
+    "Terraform (modules, remote state, S3 + DynamoDB locking)",
+    "Docker (multi-stage builds) & Containerization",
+    "Kubernetes (EKS)",
+    "Argo CD (GitOps)",
+    "Helm Charts & Kustomize",
     "Jenkins",
     "GitHub Actions",
     "Ansible",
     "Agile/Scrum SDLC",
-    "cloud service models (IaaS, PaaS, SaaS)",
-    "workflow automation with N8N"
+    "Cloud service models (IaaS, PaaS, SaaS)",
+    "Workflow automation with N8N"
+  ],
+
+  kubernetesAndSecurity: [
+    "RBAC (Roles, ClusterRoles, RoleBindings)",
+    "Pod Security Admission",
+    "Network Policies (VPC CNI)",
+    "PersistentVolumeClaims & StorageClasses",
+    "EBS CSI Driver",
+    "IRSA / OIDC",
+    "AWS Load Balancer Controller",
+    "Sealed Secrets",
+    "IMDSv2 & KMS"
   ],
 
   infrastructureVirtualization: [
@@ -114,11 +130,18 @@ export const skills = {
 
   monitoringAutomation: [
     "ELK Stack (Elasticsearch, Logstash, Kibana, Filebeat, ElastAlert2)",
-    "Amazon CloudWatch",
-    "Prometheus",
+    "Prometheus & kube-state-metrics",
     "Grafana",
+    "Amazon CloudWatch",
     "Python",
     "Shell Scripting"
+  ],
+
+  networking: [
+    "TCP/IP, DNS, DHCP",
+    "AWS VPC, Security Groups, NACLs",
+    "CNI (VPC CNI)",
+    "Kubernetes Network Policies"
   ]
 };
 
@@ -126,49 +149,65 @@ export const experience = [
   {
     company: "Protean eGov Technologies Ltd (formerly NSDL eGov Infrastructure Ltd)",
     location: "Mumbai, Maharashtra, India",
-    role: "Assistant Manager – DevOps & Infrastructure Engineer",
+    role: "Assistant Manager – DevOps & Cloud Infrastructure Engineer",
     duration: "Mar 2023 – Jun 2025",
-    domain: "India’s largest government platforms (NPS, PAN, TIN, CRA, eSign)",
+    domain: "India's largest government platforms (NPS, PAN, TIN, CRA, eSign) — 300M+ users",
 
     responsibilities: [
+      "Built and maintained Jenkins CI/CD pipelines for AWS EKS and VMware on-prem deployments with separate environment workflows, automated build triggers, test stages, Slack notifications, and rollback triggers; integrated Argo CD for GitOps-driven Kubernetes sync and deployed environment-specific configurations via Kustomize overlays",
 
-      "Maintained 99.9%+ uptime across 1500+ VMs spanning production and DR environments on a clustered VMware vSphere architecture (100+ ESXi hosts), directly supporting mission-critical government financial services",
+      "Designed end-to-end EKS deployment pipeline: GitHub webhook → Maven build → Docker multi-stage image → ECR push → Helm chart deploy → Argo CD sync, with automated rollback and environment-specific Helm value overrides",
 
-      "Reduced unplanned downtime by ~40% through proactive performance monitoring using vROps analytics — tracking CPU Ready, memory contention, and storage latency across the entire fleet",
+      "Authored Terraform IaC modules for AWS (EC2, VPC, ALB, IAM, EKS node groups) and VMware vSphere; managed remote state with S3 + DynamoDB locking ensuring safe concurrent deployments across teams",
 
-      "Executed zero-downtime ESXi lifecycle upgrades and firmware validation cycles across 100+ hosts, coordinating with CAB and maintaining patch compliance with no production impact",
+      "Provisioned 2 production EKS clusters (20–40 worker nodes) via Terraform; enforced Kubernetes RBAC (Roles, ClusterRoles, RoleBindings) for least-privilege access control and implemented Pod Security Admission policies to restrict privileged workloads across namespaces",
 
-      "Managed provisioning, monthly patch cycles (100% compliance), and security hardening for 1500+ Windows Server (2016/2019/2022) and Linux VMs supporting enterprise workloads",
+      "Managed Kubernetes persistent storage for stateful workloads using PersistentVolumeClaims, StorageClasses, and the EBS CSI Driver — handling dynamic provisioning, volume binding, and lifecycle management across dev and production environments",
 
-      "Administered 10+ PB enterprise backup environment using Commvault — the backbone of disaster recovery for one of India's largest government fintech platforms",
+      "Configured Kubernetes Network Policies (VPC CNI) to enforce pod-to-pod traffic segmentation between namespaces; managed AWS Load Balancer Controller for production ingress routing alongside IRSA/OIDC for pod-level IAM",
 
-      "Automated Disaster Recovery failover using Ansible, reducing manual DR drill time by 60% and achieving consistent RPO/RTO targets during quarterly audits",
+      "Managed Kubernetes secrets using Sealed Secrets for GitOps-safe secret storage; containerised microservices (eSign, eKYC) via Docker multi-stage builds deployed via Helm Charts with namespace isolation and resource limits",
+
+      "Deployed Kubernetes-native observability stack: Prometheus with kube-state-metrics and metrics-server for cluster and workload metrics, Grafana dashboards for pod/node/namespace visibility, and ELK Stack for centralised log aggregation — covering both EKS and VMware environments",
+
+      "Configured ElastAlert2 detection rules (SSH brute force, CPU spikes, error rate thresholds) achieving sub-5-minute MTTD; vROps alerting for VMware resource contention reduced unplanned downtime by ~40%",
+
+      "Maintained 99.9%+ uptime across 1500+ VMs for NPS, PAN, TIN, CRA, and eSign platforms serving 60M+ NPS subscribers and 300M+ PAN cardholders; executed zero-downtime ESXi upgrades across 100+ hosts with Python/Shell pre/post-validation scripts",
+
+      "Automated VM provisioning via Ansible achieving 100% monthly patch compliance, eliminating configuration drift across 1500+ Windows Server (2016/2019/2022) and Linux VMs",
 
       "Led daily operations of a 6-member infrastructure team; served as escalation point for P1/P2 incidents and conducted structured Root Cause Analysis (RCA) for all major events",
 
       "Participated in CAB meetings and enforced ITIL-aligned change management processes, reducing change-related incidents by standardizing pre-change checklists",
 
-      "Built an internal infrastructure asset management platform using Spring Boot, MySQL, and ReactJS to replace manual spreadsheet tracking of 1500+ hardware/software assets",
-
-      "Reduced audit preparation time by ~50% — platform provided real-time inventory visibility that was previously unavailable during compliance reviews"
+      "Built an internal infrastructure asset management platform using Spring Boot, MySQL, and ReactJS to replace manual spreadsheet tracking of 1500+ hardware/software assets, reducing audit preparation time by ~50%"
     ],
 
     achievements: [
-      "Promoted to Assistant Manager in Sep 2023 based on operational ownership and leadership.",
-      "Improved infrastructure reliability through proactive monitoring and capacity planning.",
-      "Contributed to automation initiatives reducing manual infrastructure operations."
+      "Promoted to Assistant Manager within 6 months based on operational ownership and leadership.",
+      "Designed and owned end-to-end GitOps-based EKS deployment pipeline adopted across production environments.",
+      "Reduced DR drill time by 60% through Ansible-driven disaster recovery automation."
     ]
   }
 ];
 
 export const projects = [
-{
-  title: "ELK Stack – Centralized Log Aggregation & Observability Platform",
-  category: "Observability & Monitoring",
-  description:
-    "Production-style ELK Stack on AWS EC2 using Terraform and Docker Compose. Built Logstash Grok pipelines for Nginx, app, and syslog ingestion. Created Kibana dashboards for real-time health monitoring and implemented ElastAlert2 anomaly detection with Slack alerting — sub-5-min MTTD. Hardened with X-Pack TLS, RBAC, and ILM policies.",
-  technologies: ["Elasticsearch", "Logstash", "Kibana", "Filebeat", "ElastAlert2", "AWS EC2", "Terraform", "Docker Compose"]
-},
+  {
+    title: "ELK Stack – Centralized Log Aggregation & Observability Platform",
+    category: "Observability & Monitoring",
+    description:
+      "Production-style ELK Stack on AWS EC2 using Terraform and Docker Compose. Built Logstash Grok pipelines for Nginx, app, and syslog ingestion. Created Kibana dashboards for real-time health monitoring and implemented ElastAlert2 anomaly detection with Slack alerting — sub-5-min MTTD. Hardened with X-Pack TLS, RBAC, and ILM policies.",
+    technologies: ["Elasticsearch", "Logstash", "Kibana", "Filebeat", "ElastAlert2", "AWS EC2", "Terraform", "Docker Compose"]
+  },
+
+  {
+    title: "AWS EKS Production Architecture",
+    category: "Kubernetes / GitOps",
+    description:
+      "Built a full GitOps-ready EKS architecture: multi-AZ VPC, ALB, Auto Scaling Groups, managed node groups, IRSA/OIDC, EBS CSI for persistent storage, Kubernetes RBAC and Network Policies, Argo CD sync, and Kustomize overlays for environment promotion.",
+    technologies: ["AWS", "EKS", "Terraform", "Kubernetes", "Helm", "Argo CD", "Kustomize", "IRSA"]
+  },
+
   {
     title: "Enterprise DevOps CI/CD Pipeline",
     category: "DevOps Automation",
@@ -181,7 +220,7 @@ export const projects = [
     title: "AI-Driven DevOps Incident Management Platform",
     category: "DevOps / SRE",
     description:
-      "Built a simulated DevOps incident response platform on AWS using Terraform infrastructure to evaluate automated incident analysis using CloudWatch metrics, logs, and CI/CD deployment telemetry.",
+      "Built a simulated DevOps incident response platform on AWS using Terraform infrastructure to evaluate automated incident analysis using CloudWatch metrics, logs, and CI/CD deployment telemetry. Validated via failure injection testing with GitHub Actions OIDC auth.",
     technologies: ["AWS", "Terraform", "CloudWatch", "GitHub Actions"]
   },
 
@@ -194,18 +233,10 @@ export const projects = [
   },
 
   {
-    title: "Amazon EKS Production Automation",
-    category: "Kubernetes",
-    description:
-      "Provisioned production-ready Kubernetes infrastructure using Terraform with managed EKS node groups, IRSA based IAM access control, and AWS Load Balancer Controller integration.",
-    technologies: ["AWS", "EKS", "Terraform", "Kubernetes"]
-  },
-
-  {
     title: "Infrastructure Inventory Management Platform",
     category: "Internal Automation Tool",
     description:
-      "Developed internal infrastructure asset management platform using Spring Boot, MySQL, and ReactJS to track hardware and software inventory improving audit readiness and compliance tracking.",
+      "Developed internal infrastructure asset management platform using Spring Boot, MySQL, and ReactJS to track hardware and software inventory improving audit readiness and compliance tracking. Reduced audit preparation time by ~50%.",
     technologies: ["Spring Boot", "ReactJS", "MySQL"]
   },
 
@@ -224,29 +255,34 @@ export const projects = [
       "Containerized AI assistant for transforming doctor consultation notes into structured summaries.",
     technologies: ["Next.js", "FastAPI", "Docker"]
   }
-
 ];
 
 export const certifications = [
   {
     name: "Advanced Cloud Computing & DevOps Certification from Learnbay, in collaboration with Microsoft",
     provider: "Learnbay",
+    completedDate: "May 2026"
   },
   {
-    name: "AI Engineer MLOps Track-Deploy Gen AI & Agentic AI at Scale",
+    name: "AI Engineer MLOps Track – Deploy GenAI & Agentic AI at Scale",
     provider: "Udemy"
   },
   {
-    name: "PromptOps  AI-Powered DevOps",
+    name: "PromptOps – AI-Powered DevOps",
     provider: "Udemy"
   },
   {
-    name: "Complete VMWare vSphere ESXi and vCenter Administration",
+    name: "Complete VMware vSphere ESXi and vCenter Administration",
     provider: "Udemy"
   },
   {
     name: "Java Full Stack Development",
     provider: "TalentSprint / Q-J Spiders"
+  },
+  {
+    name: "Certified Kubernetes Administrator (CKA)",
+    provider: "CNCF",
+    status: "Pursuing"
   }
 ];
 
@@ -258,9 +294,10 @@ export const stats = {
   vmsManaged: "1500+",
   esxiHosts: "100+",
   backupStorage: "10+ PB",
-  uptime: "99.9%"
+  uptime: "99.9%",
+  usersServed: "300M+"
 };
 
 export const projectsPage = {
-  tagline: "Selected projects demonstrating real-world DevOps, Cloud, and automation expertise"
+  tagline: "Selected projects demonstrating real-world DevOps, Cloud, Kubernetes, and automation expertise"
 };

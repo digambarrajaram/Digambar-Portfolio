@@ -14,28 +14,34 @@ export const SITE_URL = siteConfig.siteUrl;
 export function generateBaseMetadata(): Metadata {
   return {
     title: `${personalInfo.name} | ${personalInfo.title}`,
-    description: `Professional portfolio of ${personalInfo.name} - ${personalInfo.title} specializing in AWS, Terraform, Docker, Kubernetes, and CI/CD automation.`,
+    description: `Professional portfolio of ${personalInfo.name} - ${personalInfo.title} specializing in CI/CD, GitOps, Kubernetes (EKS), AWS, Terraform, and infrastructure automation.`,
     keywords: [
       'DevOps',
-      'Cloud Engineer',
-      'Infrastructure Engineer',
+      'Cloud Infrastructure Engineer',
       'AWS',
       'Terraform',
-      'Docker',
       'Kubernetes',
+      'EKS',
+      'Docker',
       'CI/CD',
+      'GitOps',
+      'Argo CD',
+      'Helm',
+      'Kustomize',
       'GitHub Actions',
+      'Jenkins',
       'Infrastructure as Code',
       'ELK Stack',
-      'N8n',
-      'Python',
-      'Shell Scripting',
       'Prometheus',
       'Grafana',
       'VMware vSphere',
       'Linux',
       'Windows Server',
-      'Commvault'
+      'Commvault',
+      'Ansible',
+      'Python',
+      'Shell Scripting',
+      'N8n'
     ],
     authors: [{ name: personalInfo.name }],
     creator: personalInfo.name,
@@ -114,7 +120,7 @@ export function generateProjectsMetadata(): Metadata {
   const projectCount = projects.length;
   return generatePageMetadata({
     title: 'Projects',
-    description: `Explore ${projectCount} DevOps and Infrastructure Engineering projects by ${personalInfo.name}, featuring AWS infrastructure, CI/CD pipelines, and containerization solutions.`,
+    description: `Explore ${projectCount} DevOps and Cloud Infrastructure projects by ${personalInfo.name}, featuring AWS, Kubernetes (EKS), GitOps pipelines, CI/CD automation, and observability platforms.`,
   });
 }
 
@@ -124,7 +130,7 @@ export function generateProjectsMetadata(): Metadata {
 export function generateResumeMetadata(): Metadata {
   return generatePageMetadata({
     title: 'Resume',
-    description: `Download the resume of ${personalInfo.name} - ${personalInfo.title}. Experience with AWS, Terraform, Kubernetes, and CI/CD automation.`,
+    description: `Download the resume of ${personalInfo.name} - ${personalInfo.title}. Experience with AWS, Terraform, Kubernetes, Argo CD, Helm, CI/CD automation, and VMware infrastructure.`,
   });
 }
 
